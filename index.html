@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anacomp · Information Lifecycle — From raw records to public release</title>
+  <meta name="description" content="One information lifecycle pipeline for public agencies: Discover, Digitize, Redact, Remediate and Release, with Insignal analytics across every stage. Sold end to end or one stage at a time.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=14">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header id="nav" data-page="home"></header>
+<script src="layout.js?v=14"></script>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero dark" id="top">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <p class="eyebrow reveal">Anacomp Information Lifecycle</p>
+    <h1 class="hero__title reveal">From raw records<br>to <span class="accent-text">public release.</span></h1>
+    <p class="hero__lede reveal">One information lifecycle pipeline for public agencies, sold end to end or one stage at a time.</p>
+    <div class="hero__ctas reveal">
+      <a href="#pilot" class="btn btn--accent">Start a 30-day pilot <span aria-hidden="true">→</span></a>
+      <a href="#pipeline" class="btn btn--ghost">See the pipeline</a>
+    </div>
+
+    <!-- Animated pipeline -->
+    <div class="flow reveal" aria-label="The pipeline: Discover, Digitize, Redact, Remediate, Release, with Analyze across every stage" role="img">
+      <svg class="flow__svg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="lineGrad" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="900" y2="0">
+            <stop offset="0" stop-color="#F28C5A"/>
+            <stop offset="1" stop-color="#E2622B"/>
+          </linearGradient>
+        </defs>
+        <line x1="100" y1="60" x2="900" y2="60" class="flow__track"/>
+        <line x1="100" y1="60" x2="900" y2="60" class="flow__line" stroke="url(#lineGrad)"/>
+        <path d="M100 150 H900" class="flow__analyze"/>
+        <g class="flow__drops">
+          <line x1="100" y1="128" x2="100" y2="140"/><line x1="300" y1="128" x2="300" y2="140"/>
+          <line x1="500" y1="128" x2="500" y2="140"/><line x1="700" y1="128" x2="700" y2="140"/>
+          <line x1="900" y1="128" x2="900" y2="140"/>
+        </g>
+        <circle r="6" class="flow__pulse"><animateMotion dur="5s" repeatCount="indefinite" path="M100 60 H900"/></circle>
+        <circle r="6" class="flow__pulse flow__pulse--2"><animateMotion dur="5s" begin="2.5s" repeatCount="indefinite" path="M100 60 H900"/></circle>
+      </svg>
+      <ol class="flow__nodes">
+        <li style="--i:0"><span class="flow__dot">01</span><span class="flow__label">Discover</span></li>
+        <li style="--i:1"><span class="flow__dot">02</span><span class="flow__label">Digitize</span></li>
+        <li style="--i:2"><span class="flow__dot">03</span><span class="flow__label">Redact</span></li>
+        <li style="--i:3"><span class="flow__dot">04</span><span class="flow__label">Remediate</span></li>
+        <li style="--i:4"><span class="flow__dot">05</span><span class="flow__label">Release</span></li>
+      </ol>
+      <div class="flow__analyze-label"><span class="pill pill--blue">Analyze</span> Insignal, across every stage</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHALLENGE ============ -->
+<section class="section paper" id="challenge">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow eyebrow--rust">The problem</p>
+      <h2>Four pressures on agency records</h2>
+      <p class="section__lede">Records programs are being asked to do more, faster, with files they can’t fully see, search, share or serve.</p>
+    </header>
+    <div class="pressures">
+      <article class="pressure reveal">
+        <div class="pressure__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="12"/><path d="M30 30l10 10"/><path d="M15 21h12M21 15v12" class="ic-accent"/></svg>
+        </div>
+        <p class="pressure__tag">Visibility</p>
+        <h3>Unmapped file estates</h3>
+        <p>Years of file shares and cloud folders, with no count of what is there or how much is duplicate.</p>
+      </article>
+      <article class="pressure reveal">
+        <div class="pressure__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><rect x="8" y="14" width="32" height="26" rx="2"/><path d="M8 22h32"/><path d="M20 30h8" class="ic-accent"/><path d="M12 14l3-6h18l3 6"/></svg>
+        </div>
+        <p class="pressure__tag">Paper</p>
+        <h3>Paper that can’t be searched</h3>
+        <p>Boxes and file rooms hold records that staff must pull by hand and cannot serve digitally.</p>
+      </article>
+      <article class="pressure reveal">
+        <div class="pressure__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M12 6h18l8 8v28H12z"/><path d="M30 6v8h8"/><path d="M17 22h16M17 28h10M17 34h14" class="ic-accent"/></svg>
+        </div>
+        <p class="pressure__tag">Privacy</p>
+        <h3>Sensitive data in the open</h3>
+        <p>PII sits inside unstructured documents, so nothing can be shared until someone reads every page.</p>
+      </article>
+      <article class="pressure reveal">
+        <div class="pressure__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="10" r="4"/><path d="M10 18h28M24 18v12M24 30l-7 12M24 30l7 12"/><circle cx="24" cy="24" r="20" class="ic-accent" stroke-dasharray="4 5"/></svg>
+        </div>
+        <p class="pressure__tag">Access</p>
+        <h3>Accessibility obligations</h3>
+        <p>Section 508 and ADA Title II expect documents that work with assistive technology, not image-only PDFs.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PIPELINE ============ -->
+<section class="section" id="pipeline">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow eyebrow--rust">The offering</p>
+      <h2>Five stages, one analytics layer</h2>
+      <p class="section__lede">Six services. Each one is complete on its own, and each one’s output is the next one’s input.</p>
+    </header>
+
+    <div class="stages reveal">
+      <div class="stages__tabs" role="tablist" aria-label="Pipeline stages" id="stageTabs">
+        <!-- populated by main.js -->
+      </div>
+      <div class="stage-panel" id="stagePanel" role="tabpanel" tabindex="0" aria-live="polite">
+        <!-- populated by main.js -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="section dark journey" id="journey">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow">End to end</p>
+      <h2>A public records request, start to finish</h2>
+      <p class="section__lede">From a verified request to an accessible, redacted release, in one chain of custody.</p>
+    </header>
+
+    <div class="timeline" id="timeline">
+    <div class="timeline__rail" aria-hidden="true"><div class="timeline__fill" id="timelineFill"></div></div>
+    <ol class="timeline__steps">
+      <li class="step reveal"><span class="step__num">1</span><div><h3>Request</h3><p>A member of the public verifies identity with ID.me and asks for documents in the portal.</p></div></li>
+      <li class="step reveal"><span class="step__num">2</span><div><h3>Locate</h3><p>Agency staff pick up the request in the portal and find the records, on paper or in file stores.</p></div></li>
+      <li class="step reveal"><span class="step__num">3</span><div><h3>Digitize</h3><p>Paper records are scanned and indexed.</p></div></li>
+      <li class="step reveal"><span class="step__num">4</span><div><h3>Redact</h3><p>PII and sensitive content are removed in Hyperscience workflows.</p></div></li>
+      <li class="step reveal"><span class="step__num">5</span><div><h3>Remediate</h3><p>ADA produces accessible HTML and a tagged document for download.</p></div></li>
+      <li class="step reveal"><span class="step__num">6</span><div><h3>Release</h3><p>The agency approves and releases the documents to the requester in the portal.</p></div></li>
+    </ol>
+    </div>
+
+    <div class="journey__notes">
+      <div class="note reveal">
+        <span class="note__icon" aria-hidden="true">↷</span>
+        <p><strong>Records skip what they don’t need.</strong> Born-digital files bypass Digitize, and files with nothing sensitive bypass Redact.</p>
+      </div>
+      <div class="note note--accent reveal">
+        <span class="note__icon" aria-hidden="true">◎</span>
+        <p><strong>Insignal, throughout.</strong> Every request is tracked, so staff can ask about volumes, turnaround and backlog in plain English.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TWO WAYS TO BUY ============ -->
+<section class="section paper" id="buy">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow eyebrow--rust">How it is sold</p>
+      <h2>Two ways to buy</h2>
+    </header>
+    <div class="options">
+      <article class="option option--featured reveal">
+        <p class="option__tag">Option A</p>
+        <h3>The full pipeline</h3>
+        <ul class="checks">
+          <li>One contract and one service level across every stage, with Insignal reporting on all of it</li>
+          <li>Records move from stage to stage without leaving Anacomp custody</li>
+          <li>The portal is the public’s front door and the agency’s work queue</li>
+        </ul>
+        <p class="option__best"><span>Best for</span> Agencies with steady request volume and a mix of paper and digital records.</p>
+      </article>
+      <article class="option reveal">
+        <p class="option__tag">Option B</p>
+        <h3>Any stage on its own</h3>
+        <ul class="checks">
+          <li>A separate statement of work per stage, sized to one backlog or mandate</li>
+          <li>Files in, files out: each stage works alongside your existing systems</li>
+          <li>Each stage’s output is the next stage’s input, so adding one later needs no rework</li>
+        </ul>
+        <p class="option__best"><span>Best for</span> Clients with one pressing problem, or with tools that already cover other stages.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PACKAGES ============ -->
+<section class="section" id="packages">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow eyebrow--rust">Packaging</p>
+      <h2>Seven packages built from six services</h2>
+      <p class="section__lede">Pick the package that matches the moment, or assemble the whole lifecycle.</p>
+    </header>
+    <div class="matrix-wrap reveal">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th scope="col">Package</th>
+            <th scope="col"><span>Discover</span></th>
+            <th scope="col"><span>Digitize</span></th>
+            <th scope="col"><span>Redact</span></th>
+            <th scope="col"><span>Remediate</span></th>
+            <th scope="col"><span>Release</span></th>
+            <th scope="col"><span>Analyze</span></th>
+            <th scope="col">Typical trigger</th>
+          </tr>
+        </thead>
+        <tbody id="matrixBody"><!-- populated by main.js --></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENTRY POINTS ============ -->
+<section class="section paper" id="start">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow eyebrow--rust">Where are you starting?</p>
+      <h2>Every conversation starts somewhere</h2>
+      <p class="section__lede">Whatever your entry point, we’ll name the next stage and price it as an option.</p>
+    </header>
+    <div class="quotes" id="quotes"><!-- populated by main.js --></div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow eyebrow--rust">Commercial model</p>
+      <h2>Priced the way the work is measured</h2>
+      <p class="section__lede">Every stage has a clear unit of sale. Bundles are always discounted against the sum of their stages, so the package is always the better buy.</p>
+    </header>
+    <div class="pricing" id="pricingGrid"><!-- populated by main.js --></div>
+    <p class="pricing__foot reveal">Pricing is tailored to each engagement. <a href="contact.html?topic=pricing">Talk to us about a quote <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="section paper why" id="why">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow eyebrow--rust">Why Anacomp</p>
+      <h2>Why one vendor for the whole chain</h2>
+    </header>
+    <div class="pillars">
+      <article class="pillar reveal">
+        <span class="pillar__num">01</span>
+        <h3>One chain of custody</h3>
+        <p>Records pass from scan to release inside one provider, with no hand-offs between vendors to secure.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__num">02</span>
+        <h3>One accountable team</h3>
+        <p>Anacomp operates every stage, so quality and turnaround have a single owner.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__num">03</span>
+        <h3>Proven engines inside</h3>
+        <p>Congruity360, Hyperscience, ID.me and Insignal each do one job well; Anacomp integrates and runs them.</p>
+      </article>
+    </div>
+
+    <!-- TODO: fill in real figures, then uncomment.
+    <div class="stats">
+      <div class="stat"><span class="stat__num">__</span><span class="stat__label">agencies served</span></div>
+      <div class="stat"><span class="stat__num">__</span><span class="stat__label">pages processed</span></div>
+      <div class="stat"><span class="stat__num">__</span><span class="stat__label">security authorizations held</span></div>
+    </div>
+    -->
+
+    <div class="engines reveal" aria-label="Technology inside the pipeline">
+      <p class="engines__label">Engines inside the pipeline</p>
+      <ul>
+        <li><strong>Congruity360</strong><span>Discover</span></li>
+        <li><strong>Hyperscience</strong><span>Redact</span></li>
+        <li><strong>ID.me</strong><span>Release</span></li>
+        <li><strong>Insignal</strong><span>Analyze</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILOT ============ -->
+<section class="section dark pilot" id="pilot">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="hero__glow hero__glow--low" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow">Next step</p>
+      <h2>Start with a <span class="accent-text">30-day pilot</span></h2>
+      <p class="section__lede">See the whole pipeline work on your own records before you commit to anything.</p>
+    </header>
+    <div class="weeks">
+      <article class="week reveal">
+        <p class="week__when">Week 1</p>
+        <h3>Scan one repository</h3>
+        <p>Discover reports file counts, sizes and duplicates for a repository you choose.</p>
+      </article>
+      <article class="week reveal">
+        <p class="week__when">Weeks 2–3</p>
+        <h3>Process a sample set</h3>
+        <p>A sample set of pages runs through Redact and Remediate and comes back for your review.</p>
+      </article>
+      <article class="week reveal">
+        <p class="week__when">Week 4</p>
+        <h3>Walk one request through</h3>
+        <p>A portal sandbox shows a request from ID.me sign-in to release, with the pilot reported in Insignal.</p>
+      </article>
+    </div>
+    <div class="pilot__cta reveal">
+      <p>The pilot ends with a scoped proposal: the full pipeline, or the stages that proved their value.</p>
+      <a href="contact.html?topic=pilot" class="btn btn--accent btn--lg">Book your pilot <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="home.js?v=14"></script>
+</body>
+</html>

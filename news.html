@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="show-placeholders">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News &amp; articles · Anacomp</title>
+  <meta name="description" content="News, announcements and practical articles on records management, redaction, accessibility and public records requests.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="pages.css?v=14">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="nav" data-page="news"></header>
+<script src="layout.js?v=14"></script>
+
+<main id="main">
+  <section class="page-hero dark">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>News</span></nav>
+      <p class="eyebrow reveal">News &amp; articles</p>
+      <h1 class="reveal">Notes from the records lifecycle.</h1>
+      <p class="page-hero__lede reveal">Announcements from Anacomp, plus practical guides on discovery, redaction, accessibility and public records requests.</p>
+    </div>
+  </section>
+
+  <section class="section paper" style="padding-top:72px">
+    <div class="wrap">
+      <a class="featured-post reveal" href="article.html">
+        <div class="post-art" data-art="information-lifecycle-launch" data-art-style="0"></div>
+        <div class="featured-post__body">
+          <div class="post-meta"><span class="tag">Announcement</span><time datetime="2026-11">November 2026</time><span>· 4 min read</span></div>
+          <h2>Introducing the Anacomp Information Lifecycle</h2>
+          <p>One pipeline from raw records to public release: Discover, Digitize, Redact, Remediate and Release, with Insignal analytics across every stage.</p>
+          <span class="read-more">Read the announcement →</span>
+        </div>
+      </a>
+
+      <div class="news-tools">
+        <h2>Latest</h2>
+        <div class="case-filter" style="margin:0" data-filter-group=".post" role="group" aria-label="Filter articles by topic">
+          <button class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="accessibility" aria-pressed="false">Accessibility</button>
+          <button class="chip" data-filter="privacy" aria-pressed="false">Privacy</button>
+          <button class="chip" data-filter="records" aria-pressed="false">Records requests</button>
+          <button class="chip" data-filter="news" aria-pressed="false">Company news</button>
+        </div>
+      </div>
+
+      <!-- TODO: each card below is a suggested article topic. Write the article, give it a page
+           (copy article.html), then turn the <article> into an <a href="..."> and set the date. -->
+      <div class="posts">
+        <article class="post reveal" data-tags="accessibility" data-placeholder>
+          <div class="post-art" data-art="ada-title-ii"></div>
+          <div class="post__body">
+            <span class="tag" style="align-self:start">Accessibility</span>
+            <h3>What ADA Title II means for the documents on your website</h3>
+            <p>Why image-only PDFs fall short, and what accessible HTML and tagged documents change.</p>
+            <div class="post-meta"><span>Publish date</span><span>· 6 min read</span></div>
+          </div>
+        </article>
+        <article class="post reveal" data-tags="privacy" data-placeholder>
+          <div class="post-art" data-art="cloud-migration-inventory"></div>
+          <div class="post__body">
+            <span class="tag" style="align-self:start">Privacy</span>
+            <h3>Five questions to answer before a cloud migration</h3>
+            <p>Counts, sizes, duplicates and sensitive data: the inventory to take before you move a thing.</p>
+            <div class="post-meta"><span>Publish date</span><span>· 5 min read</span></div>
+          </div>
+        </article>
+        <article class="post reveal" data-tags="records" data-placeholder>
+          <div class="post-art" data-art="records-backlog"></div>
+          <div class="post__body">
+            <span class="tag" style="align-self:start">Records requests</span>
+            <h3>How to clear a public-records backlog without adding headcount</h3>
+            <p>Routing requests through one portal, redacting in workflows, and measuring turnaround as you go.</p>
+            <div class="post-meta"><span>Publish date</span><span>· 7 min read</span></div>
+          </div>
+        </article>
+        <article class="post reveal" data-tags="privacy" data-placeholder>
+          <div class="post-art" data-art="pii-before-ai"></div>
+          <div class="post__body">
+            <span class="tag" style="align-self:start">Privacy</span>
+            <h3>Remove PII before your agency’s AI rollout, not after</h3>
+            <p>Why redaction belongs at the start of any AI project that touches unstructured documents.</p>
+            <div class="post-meta"><span>Publish date</span><span>· 5 min read</span></div>
+          </div>
+        </article>
+        <article class="post reveal" data-tags="records accessibility" data-placeholder>
+          <div class="post-art" data-art="file-room-closure"></div>
+          <div class="post__body">
+            <span class="tag" style="align-self:start">Records requests</span>
+            <h3>Closing the file room: a planning checklist</h3>
+            <p>Scanning, indexing and remediation in the right order, so paper becomes searchable, accessible data.</p>
+            <div class="post-meta"><span>Publish date</span><span>· 6 min read</span></div>
+          </div>
+        </article>
+        <article class="post reveal" data-tags="news" data-placeholder>
+          <div class="post-art" data-art="company-news-event"></div>
+          <div class="post__body">
+            <span class="tag" style="align-self:start">Company news</span>
+            <h3>Add an event, partnership or press release</h3>
+            <p>Conference appearances, new partnerships, security authorizations and other company news.</p>
+            <div class="post-meta"><span>Publish date</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="newsletter reveal">
+        <div>
+          <h2>Get new articles in your inbox</h2>
+          <p>A short monthly note on records, redaction and accessibility. No spam, unsubscribe anytime.</p>
+        </div>
+        <form class="inline-form" id="newsletterForm" novalidate>
+          <label for="nlEmail" class="visually-hidden" style="position:absolute;left:-9999px">Work email</label>
+          <input type="email" id="nlEmail" placeholder="Your work email" autocomplete="email" required>
+          <button class="btn btn--accent" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="pages.js?v=14"></script>
+</body>
+</html>

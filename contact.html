@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="show-placeholders">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Anacomp</title>
+  <meta name="description" content="Book a 30-day pilot, request pricing, or talk to the Anacomp team about your records program.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="pages.css?v=14">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="nav" data-page="contact"></header>
+<script src="layout.js?v=14"></script>
+
+<main id="main">
+  <section class="page-hero dark" style="padding-bottom:190px">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Contact</span></nav>
+      <p class="eyebrow reveal">Contact</p>
+      <h1 class="reveal">Let’s talk about your records.</h1>
+      <p class="page-hero__lede reveal">Book a pilot, get pricing for a stage, or just tell us where it hurts. A real person replies within one business day.</p>
+    </div>
+  </section>
+
+  <section class="section paper" style="padding-top:0">
+    <div class="wrap contact-grid">
+      <div class="form-card reveal">
+        <form id="contactForm" novalidate>
+          <h2>Send us a message</h2>
+          <p>Fields marked optional can be skipped.</p>
+
+          <fieldset class="topic-picker">
+            <legend>What can we help with?</legend>
+            <input type="radio" name="topic" id="t-pilot" value="pilot" data-label="30-day pilot" checked>
+            <label for="t-pilot"><strong>Book a pilot</strong>30 days on your records</label>
+            <input type="radio" name="topic" id="t-pricing" value="pricing" data-label="Pricing request">
+            <label for="t-pricing"><strong>Get pricing</strong>For a stage or package</label>
+            <input type="radio" name="topic" id="t-general" value="general" data-label="General enquiry">
+            <label for="t-general"><strong>Something else</strong>Partners, press, reviews</label>
+          </fieldset>
+
+          <div class="fields">
+            <div class="field">
+              <label for="f-name">Full name</label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required>
+              <span class="field__err" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="f-email">Work email</label>
+              <input type="email" id="f-email" name="email" autocomplete="email" required>
+              <span class="field__err" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="f-org">Organization</label>
+              <input type="text" id="f-org" name="org" autocomplete="organization" required>
+              <span class="field__err" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="f-role">Role <span>(optional)</span></label>
+              <input type="text" id="f-role" name="role" autocomplete="organization-title">
+            </div>
+            <div class="field field--full">
+              <label for="f-phone">Phone <span>(optional)</span></label>
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel">
+            </div>
+            <fieldset class="field field--full" style="border:0;padding:0;margin:0">
+              <legend style="font-size:.85rem;font-weight:600;margin-bottom:8px;padding:0">Which stages interest you? <span style="color:var(--slate);font-weight:400">(optional)</span></legend>
+              <div class="stage-checks">
+                <input type="checkbox" id="s1" name="stages" value="Discover"><label for="s1">Discover</label>
+                <input type="checkbox" id="s2" name="stages" value="Digitize"><label for="s2">Digitize</label>
+                <input type="checkbox" id="s3" name="stages" value="Redact"><label for="s3">Redact</label>
+                <input type="checkbox" id="s4" name="stages" value="Remediate"><label for="s4">Remediate</label>
+                <input type="checkbox" id="s5" name="stages" value="Release"><label for="s5">Release</label>
+                <input type="checkbox" id="s6" name="stages" value="Analyze"><label for="s6">Analyze</label>
+                <input type="checkbox" id="s7" name="stages" value="Full lifecycle"><label for="s7">The full lifecycle</label>
+              </div>
+            </fieldset>
+            <div class="field field--full">
+              <label for="f-msg">Tell us what you’re facing</label>
+              <textarea id="f-msg" name="message" placeholder="For example: a records-request backlog, a file-room closure, an accessibility audit…" required></textarea>
+              <span class="field__err" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-foot">
+            <small>We only use your details to reply to this message.</small>
+            <button type="submit" class="btn btn--accent">Send message <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="contact-side">
+        <div class="contact-card contact-card--dark reveal">
+          <h3>What happens next</h3>
+          <ol class="next-steps">
+            <li>We reply within one business day to set up a short call.</li>
+            <li>We learn about your records, backlog and mandates.</li>
+            <li>You get a pilot plan or a priced proposal for the stages you need.</li>
+          </ol>
+        </div>
+        <!-- TODO: replace with real contact details -->
+        <div class="contact-card reveal" data-placeholder>
+          <h3>Reach us directly</h3>
+          <ul>
+            <li>Email: <a href="mailto:info@anacomp.com">info@anacomp.com</a></li>
+            <li>Phone: <a href="tel:+10000000000">Add phone number</a></li>
+            <li>Address: Add headquarters address</li>
+          </ul>
+        </div>
+        <div class="contact-card reveal">
+          <h3>Public-sector buyers</h3>
+          <p>Ask us about contract vehicles, security authorizations and procurement paperwork. We’ll send what your process needs.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <p class="eyebrow eyebrow--rust">Questions</p>
+        <h2>Before you get in touch</h2>
+      </header>
+      <div class="faq reveal">
+        <details open>
+          <summary>Do we have to buy the whole pipeline?</summary>
+          <p>No. Every stage is complete on its own and works alongside your existing systems: files in, files out. Because each stage’s output is the next stage’s input, adding another later needs no rework.</p>
+        </details>
+        <details>
+          <summary>What does the 30-day pilot include?</summary>
+          <p>Week 1: Discover scans one repository you choose. Weeks 2–3: a sample set of pages runs through Redact and Remediate for your review. Week 4: a portal sandbox walks one request from ID.me sign-in to release, with the pilot reported in Insignal. It ends with a scoped proposal.</p>
+        </details>
+        <details>
+          <summary>How is each stage priced?</summary>
+          <p>Each stage has its own unit of sale: per terabyte for Discover, per image for Digitize, per page for Redact and Remediate, an annual fee plus request tiers for Release, and per seat for Analyze. Bundles are discounted against the sum of their stages.</p>
+        </details>
+        <details>
+          <summary>Do our records leave our control?</summary>
+          <p>On the full pipeline, records move from stage to stage without leaving Anacomp custody, so there are no hand-offs between vendors to secure. Insignal is self-hosted in your own cloud.</p>
+        </details>
+        <details>
+          <summary>Which technology is inside?</summary>
+          <p>Congruity360 for Discover, Hyperscience workflows for Redact, ID.me for identity in the Release portal, and Insignal for Analyze. Anacomp integrates and operates them all.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="pages.js?v=14"></script>
+</body>
+</html>
