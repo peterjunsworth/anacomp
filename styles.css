@@ -206,6 +206,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .fact { background: #fff; border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow); }
 .fact p:last-child { font-size: .98rem; }
 .fact--powered p:last-child { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; }
+.stage-panel__addon { margin-top: 28px; padding: 20px 24px; border: 2px dashed var(--orange); border-radius: 14px; background: #fff; }
+.stage-panel__addon .stage-panel__label { color: var(--rust); margin-bottom: 8px; }
+.stage-panel__addon-name { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 6px; }
+.stage-panel__addon-name span { font-family: var(--font-body, inherit); font-size: .85rem; font-weight: 400; color: var(--slate); margin-left: 8px; }
+.stage-panel__addon p:last-child { color: var(--slate); max-width: 70ch; }
+.dot--addon { border-style: dashed; }
+.matrix thead th:nth-last-child(2) { white-space: nowrap; }
 .leads { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
 .lead-chip { all: unset; cursor: pointer; font-family: var(--font-display); font-weight: 600; font-size: .9rem; padding: 6px 14px; border-radius: 999px; background: var(--paper-2); transition: background .2s, color .2s; }
 .lead-chip:hover, .lead-chip:focus-visible { background: var(--orange); color: #fff; }
@@ -387,6 +394,17 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .reveal, .flow__nodes li, .dot { opacity: 1 !important; transform: none !important; }
   .flow__line { stroke-dashoffset: 0; }
   .flow__pulse { display: none; }
+}
+
+/* Add-on pricing card spans the row, dashed to mark it optional */
+.price--addon { grid-column: 1 / -1; display: grid; grid-template-columns: 200px 1fr auto; align-items: center; gap: 8px 32px; padding: 24px 36px; border: 2px dashed var(--orange); }
+.price--addon .price__unit { margin: 0; }
+.price--addon .price__stage { grid-row: 1 / span 2; }
+.price--addon .price__shape { grid-column: 2; }
+.price--addon::after { content: "Optional add-on"; justify-self: end; grid-column: 3; grid-row: 1 / span 2; font-family: var(--font-display); font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; border: 1.5px solid var(--orange); color: var(--rust); padding: 4px 10px; border-radius: 999px; }
+@media (max-width: 620px) {
+  .price--addon { grid-template-columns: 1fr; }
+  .price--addon .price__shape, .price--addon .price__stage, .price--addon::after { grid-column: auto; grid-row: auto; justify-self: start; }
 }
 
 /* Full-pipeline pricing card spans the row */

@@ -67,7 +67,7 @@
         </a></li>`).join("")}
       </ol>
       <div class="mega__side">
-        <a href="${home}#packages" class="mega__card"><strong>Packages</strong><small>Seven bundles built from six services</small></a>
+        <a href="${home}#packages" class="mega__card"><strong>Packages</strong><small>Eight bundles, including Ask the Document</small></a>
         <a href="${home}#journey" class="mega__card"><strong>How a request flows</strong><small>Six steps, one chain of custody</small></a>
         <a href="${home}#pilot" class="mega__card mega__card--accent"><strong>30-day pilot</strong><small>Prove it on your own records</small></a>
       </div>

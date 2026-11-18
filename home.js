@@ -42,7 +42,12 @@
       powered: "Anacomp ADA",
       alone: "You have an accessibility audit, complaint or mandate and a library of untagged documents.",
       leads: ["release", "digitize"],
-      leadsWhy: "Release, to deliver accessible copies; Digitize, for paper still outside the library."
+      leadsWhy: "Release, to deliver accessible copies; Digitize, for paper still outside the library.",
+      addon: {
+        name: "Ask the Document",
+        powered: "Botcopy",
+        text: "Put an accessible assistant beside the HTML that ADA produces, on your own site or portal. Residents ask questions in plain language and get answers drawn from the document, in 190+ languages, with ID.me sign-in where needed."
+      }
     },
     {
       id: "release", num: "05", name: "Release", kicker: "Stage 5 · Release",
@@ -75,6 +80,7 @@
     { name: "Paper to Accessible", stages: ["digitize", "remediate"], trigger: "File-room closure with an accessibility duty" },
     { name: "Request Response", stages: ["redact", "release", "analyze"], trigger: "A records-request backlog to clear and report on" },
     { name: "Accessible Release", stages: ["remediate", "release"], trigger: "Requests delivered in accessible form" },
+    { name: "Accessible Answers", stages: ["remediate", "release"], addon: true, trigger: "Residents need answers from long documents, not just access" },
     { name: "Full Lifecycle", stages: ORDER, trigger: "One vendor from paper intake to public release", featured: true }
   ];
 
@@ -94,6 +100,7 @@
     { stage: "Remediate", unit: "Per page, by complexity", shape: "Backlog project, then subscription" },
     { stage: "Release", unit: "Annual fee plus request tiers", shape: "Subscription per agency" },
     { stage: "Analyze", unit: "Per seat, self-hosted licence", shape: "Annual subscription" },
+    { stage: "Ask the Document", unit: "Annual fee per site, plus conversation tiers", shape: "Add-on subscription to Remediate", addon: true },
     { stage: "Full pipeline", unit: "Annual fee plus page volume", shape: "Multi-year managed service", full: true }
   ];
 
@@ -144,6 +151,12 @@
             </div>
           </div>
         </div>
+        ${s.addon ? `
+        <div class="stage-panel__addon">
+          <p class="stage-panel__label">Optional add-on</p>
+          <p class="stage-panel__addon-name"><strong>${esc(s.addon.name)}</strong> <span>Powered by ${esc(s.addon.powered)}</span></p>
+          <p>${esc(s.addon.text)}</p>
+        </div>` : ""}
       </div>`;
   }
 
@@ -180,6 +193,8 @@
         return `<td><span class="dot${on ? " dot--on" : ""}" style="transition-delay:${(i * 0.06).toFixed(2)}s"
           role="img" aria-label="${byId[id].name}: ${on ? "included" : "not included"}"></span></td>`;
       }).join("")}
+      <td><span class="dot dot--addon${p.addon ? " dot--on" : ""}" style="transition-delay:${(ORDER.length * 0.06).toFixed(2)}s"
+        role="img" aria-label="Ask the Document add-on: ${p.addon ? "included" : "not included"}"></span></td>
       <td>${p.trigger}</td>
     </tr>`).join("");
 
@@ -195,7 +210,7 @@
 
   /* ---------------- Pricing ---------------- */
   $("#pricingGrid").innerHTML = PRICING.map((p, i) => `
-    <article class="price reveal${p.full ? " price--full" : ""}" style="--d:${(i % 3) * 0.08}s">
+    <article class="price reveal${p.full ? " price--full" : ""}${p.addon ? " price--addon" : ""}" style="--d:${(i % 3) * 0.08}s">
       <p class="price__stage">${p.stage}</p>
       <p class="price__unit">${p.unit}</p>
       <p class="price__shape">${p.shape}</p>
