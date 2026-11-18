@@ -1,0 +1,53 @@
+# Anacomp
+
+> Anacomp runs one information lifecycle pipeline for public agencies: records discovery, document scanning and digitization, PII redaction, Section 508 and ADA accessibility remediation, and an identity-verified public records portal, with Insignal analytics across every stage.
+
+Anacomp sells the Information Lifecycle end to end (one contract, one service level, one chain of custody) or one stage at a time. Every engagement can start with a 30-day pilot on the agency's own records.
+
+## Services (the Information Lifecycle)
+
+- [Discover: Records and data discovery](https://www.anacomp.com/#stage-discover): Congruity360 runs a shallow scan across file systems and cloud file repositories and returns the facts a records owner needs first. Powered by Congruity360.
+- [Digitize: Document scanning and digitization](https://www.anacomp.com/#stage-digitize): Anacomp scanning services ingest paper documents and deliver indexed images that every later stage can work on. Powered by Anacomp scanning services.
+- [Redact: PII and sensitive-data redaction](https://www.anacomp.com/#stage-redact): Anacomp redaction services remove PII and sensitive information from unstructured data, run as workflows on Hyperscience. Powered by Hyperscience workflows, operated by Anacomp.
+- [Remediate: Section 508 and ADA document accessibility remediation](https://www.anacomp.com/#stage-remediate): ADA takes PDFs, Excel, PowerPoint, Word and image files, transcribes them, saves the content as data and republishes it in accessible form. Powered by Anacomp ADA.
+- [Release: Public records request portal](https://www.anacomp.com/#stage-release): The Anacomp portal lets members of the public, authenticated through ID.me, request documents that pass through the other stages before release. Powered by Anacomp portal with ID.me sign-in.
+- [Analyze: Records program analytics](https://www.anacomp.com/#stage-analyze): Insignal builds a data warehouse from what the other stages produce and lets staff ask questions in plain English, then turn the answers into dashboards and alerts. Powered by Insignal, self-hosted in your own cloud.
+- [Ask the Document (optional add-on, powered by Botcopy)](https://www.anacomp.com/#stage-remediate): Put an accessible assistant beside the HTML that ADA produces, on your own site or portal. Residents ask questions in plain language and get answers drawn from the document whenever needed.
+
+## Pages
+
+- [Home: the Information Lifecycle](https://www.anacomp.com/): The Information Lifecycle: six stages, packages, pricing model, how a records request flows, and the 30-day pilot.
+- [Clients & case studies](https://www.anacomp.com/clients): Sectors served (state, county and city government, courts, higher education, health and human services) and case studies.
+- [Leadership team & board](https://www.anacomp.com/team): Leadership team, board of directors and what the team stands for.
+- [News & articles](https://www.anacomp.com/news): Company announcements and articles.
+- [Introducing the Anacomp Information Lifecycle](https://www.anacomp.com/news/introducing-the-anacomp-information-lifecycle): Launch announcement explaining the five stages, Insignal analytics, ways to buy and the 30-day pilot.
+- [Contact & FAQ](https://www.anacomp.com/contact): Contact form, what happens next, and answers to common questions about buying, the pilot, pricing, custody and technology.
+
+## Packages
+
+- Estate Assessment: Discover. Typical trigger: Pre-migration or storage clean-up.
+- Records Insight: Discover + Analyze. Typical trigger: Leaders need ongoing estate reporting.
+- Safe Share: Discover + Redact. Typical trigger: Removing PII before sharing or AI use.
+- Paper to Accessible: Digitize + Remediate. Typical trigger: File-room closure with an accessibility duty.
+- Request Response: Redact + Release + Analyze. Typical trigger: A records-request backlog to clear and report on.
+- Accessible Release: Remediate + Release. Typical trigger: Requests delivered in accessible form.
+- Accessible Answers: Remediate + Release + Ask the Document. Typical trigger: Residents need answers from long documents, not just access.
+- Full Lifecycle: Discover + Digitize + Redact + Remediate + Release + Analyze. Typical trigger: One vendor from paper intake to public release.
+
+## Pricing model
+
+- Discover: Per terabyte scanned (Fixed-fee assessment)
+- Digitize: Per image, by document type (Backlog project or day-forward service)
+- Redact: Per page, by review depth (Backlog project or per-request service)
+- Remediate: Per page, by complexity (Backlog project, then subscription)
+- Release: Annual fee plus request tiers (Subscription per agency)
+- Analyze: Per seat, self-hosted licence (Annual subscription)
+- Ask the Document: Annual fee per site, plus conversation tiers (Add-on subscription to Remediate)
+- Full pipeline: Annual fee plus page volume (Multi-year managed service)
+
+Pricing is tailored to each engagement: https://www.anacomp.com/contact?topic=pricing
+
+## Optional
+
+- [Full site text for AI agents](https://www.anacomp.com/llms-full.txt): every page rendered as Markdown
+- [Sitemap](https://www.anacomp.com/sitemap.xml)

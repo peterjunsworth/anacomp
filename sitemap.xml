@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.anacomp.com/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.anacomp.com/clients</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anacomp.com/team</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://www.anacomp.com/assets/team/tyler-dulmage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.anacomp.com/assets/team/tom-cunningham.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.anacomp.com/assets/team/peter-unsworth.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.anacomp.com/assets/team/marie-hickey.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.anacomp.com/assets/team/brian-odonnell.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.anacomp.com/assets/team/lisa-basler.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.anacomp.com/assets/team/gina-kenney.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.anacomp.com/assets/team/alan-howe.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.anacomp.com/news</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.anacomp.com/news/introducing-the-anacomp-information-lifecycle</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.anacomp.com/contact</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

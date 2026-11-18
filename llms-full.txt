@@ -1,0 +1,861 @@
+# Anacomp: full site content
+
+> Anacomp runs one information lifecycle pipeline for public agencies: records discovery, document scanning and digitization, PII redaction, Section 508 and ADA accessibility remediation, and an identity-verified public records portal, with Insignal analytics across every stage.
+
+Generated 2026-11-18 from https://www.anacomp.com. Placeholder content awaiting client approval is omitted.
+
+---
+
+URL: https://www.anacomp.com/
+Title: Anacomp | Records Digitization, Redaction & 508 Remediation
+Description: Records discovery, scanning, PII redaction, Section 508 remediation and an ID.me-verified records portal for public agencies, end to end or one stage at a time.
+
+Anacomp Information Lifecycle
+
+# From raw records to public release.
+
+One information lifecycle pipeline for public agencies, sold end to end or one stage at a time.
+
+Start a 30-day pilot
+See the pipeline
+
+- 01, Discover
+
+- 02, Digitize
+
+- 03, Redact
+
+- 04, Remediate
+
+- 05, Release
+
+Analyze Insignal, across every stage
+
+The problem
+
+## Four pressures on agency records
+
+Records programs are being asked to do more, faster, with files they can’t fully see, search, share or serve.
+
+Visibility
+
+### Unmapped file estates
+
+Years of file shares and cloud folders, with no count of what is there or how much is duplicate.
+
+Paper
+
+### Paper that can’t be searched
+
+Boxes and file rooms hold records that staff must pull by hand and cannot serve digitally.
+
+Privacy
+
+### Sensitive data in the open
+
+PII sits inside unstructured documents, so nothing can be shared until someone reads every page.
+
+Access
+
+### Accessibility obligations
+
+Section 508 and ADA Title II expect documents that work with assistive technology, not image-only PDFs.
+
+The offering
+
+## Five stages, one analytics layer
+
+Six services. Each one is complete on its own, and each one’s output is the next one’s input.
+
+Stage 1 · Discover
+
+### Know what you hold before you move it
+
+Congruity360 runs a shallow scan across file systems and cloud file repositories and returns the facts a records owner needs first.
+
+What you receive
+
+- File counts, sizes and types by location
+- Duplicates identified for de-duplication
+- A sized scope for any redaction or remediation that follows
+
+Powered by
+
+Congruity360
+
+Stands alone when
+
+You’re planning a cloud migration, a storage clean-up or an AI rollout and need an inventory first.
+
+Leads to
+
+Redact for sensitive files; Remediate for public-facing ones.
+
+Stage 2 · Digitize
+
+### Bring paper into the digital flow
+
+Anacomp scanning services ingest paper documents and deliver indexed images that every later stage can work on.
+
+What you receive
+
+- Paper scanned and indexed to your scheme
+- Digital files delivered to your repository or straight into the pipeline
+- One digital starting point for redaction, accessibility and release
+
+Powered by
+
+Anacomp scanning services
+
+Stands alone when
+
+You have a paper backlog, a file-room closure or an electronic-records mandate to meet.
+
+Leads to
+
+Remediate, so scans become accessible data; Redact before anything is released.
+
+Stage 3 · Redact
+
+### Remove what must not be released
+
+Anacomp redaction services remove PII and sensitive information from unstructured data, run as workflows on Hyperscience.
+
+What you receive
+
+- PII and sensitive content removed to your rules
+- Redacted copies ready to release or share
+- One process for scanned paper and born-digital files
+
+Powered by
+
+Hyperscience workflows, operated by Anacomp
+
+Stands alone when
+
+You face a records-request backlog, a litigation production or a data-sharing agreement.
+
+Leads to
+
+Release through the portal; Remediate so the redacted copy is also accessible.
+
+Stage 4 · Remediate
+
+### Turn any document into accessible data
+
+ADA takes PDFs, Excel, PowerPoint, Word and image files, transcribes them, saves the content as data and republishes it in accessible form.
+
+What you receive
+
+- Accessible HTML for the web
+- Accessibly tagged documents for download
+- Content captured as data, ready for search and reuse
+
+Powered by
+
+Anacomp ADA
+
+Stands alone when
+
+You have an accessibility audit, complaint or mandate and a library of untagged documents.
+
+Leads to
+
+Release, to deliver accessible copies; Digitize, for paper still outside the library.
+
+Ask the Document Powered by Botcopy
+
+Put an accessible assistant beside the HTML that ADA produces, on your own site or portal. Residents ask questions in plain language and get answers drawn from the document whenever needed.
+
+Stage 5 · Release
+
+### Give the public a verified front door
+
+The Anacomp portal lets members of the public, authenticated through ID.me, request documents that pass through the other stages before release.
+
+What you receive
+
+- Identity-verified document requests from the public
+- Agency tools for requests, processing and client management
+- A release step that can route through Digitize, Redact and Remediate first
+
+Powered by
+
+Anacomp portal with ID.me sign-in
+
+Stands alone when
+
+You need a request portal now and already have your own redaction or accessibility process.
+
+Leads to
+
+Every other stage: each request the portal takes in is work for them.
+
+Across every stage · Analyze
+
+### Ask your records program anything
+
+Insignal builds a data warehouse from what the other stages produce and lets staff ask questions in plain English, then turn the answers into dashboards and alerts.
+
+What you receive
+
+- Estate dashboards from Discover scans: growth, duplicates, risk
+- Operations dashboards: request volumes, turnaround, backlog
+- Questions answered in plain English, in the browser or in Teams and Slack
+
+Powered by
+
+Insignal, self-hosted in your own cloud
+
+Stands alone when
+
+Leaders need to report on records work, or want answers from data that ADA has extracted.
+
+Leads to
+
+Discover, to feed it the estate; Release, to measure every request.
+
+End to end
+
+## A public records request, start to finish
+
+From a verified request to an accessible, redacted release, in one chain of custody.
+
+- 1
+
+### Request
+
+A member of the public verifies identity with ID.me and asks for documents in the portal.
+
+- 2
+
+### Locate
+
+Agency staff pick up the request in the portal and find the records, on paper or in file stores.
+
+- 3
+
+### Digitize
+
+Paper records are scanned and indexed.
+
+- 4
+
+### Redact
+
+PII and sensitive content are removed in Hyperscience workflows.
+
+- 5
+
+### Remediate
+
+ADA produces accessible HTML and a tagged document for download.
+
+- 6
+
+### Release
+
+The agency approves and releases the documents to the requester in the portal.
+
+Ask the Document, powered by Botcopy. Rather than scrolling through pages to find an answer, requesters just ask, and get a plain-language reply drawn from the document itself.
+
+Records skip what they don’t need. Born-digital files bypass Digitize, and files with nothing sensitive bypass Redact.
+
+Insignal, throughout. Every request is tracked, so staff can ask about volumes, turnaround and backlog in plain English.
+
+How it is sold
+
+## Two ways to buy
+
+Option A
+
+### The full pipeline
+
+- One contract and one service level across every stage, with Insignal reporting on all of it
+
+- Records move from stage to stage without leaving Anacomp custody
+
+- The portal is the public’s front door and the agency’s work queue
+
+Best for Agencies with steady request volume and a mix of paper and digital records.
+
+Option B
+
+### Any stage on its own
+
+- A separate statement of work per stage, sized to one backlog or mandate
+
+- Files in, files out: each stage works alongside your existing systems
+
+- Each stage’s output is the next stage’s input, so adding one later needs no rework
+
+Best for Clients with one pressing problem, or with tools that already cover other stages.
+
+Packaging
+
+## Eight packages built from six services and one add-on
+
+Pick the package that matches the moment, or assemble the whole lifecycle.
+
+Packages and the stages each one includes
+
+|
+Package |
+Discover |
+Digitize |
+Redact |
+Remediate |
+Release |
+Analyze |
+Ask Chat |
+Typical trigger |
+
+|
+Estate Assessment |
+✓ |
+– |
+– |
+– |
+– |
+– |
+– |
+Pre-migration or storage clean-up |
+
+|
+Records Insight |
+✓ |
+– |
+– |
+– |
+– |
+✓ |
+– |
+Leaders need ongoing estate reporting |
+
+|
+Safe Share |
+✓ |
+– |
+✓ |
+– |
+– |
+– |
+– |
+Removing PII before sharing or AI use |
+
+|
+Paper to Accessible |
+– |
+✓ |
+– |
+✓ |
+– |
+– |
+– |
+File-room closure with an accessibility duty |
+
+|
+Request Response |
+– |
+– |
+✓ |
+– |
+✓ |
+✓ |
+– |
+A records-request backlog to clear and report on |
+
+|
+Accessible Release |
+– |
+– |
+– |
+✓ |
+✓ |
+– |
+– |
+Requests delivered in accessible form |
+
+|
+Accessible Answers |
+– |
+– |
+– |
+✓ |
+✓ |
+– |
+✓ |
+Residents need answers from long documents, not just access |
+
+|
+Full Lifecycle Complete |
+✓ |
+✓ |
+✓ |
+✓ |
+✓ |
+✓ |
+– |
+One vendor from paper intake to public release |
+
+Where are you starting?
+
+## Every conversation starts somewhere
+
+Whatever your entry point, we’ll name the next stage and price it as an option.
+
+> We’re moving to the cloud and don’t know what we have.
+
+- Start with: Discover
+
+- Then expand: Redact, Remediate
+
+> We have to close the file room.
+
+- Start with: Digitize
+
+- Then expand: Remediate, Release
+
+> We can’t keep up with records requests.
+
+- Start with: Redact + Release
+
+- Then expand: Discover, Digitize
+
+> We were told our documents aren’t accessible.
+
+- Start with: Remediate
+
+- Then expand: Digitize, Release
+
+> People need a secure way to ask for their records.
+
+- Start with: Release
+
+- Then expand: Redact, Remediate
+
+> We can’t tell leadership where our backlog stands.
+
+- Start with: Analyze
+
+- Then expand: Discover, Release
+
+Commercial model
+
+## Priced the way the work is measured
+
+Every stage has a clear unit of sale. Bundles are always discounted against the sum of their stages, so the package is always the better buy.
+
+### Discover
+
+Per terabyte scanned
+
+Fixed-fee assessment
+
+### Digitize
+
+Per image, by document type
+
+Backlog project or day-forward service
+
+### Redact
+
+Per page, by review depth
+
+Backlog project or per-request service
+
+### Remediate
+
+Per page, by complexity
+
+Backlog project, then subscription
+
+### Release
+
+Annual fee plus request tiers
+
+Subscription per agency
+
+### Analyze
+
+Per seat, self-hosted licence
+
+Annual subscription
+
+### Ask the Document
+
+Annual fee per site, plus conversation tiers
+
+Add-on subscription to Remediate
+
+Optional add-on
+
+### Full pipeline
+
+Annual fee plus page volume
+
+Multi-year managed service
+
+Best value
+
+Pricing is tailored to each engagement. [Talk to us about a quote](https://www.anacomp.com/contact?topic=pricing)
+
+Why Anacomp
+
+## Why one vendor for the whole chain
+
+01
+
+### One chain of custody
+
+Records pass from scan to release inside one provider, with no hand-offs between vendors to secure.
+
+02
+
+### One accountable team
+
+Anacomp operates every stage, so quality and turnaround have a single owner.
+
+03
+
+### Proven engines inside
+
+Congruity360, Hyperscience, ID.me, Botcopy and Insignal each do one job well; Anacomp integrates and runs them.
+
+Engines inside the pipeline
+
+- Congruity360Discover
+
+- HyperscienceRedact
+
+- ID.meRelease
+
+- InsignalAnalyze
+
+Next step
+
+## Start with a 30-day pilot
+
+See the whole pipeline work on your own records before you commit to anything.
+
+Week 1
+
+### Scan one repository
+
+Discover reports file counts, sizes and duplicates for a repository you choose.
+
+Weeks 2–3
+
+### Process a sample set
+
+A sample set of pages runs through Redact and Remediate and comes back for your review.
+
+Week 4
+
+### Walk one request through
+
+A portal sandbox shows a request from ID.me sign-in to release, with the pilot reported in Insignal.
+
+The pilot ends with a scoped proposal: the full pipeline, or the stages that proved their value.
+
+[Book your pilot](https://www.anacomp.com/contact?topic=pilot)
+
+---
+
+URL: https://www.anacomp.com/clients
+Title: Clients & Case Studies | Anacomp
+Description: The public agencies Anacomp serves and case studies across records discovery, digitization, redaction, accessibility remediation and public release.
+
+Clients
+
+# Trusted with the records that matter most.
+
+Public agencies rely on Anacomp to find, digitize, protect, remediate and release their records, one stage or the whole lifecycle.
+
+- Who we serve
+
+- Case studies 6
+
+- Reviews 6
+
+Who we serve
+
+## Built for public-sector records programs
+
+Wherever there’s a backlog, a file room, a records request or an accessibility mandate, the pipeline fits.
+
+Case studies
+
+## Every engagement starts with one problem
+
+See where clients started, the stages they used, and what changed. Filter by stage.
+
+Reviews
+
+## What records leaders say
+
+Your voice
+
+Work with us? Tell others how it went.
+
+We publish reviews from clients with their permission, unedited.
+
+[Leave a review](https://www.anacomp.com/contact?topic=review)
+
+## Become the next case study.
+
+Start with a 30-day pilot on your own records, and finish with a scoped proposal.
+
+[Book a pilot](https://www.anacomp.com/contact?topic=pilot)
+
+---
+
+URL: https://www.anacomp.com/team
+Title: Leadership Team & Board of Directors | Anacomp
+Description: Meet Anacomp’s leadership team and board of directors, the people accountable for every stage of the information lifecycle, from discovery to public release.
+
+Leadership
+
+# One accountable team for every stage.
+
+Anacomp operates the whole pipeline, so quality and turnaround have a single owner. These are the people who own it.
+
+Leadership team
+
+## The people behind the pipeline
+
+Chief Executive Officer
+
+### Tyler Dulmage
+
+Drives Anacomp’s growth and innovation, helping organizations get more value from their data through AI-driven document processing, data discovery and automation, while staying secure and compliant.
+
+Strategy, AI & data, Client value
+
+President
+
+### Tom Cunningham
+
+A 27-year Anacomp veteran who rose from VP of Professional Services to President, holding five roles across the company along the way.
+
+Operations, Professional services
+
+Chief Technology Officer
+
+### Peter Unsworth
+
+Builds high-performing technology teams and turns complex technology into clear, practical strategy, with a focus on culture and data-driven leadership.
+
+Technology, Software development, Team building
+
+Senior Vice President, Corporate Development & Alliances
+
+### Marie Hickey
+
+Directs business development, customer relationships and channel partnerships, drawing on Anacomp’s decades of service to commercial and government customers.
+
+Corporate development, Alliances, Channel partners
+
+VP Sales
+
+### Brian O’Donnell
+
+A sales leader and trusted advisor with more than 20 years growing revenue and client relationships in fintech, payments and secure technology, including at Fiserv and ABCorp.
+
+Sales leadership, Strategic partnerships
+
+Director – Human Resources
+
+### Lisa Basler
+
+A PHR and SHRM-CP certified HR professional who partners with management to keep Anacomp’s people strategy aligned with its business goals.
+
+People & culture, Talent
+
+Director – Professional Services
+
+### Gina Kenney
+
+A certified project management professional with more than 12 years leading implementation and project teams, driving cross-functional work through to delivery.
+
+Project management, Implementation
+
+The wider team
+
+### The people who make it run
+
+Behind every stage are the data analysts, solution engineers, developers and operators who scan, redact, remediate and release, and who keep the whole pipeline running for our clients every day.
+
+Data analysts, Solution engineers, Developers, Operators
+
+Governance
+
+## Board of directors
+
+Chairman of the Board
+
+### Alan B. Howe
+
+A seasoned board leader who has served on more than 30 public and private boards, often as chairman or lead director, and is Managing Partner of the corporate advisory firm Broadband Initiatives.
+
+Governance, Corporate advisory
+
+Board Member
+
+### Jon Marcus
+
+Serves on Anacomp’s board of directors, providing oversight and guidance on the company’s strategy and growth.
+
+Governance
+
+How we work
+
+## What the team stands for
+
+01
+
+### One chain of custody
+
+Records pass from scan to release inside one provider, with no hand-offs between vendors to secure.
+
+02
+
+### A single owner
+
+We operate every stage, so quality and turnaround always have one accountable name.
+
+03
+
+### Best engines, integrated
+
+Congruity360, Hyperscience, ID.me and Insignal each do one job well. We make them work as one.
+
+04
+
+### Access for everyone
+
+Every document we release should work with assistive technology, not just pass an audit.
+
+## Talk to the people who’ll run your pipeline.
+
+No hand-offs to a separate delivery team. The leaders you meet are the ones accountable for your records.
+
+[Get in touch](https://www.anacomp.com/contact)
+
+---
+
+URL: https://www.anacomp.com/news
+Title: News on Records, Redaction & Accessibility | Anacomp
+Description: Anacomp announcements and practical guidance on records management, PII redaction, Section 508 and ADA Title II accessibility, and public records requests.
+
+News & articles
+
+# Notes from the records lifecycle.
+
+Announcements from Anacomp, plus practical guides on discovery, redaction, accessibility and public records requests.
+
+[AnnouncementNovember 2026· 4 min read
+
+## Introducing the Anacomp Information Lifecycle
+
+One pipeline from raw records to public release: Discover, Digitize, Redact, Remediate and Release, with Insignal analytics across every stage.
+Read the announcement](https://www.anacomp.com/news/introducing-the-anacomp-information-lifecycle)
+
+## Latest
+
+## Get new articles in your inbox
+
+A short monthly note on records, redaction and accessibility. No spam, unsubscribe anytime.
+
+---
+
+URL: https://www.anacomp.com/news/introducing-the-anacomp-information-lifecycle
+Title: Introducing the Anacomp Information Lifecycle | Anacomp News
+Description: Anacomp unites records discovery, digitization, redaction, accessibility remediation and public release in one pipeline for public agencies.
+
+# Introducing the Anacomp Information Lifecycle
+
+AnnouncementNovember 2026· 4 min read
+
+Public agencies are under four pressures at once: unmapped file estates, paper that can’t be searched, sensitive data in the open, and accessibility obligations. Today we’re bringing our answer together into one pipeline.
+
+The Anacomp Information Lifecycle takes records from raw state to public release. It runs five stages with one analytics layer across all of them, and agencies can buy it end to end or one stage at a time.
+
+## Five stages, one analytics layer
+
+- Discover. Congruity360 scans file systems and cloud repositories for counts, sizes and duplicates.
+
+- Digitize. Anacomp scanning services bring paper into the same flow as digital files.
+
+- Redact. Anacomp redaction, run as workflows on Hyperscience, removes PII and sensitive content.
+
+- Remediate. Anacomp ADA turns any format into data, accessible HTML and tagged documents.
+
+- Release. The Anacomp portal, with ID.me sign-in, lets verified requesters ask and agencies manage and release.
+
+Across every stage, Insignal builds a data warehouse from what the pipeline produces. Staff ask questions in plain English, in the browser or in Teams and Slack, and turn the answers into dashboards and alerts.
+
+## A records request, start to finish
+
+A member of the public verifies their identity with ID.me and asks for documents in the portal. Agency staff pick up the request and find the records, on paper or in file stores. Paper is scanned and indexed, sensitive content is redacted, and ADA produces an accessible copy. The agency approves the release in the portal.
+
+> A record skips any stage it doesn’t need. Born-digital files bypass Digitize, and files with nothing sensitive bypass Redact.
+
+## Two ways to buy
+
+The full pipeline gives one contract and one service level across every stage, with records that never leave Anacomp custody. Any stage on its own is sized to one backlog or mandate and works alongside the systems you already have. Because each stage’s output is the next stage’s input, adding one later needs no rework.
+
+## Start with a 30-day pilot
+
+In week one we scan one repository. In weeks two and three, a sample set of pages runs through Redact and Remediate for your review. In week four, a portal sandbox walks one request from ID.me sign-in to release, all reported in Insignal. The pilot ends with a scoped proposal: the full pipeline, or the stages that proved their value.
+
+[Book a 30-day pilot](https://www.anacomp.com/contact?topic=pilot)
+
+## See it on your own records.
+
+Thirty days, one repository, a sample set of pages and one request walked all the way through.
+
+[Book a pilot](https://www.anacomp.com/contact?topic=pilot)
+
+---
+
+URL: https://www.anacomp.com/contact
+Title: Contact Anacomp | Book a 30-Day Records Pilot
+Description: Book a 30-day pilot on your own records, request pricing, or talk to Anacomp about your records program. A real person replies within one business day.
+
+Contact
+
+# Let’s talk about your records.
+
+Book a pilot, get pricing for a stage, or just tell us where it hurts. A real person replies within one business day.
+
+### What happens next
+
+- We reply within one business day to set up a short call.
+
+- We learn about your records, backlog and mandates.
+
+- You get a pilot plan or a priced proposal for the stages you need.
+
+### Public-sector buyers
+
+Ask us about contract vehicles, security authorizations and procurement paperwork. We’ll send what your process needs.
+
+Questions
+
+## Before you get in touch
+
+Do we have to buy the whole pipeline?
+No. Every stage is complete on its own and works alongside your existing systems: files in, files out. Because each stage’s output is the next stage’s input, adding another later needs no rework.
+
+What does the 30-day pilot include?
+Week 1: Discover scans one repository you choose. Weeks 2–3: a sample set of pages runs through Redact and Remediate for your review. Week 4: a portal sandbox walks one request from ID.me sign-in to release, with the pilot reported in Insignal. It ends with a scoped proposal.
+
+How is each stage priced?
+Each stage has its own unit of sale: per terabyte for Discover, per image for Digitize, per page for Redact and Remediate, an annual fee plus request tiers for Release, per seat for Analyze, and an annual fee plus conversation tiers for the Ask the Document add-on. Bundles are discounted against the sum of their stages.
+
+Do our records leave our control?
+On the full pipeline, records move from stage to stage without leaving Anacomp custody, so there are no hand-offs between vendors to secure. Insignal is self-hosted in your own cloud.
+
+Which technology is inside?
+Congruity360 for Discover, Hyperscience workflows for Redact, ID.me for identity in the Release portal, and Insignal for Analyze. Anacomp integrates and operates them all.

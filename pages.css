@@ -295,3 +295,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--o
 
 /* Board of directors block (inside the leadership section) */
 .board__head { margin-top: 88px; }
+
+/* 404 page */
+.notfound-links { display: grid; gap: 12px; max-width: 520px; font-size: 1.1rem; }
+.notfound-links a { font-weight: 600; color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }

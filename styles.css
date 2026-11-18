@@ -641,3 +641,7 @@ html:has(.subnav) { scroll-padding-top: 150px; }
 .footer__nav { display: contents; }
 h2.footer__head { line-height: inherit; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+/* Pre-rendered stage panels: one visible at a time; without JS every stage is shown */
+.stage-panels { min-width: 0; }
+html:not(.js) .stage-panel[hidden] { display: block; margin-top: 24px; }
