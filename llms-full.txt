@@ -767,25 +767,25 @@ Read the announcement](https://www.anacomp.com/news/introducing-the-anacomp-info
 
 ### New Zero Trust White Paper on Meeting White House Executive Order 14028 on Improving the Nation’s Cybersecurity
 
-Anacomp published a white paper by advisory board member Chuck Brooks on meeting DHS and CISA Zero Trust guidance, starting with an inventory of all data assets.
+Anacomp published a white paper by advisory board member Chuck Brooks on meeting DHS and CISA Zero Trust guidance, starting with a data inventory.
 May 2, 2022· 3 min read](https://www.anacomp.com/news/zero-trust-white-paper-executive-order-14028)
 [Webinar
 
 ### New Webinar on the CISA Zero Trust Maturity Model, The Requirement for a New Data-Centric Cybersecurity Approach
 
-Anacomp launched a webinar series on federal Zero Trust guidance, opening with Chuck Brooks, Greg Touhill and Tyler Cohen Wood on the CISA Zero Trust Maturity Model.
+Anacomp launched a Zero Trust webinar series, opening with Chuck Brooks, Greg Touhill and Tyler Cohen Wood on the CISA Zero Trust Maturity Model.
 February 22, 2022· 4 min read](https://www.anacomp.com/news/cisa-zero-trust-maturity-model-webinar)
 [Announcement
 
 ### Chuck Brooks, Cybersecurity & Emerging Technology Leader, Joins Anacomp’s Advisory Board
 
-Globally recognized cybersecurity and emerging technology leader Chuck Brooks joined Anacomp’s Strategic Advisory Board to guide its cybersecurity and data protection work.
+Cybersecurity and emerging technology leader Chuck Brooks joined Anacomp’s Strategic Advisory Board to guide its cybersecurity and data protection work.
 November 17, 2021· 3 min read](https://www.anacomp.com/news/chuck-brooks-joins-anacomp-advisory-board)
 [Contract award
 
 ### GRS and Technology Partner Anacomp Awarded $950M Ceiling IDIQ Contract by the U.S. Air Force to Support Data Discovery for Advanced Battle Management System (ABMS)
 
-Government Research Specialists, with technology partner Anacomp, won a $950M-ceiling IDIQ contract from the U.S. Air Force to develop data discovery capabilities for ABMS and JADC2.
+Government Research Specialists and technology partner Anacomp won a $950M-ceiling U.S. Air Force IDIQ contract for ABMS and JADC2 data discovery.
 August 25, 2021· 3 min read](https://www.anacomp.com/news/grs-anacomp-950m-air-force-abms-contract)
 [Partnership
 
@@ -851,8 +851,8 @@ Thirty days, one repository, a sample set of pages and one request walked all th
 ---
 
 URL: https://www.anacomp.com/news/zero-trust-white-paper-executive-order-14028
-Title: Zero Trust White Paper on Executive Order 14028 | Anacomp News
-Description: Anacomp published a white paper by advisory board member Chuck Brooks on meeting DHS and CISA Zero Trust guidance, starting with an inventory of all data assets.
+Title: Zero Trust White Paper on Executive Order 14028 | Anacomp
+Description: Anacomp published a white paper by advisory board member Chuck Brooks on meeting DHS and CISA Zero Trust guidance, starting with a data inventory.
 
 # New Zero Trust White Paper on Meeting White House Executive Order 14028 on Improving the Nation’s Cybersecurity
 
@@ -891,8 +891,8 @@ Thirty days, one repository, a sample set of pages and one request walked all th
 ---
 
 URL: https://www.anacomp.com/news/cisa-zero-trust-maturity-model-webinar
-Title: Webinar: the CISA Zero Trust Maturity Model | Anacomp News
-Description: Anacomp launched a webinar series on federal Zero Trust guidance, opening with Chuck Brooks, Greg Touhill and Tyler Cohen Wood on the CISA Zero Trust Maturity Model.
+Title: Webinar: the CISA Zero Trust Maturity Model | Anacomp
+Description: Anacomp launched a Zero Trust webinar series, opening with Chuck Brooks, Greg Touhill and Tyler Cohen Wood on the CISA Zero Trust Maturity Model.
 
 # New Webinar on the CISA Zero Trust Maturity Model, The Requirement for a New Data-Centric Cybersecurity Approach
 
@@ -935,8 +935,8 @@ Thirty days, one repository, a sample set of pages and one request walked all th
 ---
 
 URL: https://www.anacomp.com/news/chuck-brooks-joins-anacomp-advisory-board
-Title: Chuck Brooks Joins Anacomp’s Advisory Board | Anacomp News
-Description: Globally recognized cybersecurity and emerging technology leader Chuck Brooks joined Anacomp’s Strategic Advisory Board to guide its cybersecurity and data protection work.
+Title: Chuck Brooks Joins Anacomp’s Advisory Board | Anacomp
+Description: Cybersecurity and emerging technology leader Chuck Brooks joined Anacomp’s Strategic Advisory Board to guide its cybersecurity and data protection work.
 
 # Chuck Brooks, Cybersecurity & Emerging Technology Leader, Joins Anacomp’s Advisory Board
 
@@ -971,8 +971,8 @@ Thirty days, one repository, a sample set of pages and one request walked all th
 ---
 
 URL: https://www.anacomp.com/news/grs-anacomp-950m-air-force-abms-contract
-Title: GRS and Anacomp Awarded $950M Air Force ABMS Contract | Anacomp News
-Description: Government Research Specialists, with technology partner Anacomp, won a $950M-ceiling IDIQ contract from the U.S. Air Force to develop data discovery capabilities for ABMS and JADC2.
+Title: GRS and Anacomp Win $950M Air Force ABMS Contract | Anacomp
+Description: Government Research Specialists and technology partner Anacomp won a $950M-ceiling U.S. Air Force IDIQ contract for ABMS and JADC2 data discovery.
 
 # GRS and Technology Partner Anacomp Awarded $950M Ceiling IDIQ Contract by the U.S. Air Force to Support Data Discovery for Advanced Battle Management System (ABMS)
 
@@ -1013,7 +1013,7 @@ Thirty days, one repository, a sample set of pages and one request walked all th
 ---
 
 URL: https://www.anacomp.com/news/anacomp-exonar-data-discovery-partnership
-Title: Anacomp and Exonar Partner on Intelligent Data Discovery | Anacomp News
+Title: Anacomp and Exonar Partner on Data Discovery | Anacomp
 Description: Anacomp and Exonar formalized a partnership to deliver intelligent data discovery services to U.S. federal agencies and commercial organizations.
 
 # Anacomp and Exonar Announce Strategic Partnership to Deliver Intelligent Data Discovery Services in U.S.

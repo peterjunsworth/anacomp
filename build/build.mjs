@@ -495,7 +495,7 @@ const NEWS_PAGES = NEWS.map(n => {
   return {
     file: `news/${n.slug}.html`, path: `/news/${n.slug}`, short, nav: "news", navCurrent: "true",
     type: "NewsArticle", css: ["styles.css", "pages.css"], js: ["pages.js"],
-    title: `${short} | Anacomp News`, description: n.excerpt,
+    title: `${short} | Anacomp`, description: n.excerpt,
     crumbs: [["News", "/news"], [short, `/news/${n.slug}`]],
     article: { headline: n.title.length > 110 ? short : n.title, datePublished: n.date, section: tagLabel(n.tag) },
     og: { url: n.image, width: n.width, height: n.height, alt: n.imageAlt },

@@ -23,7 +23,7 @@ export const NEWS = [
     date: "2022-05-02", tag: "cybersecurity", kind: "White paper", minutes: 3,
     image: "/assets/news/zero-trust-white-paper.jpg", width: 1200, height: 627,
     imageAlt: "New white paper by Chuck Brooks, President, Brooks Consulting International: How to Meet DHS and CISA Guidelines Supporting White House Executive Order 14028 on Improving the Nation’s Cybersecurity. Zero Trust.",
-    excerpt: "Anacomp published a white paper by advisory board member Chuck Brooks on meeting DHS and CISA Zero Trust guidance, starting with an inventory of all data assets.",
+    excerpt: "Anacomp published a white paper by advisory board member Chuck Brooks on meeting DHS and CISA Zero Trust guidance, starting with a data inventory.",
     body: `
       <p class="lead">A call for an inventory of all data assets as foundational to implementing a Zero Trust Architecture.</p>
       <p><em>Chantilly, VA, United States, May 2, 2022</em> – Anacomp, a U.S. leading provider of D3 Data Discovery and Visibility solutions to mitigate data breach risk, published a new white paper on How to Meet DHS and CISA Guidelines Supporting White House Executive Order 14028 on Improving the Nation’s Cybersecurity. The U.S. Cybersecurity &amp; Infrastructure Security Agency (CISA) has identified Zero Trust as a shift to a data-centric strategy from a location-centric approach. The white paper addresses this paradigm shift as a call for an inventory of all assets as foundational to implementing a Zero Trust Architecture. Renowned cybersecurity expert and Anacomp Advisory Board member Charles (Chuck) Brooks, President of Brooks Consulting International, is the author of the new white paper.</p>
@@ -44,7 +44,7 @@ export const NEWS = [
     date: "2022-02-22", tag: "cybersecurity", kind: "Webinar", minutes: 4,
     image: "/assets/news/zero-trust-webinar.jpg", width: 1200, height: 675,
     imageAlt: "Zero Trust webinar series, Wednesday, March 23, 1pm EDT, with Gregory J. Touhill, Director, CERT, Software Engineering Institute; Chuck Brooks, President, Brooks Consulting International; and Tyler Cohen Wood, National Security Consultant. CISA Zero Trust Maturity Model: The Requirement for a New Data-Centric Cybersecurity Approach.",
-    excerpt: "Anacomp launched a webinar series on federal Zero Trust guidance, opening with Chuck Brooks, Greg Touhill and Tyler Cohen Wood on the CISA Zero Trust Maturity Model.",
+    excerpt: "Anacomp launched a Zero Trust webinar series, opening with Chuck Brooks, Greg Touhill and Tyler Cohen Wood on the CISA Zero Trust Maturity Model.",
     body: `
       <p><em>Chantilly, VA, United States, February 22, 2022</em> – Anacomp, a U.S. leading provider of D3 Data Discovery and Visibility solutions to mitigate data breach risk, announced a new webinar series focused on White House Executive Order 14028 and Federal Zero Trust guidelines on reducing cybersecurity risk. The first webinar will take place on Wednesday, March 23, 2022 at 1 p.m. EDT, and the topic is CISA Zero Trust Maturity Model: The Requirement for a New Data-Centric Cybersecurity Approach. Executives and IT staff from all public and private sectors are invited to register to attend.</p>
       <p>Top cybersecurity experts will participate in the webinar including Charles (Chuck) Brooks, President of Brooks Consulting International, Gregory (Greg) Touhill, Director of the CERT Division at the Carnegie Mellon University Software Engineering Institute, and Tyler Cohen Wood, National Security Consultant and VoiceAmerica Talk Show Host.</p>
@@ -67,7 +67,7 @@ export const NEWS = [
     date: "2021-11-17", tag: "company", kind: "Announcement", minutes: 3,
     image: "/assets/news/chuck-brooks-advisory-board.jpg", width: 1200, height: 626,
     imageAlt: "Portrait of Chuck Brooks beside the words “Chuck Brooks Joins Anacomp’s Advisory Board” and the Anacomp logo.",
-    excerpt: "Globally recognized cybersecurity and emerging technology leader Chuck Brooks joined Anacomp’s Strategic Advisory Board to guide its cybersecurity and data protection work.",
+    excerpt: "Cybersecurity and emerging technology leader Chuck Brooks joined Anacomp’s Strategic Advisory Board to guide its cybersecurity and data protection work.",
     body: `
       <p><em>Chantilly, VA, United States, November 17, 2021</em> – Anacomp, a U.S. leading provider of D3 Data Discovery and data visibility solutions to reduce cybersecurity, privacy and compliance risks, announced that Charles (Chuck) Brooks has joined Anacomp’s Strategic Advisory Board. Chuck is a globally recognized cybersecurity and emerging technology thought leader and has been a leading evangelist for cybersecurity in both the public and private sectors for decades. He was named the top person to follow on Tech by LinkedIn.</p>
       <p>Chuck’s extensive expertise includes serving as a two-time presidential appointee, leadership at the Department of Homeland Security as the first Director of Legislative Affairs, teaching cybersecurity and risk management at John Hopkins University and Georgetown University, and authoring dozens of articles on cyber tech and policy for publications such as Forbes, Huffington Post, The Hill, Federal Times, and many others. Chuck is also President of Brooks Consulting International and has served as an adviser and renowned public speaker to Capitol Hill, for corporations such as General Dynamics and Xerox, and for nonprofit organizations including the Bill &amp; Melinda Gates Foundation.</p>
@@ -82,11 +82,11 @@ export const NEWS = [
     slug: "grs-anacomp-950m-air-force-abms-contract",
     oldPath: "/grs-and-anacomp-awarded-abms-contract",
     title: "GRS and Technology Partner Anacomp Awarded $950M Ceiling IDIQ Contract by the U.S. Air Force to Support Data Discovery for Advanced Battle Management System (ABMS)",
-    shortTitle: "GRS and Anacomp Awarded $950M Air Force ABMS Contract",
+    shortTitle: "GRS and Anacomp Win $950M Air Force ABMS Contract",
     date: "2021-08-25", tag: "partnerships", kind: "Contract award", minutes: 3,
     image: "/assets/news/grs-abms-contract.jpg", width: 1200, height: 630,
     imageAlt: "Anacomp and Government Research Specialists (GRS, a division of GSS) logos: D3 Data Discovery for U.S. Air Force Advanced Battle Management Systems.",
-    excerpt: "Government Research Specialists, with technology partner Anacomp, won a $950M-ceiling IDIQ contract from the U.S. Air Force to develop data discovery capabilities for ABMS and JADC2.",
+    excerpt: "Government Research Specialists and technology partner Anacomp won a $950M-ceiling U.S. Air Force IDIQ contract for ABMS and JADC2 data discovery.",
     body: `
       <p><em>Bethesda, MD, United States, August 25, 2021</em> – Government Research Specialists (GRS), a U.S. leading research and solutions consultant to Federal agencies, with strategic partner, Anacomp, Inc., was awarded a $950M ceiling indefinite-delivery/indefinite-quantity (IDIQ) contract by the U.S. Air Force to develop data discovery capabilities across all operations.</p>
       <p>GRS’s technology solutions will support the maturation, demonstration and proliferation of capability across platforms and domains, leveraging open systems design, modern software and algorithm development in order to enable Joint All Domain Command and Control (JADC2). The contract is part of a multiple award multi-level security effort to provide development and operation of systems as a unified force across all domains (air, land, sea, space, cyber, and electromagnetic spectrum) in an open architecture family of systems that enables capabilities via multiple integrated platforms.</p>
@@ -104,7 +104,7 @@ export const NEWS = [
     slug: "anacomp-exonar-data-discovery-partnership",
     oldPath: "/anacomp-and-exonar-announce-strategic-partnership-to-deliver-intelligent-data-discovery-services-in-u-s",
     title: "Anacomp and Exonar Announce Strategic Partnership to Deliver Intelligent Data Discovery Services in U.S.",
-    shortTitle: "Anacomp and Exonar Partner on Intelligent Data Discovery",
+    shortTitle: "Anacomp and Exonar Partner on Data Discovery",
     date: "2021-02-24", tag: "partnerships", kind: "Partnership", minutes: 2,
     image: "/assets/news/exonar-partnership.jpg", width: 1200, height: 630,
     imageAlt: "Anacomp logo plus Exonar logo.",
