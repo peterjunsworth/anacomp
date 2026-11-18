@@ -2,3 +2,4 @@ build/
 .vercel
 .env*
 README.md
+CLAUDE.md
