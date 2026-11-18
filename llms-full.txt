@@ -17,7 +17,9 @@ Anacomp Information Lifecycle
 One information lifecycle pipeline for public agencies, sold end to end or one stage at a time.
 
 Start a 30-day pilot
-See the pipeline
+See the pipeline stages
+
+The Anacomp pipeline, in order:
 
 - 01, Discover
 

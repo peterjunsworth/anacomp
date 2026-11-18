@@ -365,11 +365,12 @@
     <p class="hero__lede reveal">One information lifecycle pipeline for public agencies, sold end to end or one stage at a time.</p>
     <div class="hero__ctas reveal">
       <a href="#pilot" class="btn btn--accent">Start a 30-day pilot <span aria-hidden="true">→</span></a>
-      <a href="#pipeline" class="btn btn--ghost">See the pipeline</a>
+      <a href="#pipeline" class="btn btn--ghost">See the pipeline stages</a>
     </div>
 
     <!-- Animated pipeline -->
-    <div class="flow reveal" aria-label="The pipeline: Discover, Digitize, Redact, Remediate, Release, with Analyze across every stage and Ask the Document answering questions from your documents" role="img">
+    <div class="flow reveal">
+      <p class="visually-hidden">The Anacomp pipeline, in order:</p>
       <svg class="flow__svg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="lineGrad" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="900" y2="0">
@@ -408,38 +409,38 @@
       <p class="section__lede">Records programs are being asked to do more, faster, with files they can’t fully see, search, share or serve.</p>
     </header>
     <div class="pressures">
-      <article class="pressure reveal">
+      <div class="pressure reveal">
         <div class="pressure__icon" aria-hidden="true">
           <svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="12"/><path d="M30 30l10 10"/><path d="M15 21h12M21 15v12" class="ic-accent"/></svg>
         </div>
         <p class="pressure__tag">Visibility</p>
         <h3>Unmapped file estates</h3>
         <p>Years of file shares and cloud folders, with no count of what is there or how much is duplicate.</p>
-      </article>
-      <article class="pressure reveal">
+      </div>
+      <div class="pressure reveal">
         <div class="pressure__icon" aria-hidden="true">
           <svg viewBox="0 0 48 48"><rect x="8" y="14" width="32" height="26" rx="2"/><path d="M8 22h32"/><path d="M20 30h8" class="ic-accent"/><path d="M12 14l3-6h18l3 6"/></svg>
         </div>
         <p class="pressure__tag">Paper</p>
         <h3>Paper that can’t be searched</h3>
         <p>Boxes and file rooms hold records that staff must pull by hand and cannot serve digitally.</p>
-      </article>
-      <article class="pressure reveal">
+      </div>
+      <div class="pressure reveal">
         <div class="pressure__icon" aria-hidden="true">
           <svg viewBox="0 0 48 48"><path d="M12 6h18l8 8v28H12z"/><path d="M30 6v8h8"/><path d="M17 22h16M17 28h10M17 34h14" class="ic-accent"/></svg>
         </div>
         <p class="pressure__tag">Privacy</p>
         <h3>Sensitive data in the open</h3>
         <p>PII sits inside unstructured documents, so nothing can be shared until someone reads every page.</p>
-      </article>
-      <article class="pressure reveal">
+      </div>
+      <div class="pressure reveal">
         <div class="pressure__icon" aria-hidden="true">
           <svg viewBox="0 0 48 48"><circle cx="24" cy="10" r="4"/><path d="M10 18h28M24 18v12M24 30l-7 12M24 30l7 12"/><circle cx="24" cy="24" r="20" class="ic-accent" stroke-dasharray="4 5"/></svg>
         </div>
         <p class="pressure__tag">Access</p>
         <h3>Accessibility obligations</h3>
         <p>Section 508 and ADA Title II expect documents that work with assistive technology, not image-only PDFs.</p>
-      </article>
+      </div>
     </div>
   </div>
 </section>
@@ -502,7 +503,7 @@
                 <div class="fact fact--powered"><p class="stage-panel__label">Powered by</p><p>Congruity360</p></div>
                 <div class="fact"><p class="stage-panel__label">Stands alone when</p><p>You’re planning a cloud migration, a storage clean-up or an AI rollout and need an inventory first.</p></div>
                 <div class="fact"><p class="stage-panel__label">Leads to</p>
-                  <div class="leads"><button class="lead-chip" data-go="redact">Redact</button><button class="lead-chip" data-go="remediate">Remediate</button></div>
+                  <div class="leads" role="group" aria-label="Related stages"><button class="lead-chip" data-go="redact">Redact</button><button class="lead-chip" data-go="remediate">Remediate</button></div>
                   <p class="leads__why">Redact for sensitive files; Remediate for public-facing ones.</p>
                 </div>
               </div>
@@ -523,7 +524,7 @@
                 <div class="fact fact--powered"><p class="stage-panel__label">Powered by</p><p>Anacomp scanning services</p></div>
                 <div class="fact"><p class="stage-panel__label">Stands alone when</p><p>You have a paper backlog, a file-room closure or an electronic-records mandate to meet.</p></div>
                 <div class="fact"><p class="stage-panel__label">Leads to</p>
-                  <div class="leads"><button class="lead-chip" data-go="remediate">Remediate</button><button class="lead-chip" data-go="redact">Redact</button></div>
+                  <div class="leads" role="group" aria-label="Related stages"><button class="lead-chip" data-go="remediate">Remediate</button><button class="lead-chip" data-go="redact">Redact</button></div>
                   <p class="leads__why">Remediate, so scans become accessible data; Redact before anything is released.</p>
                 </div>
               </div>
@@ -544,7 +545,7 @@
                 <div class="fact fact--powered"><p class="stage-panel__label">Powered by</p><p>Hyperscience workflows, operated by Anacomp</p></div>
                 <div class="fact"><p class="stage-panel__label">Stands alone when</p><p>You face a records-request backlog, a litigation production or a data-sharing agreement.</p></div>
                 <div class="fact"><p class="stage-panel__label">Leads to</p>
-                  <div class="leads"><button class="lead-chip" data-go="release">Release</button><button class="lead-chip" data-go="remediate">Remediate</button></div>
+                  <div class="leads" role="group" aria-label="Related stages"><button class="lead-chip" data-go="release">Release</button><button class="lead-chip" data-go="remediate">Remediate</button></div>
                   <p class="leads__why">Release through the portal; Remediate so the redacted copy is also accessible.</p>
                 </div>
               </div>
@@ -565,7 +566,7 @@
                 <div class="fact fact--powered"><p class="stage-panel__label">Powered by</p><p>Anacomp ADA</p></div>
                 <div class="fact"><p class="stage-panel__label">Stands alone when</p><p>You have an accessibility audit, complaint or mandate and a library of untagged documents.</p></div>
                 <div class="fact"><p class="stage-panel__label">Leads to</p>
-                  <div class="leads"><button class="lead-chip" data-go="release">Release</button><button class="lead-chip" data-go="digitize">Digitize</button></div>
+                  <div class="leads" role="group" aria-label="Related stages"><button class="lead-chip" data-go="release">Release</button><button class="lead-chip" data-go="digitize">Digitize</button></div>
                   <p class="leads__why">Release, to deliver accessible copies; Digitize, for paper still outside the library.</p>
                 </div>
               </div>
@@ -590,7 +591,7 @@
                 <div class="fact fact--powered"><p class="stage-panel__label">Powered by</p><p>Anacomp portal with ID.me sign-in</p></div>
                 <div class="fact"><p class="stage-panel__label">Stands alone when</p><p>You need a request portal now and already have your own redaction or accessibility process.</p></div>
                 <div class="fact"><p class="stage-panel__label">Leads to</p>
-                  <div class="leads"><button class="lead-chip" data-go="digitize">Digitize</button><button class="lead-chip" data-go="redact">Redact</button><button class="lead-chip" data-go="remediate">Remediate</button></div>
+                  <div class="leads" role="group" aria-label="Related stages"><button class="lead-chip" data-go="digitize">Digitize</button><button class="lead-chip" data-go="redact">Redact</button><button class="lead-chip" data-go="remediate">Remediate</button></div>
                   <p class="leads__why">Every other stage: each request the portal takes in is work for them.</p>
                 </div>
               </div>
@@ -611,7 +612,7 @@
                 <div class="fact fact--powered"><p class="stage-panel__label">Powered by</p><p>Insignal, self-hosted in your own cloud</p></div>
                 <div class="fact"><p class="stage-panel__label">Stands alone when</p><p>Leaders need to report on records work, or want answers from data that ADA has extracted.</p></div>
                 <div class="fact"><p class="stage-panel__label">Leads to</p>
-                  <div class="leads"><button class="lead-chip" data-go="discover">Discover</button><button class="lead-chip" data-go="release">Release</button></div>
+                  <div class="leads" role="group" aria-label="Related stages"><button class="lead-chip" data-go="discover">Discover</button><button class="lead-chip" data-go="release">Release</button></div>
                   <p class="leads__why">Discover, to feed it the estate; Release, to measure every request.</p>
                 </div>
               </div>
@@ -672,7 +673,7 @@
       <h2>Two ways to buy</h2>
     </header>
     <div class="options">
-      <article class="option option--featured reveal">
+      <div class="option option--featured reveal">
         <p class="option__tag">Option A</p>
         <h3>The full pipeline</h3>
         <ul class="checks">
@@ -681,8 +682,8 @@
           <li>The portal is the public’s front door and the agency’s work queue</li>
         </ul>
         <p class="option__best"><span>Best for</span> Agencies with steady request volume and a mix of paper and digital records.</p>
-      </article>
-      <article class="option reveal">
+      </div>
+      <div class="option reveal">
         <p class="option__tag">Option B</p>
         <h3>Any stage on its own</h3>
         <ul class="checks">
@@ -691,7 +692,7 @@
           <li>Each stage’s output is the next stage’s input, so adding one later needs no rework</li>
         </ul>
         <p class="option__best"><span>Best for</span> Clients with one pressing problem, or with tools that already cover other stages.</p>
-      </article>
+      </div>
     </div>
   </div>
 </section>
@@ -725,90 +726,90 @@
 
           <tr>
             <th scope="row">Estate Assessment</th>
-            <td><span class="dot dot--on" style="transition-delay:0.00s" role="img" aria-label="Discover: included"></span></td>
-            <td><span class="dot" style="transition-delay:0.06s" role="img" aria-label="Digitize: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.12s" role="img" aria-label="Redact: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.18s" role="img" aria-label="Remediate: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.24s" role="img" aria-label="Release: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.30s" role="img" aria-label="Analyze: not included"></span></td>
-            <td><span class="dot dot--addon" style="transition-delay:0.36s" role="img" aria-label="Ask Chat: not included"></span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.00s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot" style="transition-delay:0.06s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.12s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.18s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.24s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.30s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--addon" style="transition-delay:0.36s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
             <td>Pre-migration or storage clean-up</td>
           </tr>
           <tr>
             <th scope="row">Records Insight</th>
-            <td><span class="dot dot--on" style="transition-delay:0.00s" role="img" aria-label="Discover: included"></span></td>
-            <td><span class="dot" style="transition-delay:0.06s" role="img" aria-label="Digitize: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.12s" role="img" aria-label="Redact: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.18s" role="img" aria-label="Remediate: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.24s" role="img" aria-label="Release: not included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.30s" role="img" aria-label="Analyze: included"></span></td>
-            <td><span class="dot dot--addon" style="transition-delay:0.36s" role="img" aria-label="Ask Chat: not included"></span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.00s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot" style="transition-delay:0.06s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.12s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.18s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.24s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.30s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot dot--addon" style="transition-delay:0.36s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
             <td>Leaders need ongoing estate reporting</td>
           </tr>
           <tr>
             <th scope="row">Safe Share</th>
-            <td><span class="dot dot--on" style="transition-delay:0.00s" role="img" aria-label="Discover: included"></span></td>
-            <td><span class="dot" style="transition-delay:0.06s" role="img" aria-label="Digitize: not included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.12s" role="img" aria-label="Redact: included"></span></td>
-            <td><span class="dot" style="transition-delay:0.18s" role="img" aria-label="Remediate: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.24s" role="img" aria-label="Release: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.30s" role="img" aria-label="Analyze: not included"></span></td>
-            <td><span class="dot dot--addon" style="transition-delay:0.36s" role="img" aria-label="Ask Chat: not included"></span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.00s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot" style="transition-delay:0.06s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.12s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot" style="transition-delay:0.18s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.24s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.30s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--addon" style="transition-delay:0.36s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
             <td>Removing PII before sharing or AI use</td>
           </tr>
           <tr>
             <th scope="row">Paper to Accessible</th>
-            <td><span class="dot" style="transition-delay:0.00s" role="img" aria-label="Discover: not included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.06s" role="img" aria-label="Digitize: included"></span></td>
-            <td><span class="dot" style="transition-delay:0.12s" role="img" aria-label="Redact: not included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.18s" role="img" aria-label="Remediate: included"></span></td>
-            <td><span class="dot" style="transition-delay:0.24s" role="img" aria-label="Release: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.30s" role="img" aria-label="Analyze: not included"></span></td>
-            <td><span class="dot dot--addon" style="transition-delay:0.36s" role="img" aria-label="Ask Chat: not included"></span></td>
+            <td><span class="dot" style="transition-delay:0.00s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.06s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot" style="transition-delay:0.12s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.18s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot" style="transition-delay:0.24s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.30s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--addon" style="transition-delay:0.36s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
             <td>File-room closure with an accessibility duty</td>
           </tr>
           <tr>
             <th scope="row">Request Response</th>
-            <td><span class="dot" style="transition-delay:0.00s" role="img" aria-label="Discover: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.06s" role="img" aria-label="Digitize: not included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.12s" role="img" aria-label="Redact: included"></span></td>
-            <td><span class="dot" style="transition-delay:0.18s" role="img" aria-label="Remediate: not included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.24s" role="img" aria-label="Release: included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.30s" role="img" aria-label="Analyze: included"></span></td>
-            <td><span class="dot dot--addon" style="transition-delay:0.36s" role="img" aria-label="Ask Chat: not included"></span></td>
+            <td><span class="dot" style="transition-delay:0.00s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.06s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.12s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot" style="transition-delay:0.18s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.24s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.30s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot dot--addon" style="transition-delay:0.36s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
             <td>A records-request backlog to clear and report on</td>
           </tr>
           <tr>
             <th scope="row">Accessible Release</th>
-            <td><span class="dot" style="transition-delay:0.00s" role="img" aria-label="Discover: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.06s" role="img" aria-label="Digitize: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.12s" role="img" aria-label="Redact: not included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.18s" role="img" aria-label="Remediate: included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.24s" role="img" aria-label="Release: included"></span></td>
-            <td><span class="dot" style="transition-delay:0.30s" role="img" aria-label="Analyze: not included"></span></td>
-            <td><span class="dot dot--addon" style="transition-delay:0.36s" role="img" aria-label="Ask Chat: not included"></span></td>
+            <td><span class="dot" style="transition-delay:0.00s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.06s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.12s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.18s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.24s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot" style="transition-delay:0.30s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--addon" style="transition-delay:0.36s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
             <td>Requests delivered in accessible form</td>
           </tr>
           <tr>
             <th scope="row">Accessible Answers</th>
-            <td><span class="dot" style="transition-delay:0.00s" role="img" aria-label="Discover: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.06s" role="img" aria-label="Digitize: not included"></span></td>
-            <td><span class="dot" style="transition-delay:0.12s" role="img" aria-label="Redact: not included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.18s" role="img" aria-label="Remediate: included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.24s" role="img" aria-label="Release: included"></span></td>
-            <td><span class="dot" style="transition-delay:0.30s" role="img" aria-label="Analyze: not included"></span></td>
-            <td><span class="dot dot--addon dot--on" style="transition-delay:0.36s" role="img" aria-label="Ask Chat: included"></span></td>
+            <td><span class="dot" style="transition-delay:0.00s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.06s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot" style="transition-delay:0.12s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.18s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.24s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot" style="transition-delay:0.30s" aria-hidden="true"></span><span class="visually-hidden">Not included</span></td>
+            <td><span class="dot dot--addon dot--on" style="transition-delay:0.36s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
             <td>Residents need answers from long documents, not just access</td>
           </tr>
           <tr class="featured">
             <th scope="row">Full Lifecycle <small>Complete</small></th>
-            <td><span class="dot dot--on" style="transition-delay:0.00s" role="img" aria-label="Discover: included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.06s" role="img" aria-label="Digitize: included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.12s" role="img" aria-label="Redact: included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.18s" role="img" aria-label="Remediate: included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.24s" role="img" aria-label="Release: included"></span></td>
-            <td><span class="dot dot--on" style="transition-delay:0.30s" role="img" aria-label="Analyze: included"></span></td>
-            <td><span class="dot dot--addon dot--on" style="transition-delay:0.36s" role="img" aria-label="Ask Chat: included"></span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.00s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.06s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.12s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.18s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.24s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot dot--on" style="transition-delay:0.30s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
+            <td><span class="dot dot--addon dot--on" style="transition-delay:0.36s" aria-hidden="true"></span><span class="visually-hidden">Included</span></td>
             <td>One vendor from paper intake to public release</td>
           </tr>
 <!-- /build:matrix -->
@@ -829,48 +830,48 @@
     <div class="quotes" id="quotes">
 <!-- build:quotes -->
 
-      <article class="quote reveal" style="--d:0s">
+      <div class="quote reveal" style="--d:0s">
         <blockquote>We’re moving to the cloud and don’t know what we have.</blockquote>
         <dl class="quote__path">
           <div class="start"><dt>Start with</dt><dd>Discover</dd></div>
           <div><dt>Then expand</dt><dd>Redact, Remediate</dd></div>
         </dl>
-      </article>
-      <article class="quote reveal" style="--d:0.08s">
+      </div>
+      <div class="quote reveal" style="--d:0.08s">
         <blockquote>We have to close the file room.</blockquote>
         <dl class="quote__path">
           <div class="start"><dt>Start with</dt><dd>Digitize</dd></div>
           <div><dt>Then expand</dt><dd>Remediate, Release</dd></div>
         </dl>
-      </article>
-      <article class="quote reveal" style="--d:0.16s">
+      </div>
+      <div class="quote reveal" style="--d:0.16s">
         <blockquote>We can’t keep up with records requests.</blockquote>
         <dl class="quote__path">
           <div class="start"><dt>Start with</dt><dd>Redact + Release</dd></div>
           <div><dt>Then expand</dt><dd>Discover, Digitize</dd></div>
         </dl>
-      </article>
-      <article class="quote reveal" style="--d:0s">
+      </div>
+      <div class="quote reveal" style="--d:0s">
         <blockquote>We were told our documents aren’t accessible.</blockquote>
         <dl class="quote__path">
           <div class="start"><dt>Start with</dt><dd>Remediate</dd></div>
           <div><dt>Then expand</dt><dd>Digitize, Release</dd></div>
         </dl>
-      </article>
-      <article class="quote reveal" style="--d:0.08s">
+      </div>
+      <div class="quote reveal" style="--d:0.08s">
         <blockquote>People need a secure way to ask for their records.</blockquote>
         <dl class="quote__path">
           <div class="start"><dt>Start with</dt><dd>Release</dd></div>
           <div><dt>Then expand</dt><dd>Redact, Remediate</dd></div>
         </dl>
-      </article>
-      <article class="quote reveal" style="--d:0.16s">
+      </div>
+      <div class="quote reveal" style="--d:0.16s">
         <blockquote>We can’t tell leadership where our backlog stands.</blockquote>
         <dl class="quote__path">
           <div class="start"><dt>Start with</dt><dd>Analyze</dd></div>
           <div><dt>Then expand</dt><dd>Discover, Release</dd></div>
         </dl>
-      </article>
+      </div>
 <!-- /build:quotes -->
     </div>
   </div>
@@ -887,54 +888,54 @@
     <div class="pricing" id="pricingGrid">
 <!-- build:pricing -->
 
-      <article class="price reveal" style="--d:0s">
+      <div class="price reveal" style="--d:0s">
         <h3 class="price__stage">Discover</h3>
         <p class="price__unit">Per terabyte scanned</p>
         <p class="price__shape">Fixed-fee assessment</p>
         
-      </article>
-      <article class="price reveal" style="--d:0.08s">
+      </div>
+      <div class="price reveal" style="--d:0.08s">
         <h3 class="price__stage">Digitize</h3>
         <p class="price__unit">Per image, by document type</p>
         <p class="price__shape">Backlog project or day-forward service</p>
         
-      </article>
-      <article class="price reveal" style="--d:0.16s">
+      </div>
+      <div class="price reveal" style="--d:0.16s">
         <h3 class="price__stage">Redact</h3>
         <p class="price__unit">Per page, by review depth</p>
         <p class="price__shape">Backlog project or per-request service</p>
         
-      </article>
-      <article class="price reveal" style="--d:0s">
+      </div>
+      <div class="price reveal" style="--d:0s">
         <h3 class="price__stage">Remediate</h3>
         <p class="price__unit">Per page, by complexity</p>
         <p class="price__shape">Backlog project, then subscription</p>
         
-      </article>
-      <article class="price reveal" style="--d:0.08s">
+      </div>
+      <div class="price reveal" style="--d:0.08s">
         <h3 class="price__stage">Release</h3>
         <p class="price__unit">Annual fee plus request tiers</p>
         <p class="price__shape">Subscription per agency</p>
         
-      </article>
-      <article class="price reveal" style="--d:0.16s">
+      </div>
+      <div class="price reveal" style="--d:0.16s">
         <h3 class="price__stage">Analyze</h3>
         <p class="price__unit">Per seat, self-hosted licence</p>
         <p class="price__shape">Annual subscription</p>
         
-      </article>
-      <article class="price reveal price--addon" style="--d:0s">
+      </div>
+      <div class="price reveal price--addon" style="--d:0s">
         <h3 class="price__stage">Ask the Document</h3>
         <p class="price__unit">Annual fee per site, plus conversation tiers</p>
         <p class="price__shape">Add-on subscription to Remediate</p>
         <span class="price__badge">Optional add-on</span>
-      </article>
-      <article class="price reveal price--full" style="--d:0.08s">
+      </div>
+      <div class="price reveal price--full" style="--d:0.08s">
         <h3 class="price__stage">Full pipeline</h3>
         <p class="price__unit">Annual fee plus page volume</p>
         <p class="price__shape">Multi-year managed service</p>
         <span class="price__badge">Best value</span>
-      </article>
+      </div>
 <!-- /build:pricing -->
     </div>
     <p class="pricing__foot reveal">Pricing is tailored to each engagement. <a href="/contact?topic=pricing">Talk to us about a quote <span aria-hidden="true">→</span></a></p>
@@ -949,21 +950,21 @@
       <h2>Why one vendor for the whole chain</h2>
     </header>
     <div class="pillars">
-      <article class="pillar reveal">
+      <div class="pillar reveal">
         <span class="pillar__num">01</span>
         <h3>One chain of custody</h3>
         <p>Records pass from scan to release inside one provider, with no hand-offs between vendors to secure.</p>
-      </article>
-      <article class="pillar reveal">
+      </div>
+      <div class="pillar reveal">
         <span class="pillar__num">02</span>
         <h3>One accountable team</h3>
         <p>Anacomp operates every stage, so quality and turnaround have a single owner.</p>
-      </article>
-      <article class="pillar reveal">
+      </div>
+      <div class="pillar reveal">
         <span class="pillar__num">03</span>
         <h3>Proven engines inside</h3>
         <p>Congruity360, Hyperscience, ID.me, Botcopy and Insignal each do one job well; Anacomp integrates and runs them.</p>
-      </article>
+      </div>
     </div>
 
     <!-- TODO: fill in real figures, then uncomment.
@@ -997,21 +998,21 @@
       <p class="section__lede">See the whole pipeline work on your own records before you commit to anything.</p>
     </header>
     <div class="weeks">
-      <article class="week reveal">
+      <div class="week reveal">
         <p class="week__when">Week 1</p>
         <h3>Scan one repository</h3>
         <p>Discover reports file counts, sizes and duplicates for a repository you choose.</p>
-      </article>
-      <article class="week reveal">
+      </div>
+      <div class="week reveal">
         <p class="week__when">Weeks 2–3</p>
         <h3>Process a sample set</h3>
         <p>A sample set of pages runs through Redact and Remediate and comes back for your review.</p>
-      </article>
-      <article class="week reveal">
+      </div>
+      <div class="week reveal">
         <p class="week__when">Week 4</p>
         <h3>Walk one request through</h3>
         <p>A portal sandbox shows a request from ID.me sign-in to release, with the pilot reported in Insignal.</p>
-      </article>
+      </div>
     </div>
     <div class="pilot__cta reveal">
       <p>The pilot ends with a scoped proposal: the full pipeline, or the stages that proved their value.</p>

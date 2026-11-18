@@ -150,7 +150,7 @@ function stages() {
                 <div class="fact fact--powered"><p class="stage-panel__label">Powered by</p><p>${esc(s.powered)}</p></div>
                 <div class="fact"><p class="stage-panel__label">Stands alone when</p><p>${esc(s.alone)}</p></div>
                 <div class="fact"><p class="stage-panel__label">Leads to</p>
-                  <div class="leads">${s.leads.map(l => `<button class="lead-chip" data-go="${l}">${byId[l].name}</button>`).join("")}</div>
+                  <div class="leads" role="group" aria-label="Related stages">${s.leads.map(l => `<button class="lead-chip" data-go="${l}">${byId[l].name}</button>`).join("")}</div>
                   <p class="leads__why">${esc(s.leadsWhy)}</p>
                 </div>
               </div>
@@ -172,28 +172,28 @@ const matrixRows = () => PACKAGES.map(p => `
             <th scope="row">${p.name}${p.featured ? " <small>Complete</small>" : ""}</th>
             ${ORDER.map((id, i) => {
               const on = p.stages.includes(id);
-              return `<td><span class="dot${on ? " dot--on" : ""}" style="transition-delay:${(i * 0.06).toFixed(2)}s" role="img" aria-label="${byId[id].name}: ${on ? "included" : "not included"}"></span></td>`;
+              return `<td><span class="dot${on ? " dot--on" : ""}" style="transition-delay:${(i * 0.06).toFixed(2)}s" aria-hidden="true"></span><span class="visually-hidden">${on ? "Included" : "Not included"}</span></td>`;
             }).join("\n            ")}
-            <td><span class="dot dot--addon${p.addon ? " dot--on" : ""}" style="transition-delay:${(ORDER.length * 0.06).toFixed(2)}s" role="img" aria-label="Ask Chat: ${p.addon ? "included" : "not included"}"></span></td>
+            <td><span class="dot dot--addon${p.addon ? " dot--on" : ""}" style="transition-delay:${(ORDER.length * 0.06).toFixed(2)}s" aria-hidden="true"></span><span class="visually-hidden">${p.addon ? "Included" : "Not included"}</span></td>
             <td>${esc(p.trigger)}</td>
           </tr>`).join("");
 
 const quotes = () => QUOTES.map((q, i) => `
-      <article class="quote reveal" style="--d:${(i % 3) * 0.08}s">
+      <div class="quote reveal" style="--d:${(i % 3) * 0.08}s">
         <blockquote>${esc(q.q)}</blockquote>
         <dl class="quote__path">
           <div class="start"><dt>Start with</dt><dd>${q.start}</dd></div>
           <div><dt>Then expand</dt><dd>${q.then}</dd></div>
         </dl>
-      </article>`).join("");
+      </div>`).join("");
 
 const pricing = () => PRICING.map((p, i) => `
-      <article class="price reveal${p.full ? " price--full" : ""}${p.addon ? " price--addon" : ""}" style="--d:${(i % 3) * 0.08}s">
+      <div class="price reveal${p.full ? " price--full" : ""}${p.addon ? " price--addon" : ""}" style="--d:${(i % 3) * 0.08}s">
         <h3 class="price__stage">${p.stage}</h3>
         <p class="price__unit">${p.unit}</p>
         <p class="price__shape">${p.shape}</p>
         ${p.full ? '<span class="price__badge">Best value</span>' : ""}${p.addon ? '<span class="price__badge">Optional add-on</span>' : ""}
-      </article>`).join("");
+      </div>`).join("");
 
 /* ------------------------------------------------------------------ structured data */
 const ORG_ID = SITE.origin + "/#organization";
@@ -391,7 +391,7 @@ function toMarkdown(html) {
     .replace(/<blockquote[^>]*>/g, "\n\n> ").replace(/<\/blockquote>/g, "\n\n")
     .replace(/<dt[^>]*>([\s\S]*?)<\/dt>\s*<dd[^>]*>([\s\S]*?)<\/dd>/g, "\n- $1: $2")
     .replace(/<tr[^>]*>/g, "\n|").replace(/<\/t[hd]>/g, " |")
-    .replace(/<td[^>]*>\s*<span class="dot[^"]*"[^>]*aria-label="[^:"]+: (included|not included)"[^>]*><\/span>/g, (m, v) => (v === "included" ? " ✓" : " –"))
+    .replace(/<td[^>]*>\s*<span class="visually-hidden">(Included|Not included)<\/span>/g, (m, v) => (v === "Included" ? " ✓" : " –"))
     .replace(/<a [^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g, (m, href, text) => {
       const t = text.replace(/<[^>]+>/g, "").trim();
       if (!t) return "";
