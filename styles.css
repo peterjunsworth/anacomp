@@ -648,3 +648,10 @@ h2.footer__head { line-height: inherit; }
 /* Pre-rendered stage panels: one visible at a time; without JS every stage is shown */
 .stage-panels { min-width: 0; }
 html:not(.js) .stage-panel[hidden] { display: block; margin-top: 24px; }
+
+/* Footer social profile links */
+.footer__social { display: flex; gap: 10px; margin-top: 22px; }
+.footer__social a { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: rgba(255,255,255,.08); color: #fff; transition: background .2s; }
+.footer__social a:hover { background: var(--orange-ink); }
+.footer__social a:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+.footer__social svg { width: 18px; height: 18px; fill: currentColor; }

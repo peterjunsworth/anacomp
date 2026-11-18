@@ -186,14 +186,19 @@
     if (b.dataset.share === "copy") {
       try {
         await navigator.clipboard.writeText(url);
-        b.textContent = "Link copied";
+        const label = b.querySelector("span") || b;
+        label.textContent = "Link copied";
         announce("Link copied to clipboard.");
-        setTimeout(() => { b.textContent = "Copy link"; }, 3000);
+        setTimeout(() => { label.textContent = "Copy link"; }, 3000);
       } catch {
         announce("Couldn’t copy the link. Copy it from your browser’s address bar instead.");
       }
     } else if (b.dataset.share === "linkedin") {
       window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, "_blank", "noopener");
+    } else if (b.dataset.share === "x") {
+      window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(document.title)}`, "_blank", "noopener");
+    } else if (b.dataset.share === "facebook") {
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, "_blank", "noopener");
     } else if (b.dataset.share === "email") {
       location.href = `mailto:?subject=${encodeURIComponent(document.title)}&body=${encodeURIComponent(url)}`;
     }

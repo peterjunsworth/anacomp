@@ -1,0 +1,29 @@
+{
+  "name": "Anacomp",
+  "short_name": "Anacomp",
+  "description": "Anacomp runs one information lifecycle pipeline for public agencies: records discovery, document scanning and digitization, PII redaction, Section 508 and ADA accessibility remediation, and an identity-verified public records portal, with Insignal analytics across every stage.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "lang": "en-US",
+  "theme_color": "#0F2238",
+  "background_color": "#0F2238",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

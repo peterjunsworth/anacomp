@@ -12,6 +12,14 @@ export const SITE = {
   ogImage: "/assets/og/anacomp-og.png",
   ogImageAlt: "Anacomp Information Lifecycle: from raw records to public release",
   themeColor: "#0F2238",
+  twitter: "@AnacompInc",
+  /* Official profiles (from the previous anacomp.com footer): footer icons + Organization.sameAs */
+  social: [
+    { id: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/company/anacomp" },
+    { id: "x", label: "X (Twitter)", url: "https://twitter.com/AnacompInc" },
+    { id: "facebook", label: "Facebook", url: "https://www.facebook.com/AnacompInc/" },
+    { id: "youtube", label: "YouTube", url: "https://www.youtube.com/channel/UCqIiRb7JMq2vzk-8JLFneQA" }
+  ],
   locale: "en_US",
   knowsAbout: [
     "Records management", "Data discovery", "Document scanning and digitization", "Intelligent document processing",

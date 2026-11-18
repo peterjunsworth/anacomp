@@ -11,6 +11,8 @@ Static marketing site for Anacomp (public-sector records: Discover, Digitize, Re
 - JS (`layout.js`, `home.js`, `pages.js`) only adds behaviour to pre-rendered HTML. Never render content with JS.
 - CSS and JS get content-hash `?v=` stamps automatically. Don't add version numbers by hand.
 - Links are root-absolute and clean: `/team`, `/contact?topic=pilot`, `/assets/...`. Never use `.html` in links.
+- **Icons:** `assets/favicon.svg` is the master. The PNG/ICO sizes are rendered from it: `/favicon.ico` (16/32/48), `/apple-touch-icon.png` (180), and `assets/icons/icon-{48,192,512}.png` plus `icon-maskable-512.png`. The build writes `site.webmanifest`.
+- **Social:** the official profiles live in `SITE.social` in `build/content.mjs`. They feed the footer icons, `Organization.sameAs` and `twitter:site`. Article share buttons come from `shareBlock()` in the build, with their behaviour in `pages.js`.
 
 ## Adding a page
 

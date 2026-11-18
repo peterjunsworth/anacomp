@@ -26,6 +26,27 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const version = f => createHash("md5").update(read(f)).digest("hex").slice(0, 8);
 const V = Object.fromEntries(["styles.css", "pages.css", "layout.js", "home.js", "pages.js"].map(f => [f, version(f)]));
 
+/* ------------------------------------------------------------------ icons */
+const ICONS = {
+  linkedin: '<path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/>',
+  x: '<path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.78zm-1.08 16.18h1.7L7.4 4.73H5.58z"/>',
+  facebook: '<path d="M13.5 21v-7.5h2.5l.38-2.9H13.5V8.75c0-.84.23-1.4 1.44-1.4h1.54V4.76a20.6 20.6 0 0 0-2.24-.16c-2.22 0-3.74 1.36-3.74 3.85v2.15H8v2.9h2.5V21z"/>',
+  youtube: '<path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.27 5 12 5 12 5s-6.27 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.73 19 12 19 12 19s6.27 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/>',
+  copy: '<path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+  email: '<path d="M3 5.5h18v13H3zM3.5 6l8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'
+};
+const icon = id => `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONS[id]}</svg>`;
+
+/* Article share buttons (behaviour in pages.js) */
+const shareBlock = () => `<div class="share">
+        <p>Share</p>
+        <button data-share="copy">${icon("copy")}<span>Copy link</span></button>
+        <button data-share="linkedin">${icon("linkedin")}<span>LinkedIn</span><span class="visually-hidden"> (opens in a new window)</span></button>
+        <button data-share="x">${icon("x")}<span>X</span><span class="visually-hidden"> (opens in a new window)</span></button>
+        <button data-share="facebook">${icon("facebook")}<span>Facebook</span><span class="visually-hidden"> (opens in a new window)</span></button>
+        <button data-share="email">${icon("email")}<span>Email</span></button>
+      </div>`;
+
 /* ------------------------------------------------------------------ header / footer */
 function header(page) {
   const cur = page.navCurrent || "page";
@@ -97,6 +118,9 @@ function footer() {
         <img src="/assets/anacomp-logo-white.png" alt="Anacomp" width="122" height="40">
         <p>One information lifecycle pipeline: from raw records to public release.</p>
         <a href="/contact?topic=pilot" class="btn btn--accent btn--sm">Book a pilot <span aria-hidden="true">→</span></a>
+        <ul class="footer__social" aria-label="Anacomp on social media">
+          ${SITE.social.map(s => `<li><a href="${s.url}" rel="me noopener" aria-label="Anacomp on ${s.label}">${icon(s.id)}</a></li>`).join("\n          ")}
+        </ul>
       </div>
       <nav class="footer__nav" aria-label="Footer">
         <div class="footer__col">
@@ -207,6 +231,7 @@ function organization() {
     image: abs(SITE.ogImage),
     description: SITE.description,
     slogan: SITE.tagline,
+    sameAs: SITE.social.map(s => s.url),
     knowsAbout: SITE.knowsAbout,
     contactPoint: { "@type": "ContactPoint", contactType: "sales", url: abs("/contact"), availableLanguage: "English" },
     hasOfferCatalog: {
@@ -317,7 +342,11 @@ function head(page, html) {
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">`}
   <meta name="theme-color" content="${SITE.themeColor}">
   <meta name="author" content="${SITE.legalName}">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="Anacomp site summary for AI agents (llms.txt)">
   <meta property="og:site_name" content="${SITE.name}">
   <meta property="og:type" content="${ogType}">
@@ -332,6 +361,7 @@ function head(page, html) {
   <meta property="article:published_time" content="${page.article.datePublished}">
   <meta property="article:section" content="${esc(page.article.section)}">` : ""}
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="${SITE.twitter}">
   <meta name="twitter:title" content="${esc(page.title)}">
   <meta name="twitter:description" content="${esc(page.description)}">
   <meta name="twitter:image" content="${img}">
@@ -488,12 +518,7 @@ ${n.body.trim().split("\n").map(l => "      " + l.trim()).join("\n")}
       <p><a href="/news">Back to all news <span aria-hidden="true">→</span></a></p>
     </div>
     <aside class="article__aside">
-      <div class="share">
-        <p>Share</p>
-        <button data-share="copy">Copy link</button>
-        <button data-share="linkedin">LinkedIn<span class="visually-hidden"> (opens in a new window)</span></button>
-        <button data-share="email">Email</button>
-      </div>
+      ${shareBlock()}
     </aside>
   </article>
 
@@ -547,6 +572,7 @@ for (const page of ALL_PAGES) {
   let html = read(page.file);
   html = region(html, "header", header(page), page.file);
   html = region(html, "footer", footer(), page.file);
+  if (page.article) html = html.replace(/<div class="share">[\s\S]*?<\/div>/, shareBlock());
   if (page.path === "/news") {
     html = region(html, "news-filters", newsFilters(), page.file);
     html = region(html, "news", newsCards(), page.file);
@@ -564,6 +590,18 @@ for (const page of ALL_PAGES) {
 }
 
 /* robots.txt — everyone, including AI search and assistant crawlers, is welcome */
+/* Web app manifest (install / home-screen icon, theme colour) */
+write("site.webmanifest", JSON.stringify({
+  name: SITE.name, short_name: SITE.name, description: SITE.description,
+  start_url: "/", scope: "/", display: "browser", lang: "en-US",
+  theme_color: SITE.themeColor, background_color: SITE.themeColor,
+  icons: [
+    { src: "/assets/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+    { src: "/assets/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+    { src: "/assets/icons/icon-maskable-512.png", sizes: "512x512", type: "image/png", purpose: "maskable" }
+  ]
+}, null, 2) + "\n");
+
 write("robots.txt", `# Anacomp — ${SITE.origin}
 # All crawlers are welcome, including AI search and assistant agents.
 User-agent: *

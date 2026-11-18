@@ -344,3 +344,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--o
   .sectors--3 { grid-template-columns: repeat(2, 1fr); }
   .creds { grid-template-columns: 1fr; }
 }
+
+/* Share buttons with icons */
+.share button { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; }
+.share button svg { width: 16px; height: 16px; flex: none; fill: currentColor; }
