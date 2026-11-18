@@ -4,6 +4,14 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
+  /* ---------- Screen-reader announcements (WCAG 4.1.3) ----------
+     One status region that exists from page load; filling it later is reliably announced. */
+  const live = document.createElement("div");
+  live.className = "visually-hidden";
+  live.setAttribute("role", "status");
+  document.body.appendChild(live);
+  const announce = msg => { live.textContent = ""; setTimeout(() => { live.textContent = msg; }, 60); };
+
   /* ---------- Sticky sub-nav: highlight the section in view ---------- */
   const subLinks = $$(".subnav a[href^='#']");
   if (subLinks.length) {
@@ -20,12 +28,20 @@
   /* ---------- Filter chips (case studies, news) ---------- */
   $$("[data-filter-group]").forEach(group => {
     const items = $$(group.dataset.filterGroup);
+    // Visible result count, announced politely when a filter changes
+    const count = document.createElement("p");
+    count.className = "filter-count";
+    count.setAttribute("aria-live", "polite");
+    count.textContent = `Showing all ${items.length}`;
+    group.after(count);
     group.addEventListener("click", e => {
       const chip = e.target.closest(".chip");
       if (!chip) return;
       $$(".chip", group).forEach(c => c.setAttribute("aria-pressed", c === chip));
       const f = chip.dataset.filter;
       items.forEach(it => { it.hidden = f !== "all" && !(it.dataset.tags || "").split(" ").includes(f); });
+      const shown = items.filter(it => !it.hidden).length;
+      count.textContent = f === "all" ? `Showing all ${items.length}` : `Showing ${shown} of ${items.length}: ${chip.textContent.trim()}`;
     });
   });
 
@@ -83,6 +99,19 @@
       form.querySelector("#f-msg").value = "I'd like to share a review of working with Anacomp:\n\n";
     } else if (topic) { const r = form.querySelector(`input[name="topic"][value="${CSS.escape(topic)}"]`); if (r) r.checked = true; }
 
+    // Tie each error message to its field so it's read with the field (WCAG 1.3.1 / 3.3.1)
+    $$(".field__err", form).forEach(err => {
+      const input = err.closest(".field").querySelector("input, textarea, select");
+      if (!input) return;
+      err.id = err.id || `${input.id}-err`;
+      input.setAttribute("aria-describedby", err.id);
+    });
+    const MESSAGES = {
+      name: "Enter your full name.",
+      email: "Enter your work email address.",
+      org: "Enter your organization’s name.",
+      message: "Tell us briefly what you’re facing."
+    };
     const setErr = (field, msg) => {
       const wrap = field.closest(".field");
       wrap.classList.toggle("invalid", !!msg);
@@ -95,8 +124,8 @@
       let first = null;
       $$("[required]", form).forEach(f => {
         let msg = "";
-        if (!f.value.trim()) msg = "Please fill this in.";
-        else if (f.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value)) msg = "Please enter a valid email address.";
+        if (!f.value.trim()) msg = MESSAGES[f.name] || "This field is required.";
+        else if (f.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value)) msg = "Enter an email address like name@agency.gov.";
         setErr(f, msg);
         if (msg && !first) first = f;
       });
@@ -111,31 +140,58 @@
       ].join("\n");
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(topicLabel + " — " + d.get("org"))}&body=${encodeURIComponent(body)}`;
       form.innerHTML = `
-        <div class="form-success" role="status">
+        <div class="form-success">
           <div class="tick" aria-hidden="true">✓</div>
-          <h2>Your message is ready to send</h2>
+          <h2 tabindex="-1">Your message is ready to send</h2>
           <p>We’ve opened your email app with everything pre-filled. Hit send and our team will reply within one business day.</p>
           <p style="margin-top:14px">Email app didn’t open? Write to <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>.</p>
         </div>`;
+      // The submit button no longer exists: put focus on the confirmation instead of losing it
+      form.querySelector("h2").focus();
+      announce("Your message is ready to send. Your email app has opened with it pre-filled.");
     });
     form.addEventListener("input", e => { if (e.target.closest(".field.invalid")) setErr(e.target, ""); });
   }
 
   /* ---------- Newsletter (mailto until a list provider is connected) ---------- */
   const nl = $("#newsletterForm");
-  if (nl) nl.addEventListener("submit", e => {
-    e.preventDefault();
-    const email = nl.querySelector("input").value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { nl.querySelector("input").focus(); return; }
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Subscribe me to Anacomp updates")}&body=${encodeURIComponent("Please add " + email + " to the Anacomp updates list.")}`;
-    nl.innerHTML = `<p role="status"><strong>Almost there.</strong> Send the email that just opened to confirm your subscription.</p>`;
-  });
+  if (nl) {
+    const nlInput = nl.querySelector("input");
+    const nlErr = document.createElement("p");
+    nlErr.className = "field__err nl-err";
+    nlErr.id = "nl-err";
+    nl.after(nlErr);
+    nlInput.setAttribute("aria-describedby", "nl-err");
+    nlInput.addEventListener("input", () => { nlErr.textContent = ""; nlInput.removeAttribute("aria-invalid"); });
+    nl.addEventListener("submit", e => {
+      e.preventDefault();
+      const email = nlInput.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        nlErr.textContent = email ? "Enter an email address like name@agency.gov." : "Enter your email address to subscribe.";
+        nlInput.setAttribute("aria-invalid", "true");
+        nlInput.focus();
+        return;
+      }
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Subscribe me to Anacomp updates")}&body=${encodeURIComponent("Please add " + email + " to the Anacomp updates list.")}`;
+      nlErr.textContent = "";
+      nl.innerHTML = `<p tabindex="-1"><strong>Almost there.</strong> Send the email that just opened to confirm your subscription.</p>`;
+      nl.querySelector("p").focus();
+      announce("Almost there. Send the email that just opened to confirm your subscription.");
+    });
+  }
 
   /* ---------- Article share ---------- */
   $$("[data-share]").forEach(b => b.addEventListener("click", async () => {
     const url = location.href;
     if (b.dataset.share === "copy") {
-      try { await navigator.clipboard.writeText(url); b.textContent = "Link copied ✓"; } catch { b.textContent = url; }
+      try {
+        await navigator.clipboard.writeText(url);
+        b.textContent = "Link copied";
+        announce("Link copied to clipboard.");
+        setTimeout(() => { b.textContent = "Copy link"; }, 3000);
+      } catch {
+        announce("Couldn’t copy the link. Copy it from your browser’s address bar instead.");
+      }
     } else if (b.dataset.share === "linkedin") {
       window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, "_blank", "noopener");
     } else if (b.dataset.share === "email") {

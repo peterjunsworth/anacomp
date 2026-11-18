@@ -9,14 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=17">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- ============ NAV ============ -->
 <header id="nav" data-page="home"></header>
-<script src="layout.js?v=16"></script>
+<script src="layout.js?v=17"></script>
 
 <main id="main">
 
@@ -50,8 +50,7 @@
           <line x1="500" y1="128" x2="500" y2="140"/><line x1="700" y1="128" x2="700" y2="140"/>
           <line x1="900" y1="128" x2="900" y2="140"/>
         </g>
-        <circle r="6" class="flow__pulse"><animateMotion dur="5s" repeatCount="indefinite" path="M100 60 H900"/></circle>
-        <circle r="6" class="flow__pulse flow__pulse--2"><animateMotion dur="5s" begin="2.5s" repeatCount="indefinite" path="M100 60 H900"/></circle>
+        <circle r="6" class="flow__pulse"><animateMotion dur="5s" repeatCount="1" fill="freeze" path="M100 60 H900"/></circle>
       </svg>
       <ol class="flow__nodes">
         <li style="--i:0"><span class="flow__dot">01</span><span class="flow__label">Discover</span></li>
@@ -123,7 +122,7 @@
       <div class="stages__tabs" role="tablist" aria-label="Pipeline stages" id="stageTabs">
         <!-- populated by main.js -->
       </div>
-      <div class="stage-panel" id="stagePanel" role="tabpanel" tabindex="0" aria-live="polite">
+      <div class="stage-panel" id="stagePanel" role="tabpanel">
         <!-- populated by main.js -->
       </div>
     </div>
@@ -210,8 +209,9 @@
       <h2>Eight packages built from six services and one add-on</h2>
       <p class="section__lede">Pick the package that matches the moment, or assemble the whole lifecycle.</p>
     </header>
-    <div class="matrix-wrap reveal">
+    <div class="matrix-wrap reveal" tabindex="0" role="region" aria-label="Packages table (scrolls sideways)">
       <table class="matrix">
+        <caption class="visually-hidden">Packages and the stages each one includes</caption>
         <thead>
           <tr>
             <th scope="col">Package</th>
@@ -289,7 +289,7 @@
     </div>
     -->
 
-    <div class="engines reveal" aria-label="Technology inside the pipeline">
+    <div class="engines reveal">
       <p class="engines__label">Engines inside the pipeline</p>
       <ul>
         <li><strong>Congruity360</strong><span>Discover</span></li>
@@ -339,6 +339,6 @@
 
 <footer id="site-footer"></footer>
 
-<script src="home.js?v=16"></script>
+<script src="home.js?v=17"></script>
 </body>
 </html>

@@ -9,20 +9,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=16">
-  <link rel="stylesheet" href="pages.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="pages.css?v=17">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header id="nav" data-page="news"></header>
-<script src="layout.js?v=16"></script>
+<script src="layout.js?v=17"></script>
 
 <main id="main">
   <section class="page-hero dark">
     <div class="hero__grid" aria-hidden="true"></div>
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="wrap">
-      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>News</span></nav>
+      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">News</span></nav>
       <p class="eyebrow reveal">News &amp; articles</p>
       <h1 class="reveal">Notes from the records lifecycle.</h1>
       <p class="page-hero__lede reveal">Announcements from Anacomp, plus practical guides on discovery, redaction, accessibility and public records requests.</p>
@@ -37,7 +37,7 @@
           <div class="post-meta"><span class="tag">Announcement</span><time datetime="2026-11">November 2026</time><span>· 4 min read</span></div>
           <h2>Introducing the Anacomp Information Lifecycle</h2>
           <p>One pipeline from raw records to public release: Discover, Digitize, Redact, Remediate and Release, with Insignal analytics across every stage.</p>
-          <span class="read-more">Read the announcement →</span>
+          <span class="read-more">Read the announcement <span aria-hidden="true">→</span></span>
         </div>
       </a>
 
@@ -117,7 +117,7 @@
           <p>A short monthly note on records, redaction and accessibility. No spam, unsubscribe anytime.</p>
         </div>
         <form class="inline-form" id="newsletterForm" novalidate>
-          <label for="nlEmail" class="visually-hidden" style="position:absolute;left:-9999px">Work email</label>
+          <label for="nlEmail" class="visually-hidden">Work email</label>
           <input type="email" id="nlEmail" placeholder="Your work email" autocomplete="email" required>
           <button class="btn btn--accent" type="submit">Subscribe</button>
         </form>
@@ -127,6 +127,6 @@
 </main>
 
 <footer id="site-footer"></footer>
-<script src="pages.js?v=16"></script>
+<script src="pages.js?v=17"></script>
 </body>
 </html>

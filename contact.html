@@ -9,20 +9,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=16">
-  <link rel="stylesheet" href="pages.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="pages.css?v=17">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header id="nav" data-page="contact"></header>
-<script src="layout.js?v=16"></script>
+<script src="layout.js?v=17"></script>
 
 <main id="main">
   <section class="page-hero dark" style="padding-bottom:190px">
     <div class="hero__grid" aria-hidden="true"></div>
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="wrap">
-      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Contact</span></nav>
+      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Contact</span></nav>
       <p class="eyebrow reveal">Contact</p>
       <h1 class="reveal">Let’s talk about your records.</h1>
       <p class="page-hero__lede reveal">Book a pilot, get pricing for a stage, or just tell us where it hurts. A real person replies within one business day.</p>
@@ -39,28 +39,28 @@
           <fieldset class="topic-picker">
             <legend>What can we help with?</legend>
             <input type="radio" name="topic" id="t-pilot" value="pilot" data-label="30-day pilot" checked>
-            <label for="t-pilot"><strong>Book a pilot</strong>30 days on your records</label>
+            <label for="t-pilot"><strong>Book a pilot</strong> 30 days on your records</label>
             <input type="radio" name="topic" id="t-pricing" value="pricing" data-label="Pricing request">
-            <label for="t-pricing"><strong>Get pricing</strong>For a stage or package</label>
+            <label for="t-pricing"><strong>Get pricing</strong> For a stage or package</label>
             <input type="radio" name="topic" id="t-general" value="general" data-label="General enquiry">
-            <label for="t-general"><strong>Something else</strong>Partners, press, reviews</label>
+            <label for="t-general"><strong>Something else</strong> Partners, press, reviews</label>
           </fieldset>
 
           <div class="fields">
             <div class="field">
               <label for="f-name">Full name</label>
               <input type="text" id="f-name" name="name" autocomplete="name" required>
-              <span class="field__err" aria-live="polite"></span>
+              <span class="field__err"></span>
             </div>
             <div class="field">
               <label for="f-email">Work email</label>
               <input type="email" id="f-email" name="email" autocomplete="email" required>
-              <span class="field__err" aria-live="polite"></span>
+              <span class="field__err"></span>
             </div>
             <div class="field">
               <label for="f-org">Organization</label>
               <input type="text" id="f-org" name="org" autocomplete="organization" required>
-              <span class="field__err" aria-live="polite"></span>
+              <span class="field__err"></span>
             </div>
             <div class="field">
               <label for="f-role">Role <span>(optional)</span></label>
@@ -86,12 +86,12 @@
             <div class="field field--full">
               <label for="f-msg">Tell us what you’re facing</label>
               <textarea id="f-msg" name="message" placeholder="For example: a records-request backlog, a file-room closure, an accessibility audit…" required></textarea>
-              <span class="field__err" aria-live="polite"></span>
+              <span class="field__err"></span>
             </div>
           </div>
 
           <div class="form-foot">
-            <small>We only use your details to reply to this message.</small>
+            <small>We only use your details to reply to this message. Sending opens your email app with the message ready to go.</small>
             <button type="submit" class="btn btn--accent">Send message <span aria-hidden="true">→</span></button>
           </div>
         </form>
@@ -156,6 +156,6 @@
 </main>
 
 <footer id="site-footer"></footer>
-<script src="pages.js?v=16"></script>
+<script src="pages.js?v=17"></script>
 </body>
 </html>

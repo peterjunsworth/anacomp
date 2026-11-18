@@ -105,6 +105,8 @@
   ];
 
   const $ = (s, el = document) => el.querySelector(s);
+  const reduceMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const scrollBehavior = () => (reduceMotion() ? "auto" : "smooth");
   const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
   /* ---------------- Pipeline tabs ---------------- */
@@ -115,9 +117,14 @@
     <button class="stage-tab${s.id === "analyze" ? " stage-tab--analyze" : ""}" role="tab" id="tab-${s.id}"
       aria-controls="stagePanel" aria-selected="false" tabindex="-1" data-id="${s.id}">
       <span class="stage-tab__num">${s.num}</span>
-      <span><span class="stage-tab__name">${s.name}</span><span class="stage-tab__by">${esc(s.powered)}</span></span>
+      <span><span class="stage-tab__name">${s.name}</span> <span class="stage-tab__by">${esc(s.powered)}</span></span>
     </button>`).join("");
   const tabs = [...tabsEl.querySelectorAll(".stage-tab")];
+  // Tabs stack vertically on wide screens and scroll horizontally on narrow ones
+  const orientMq = window.matchMedia("(max-width: 1080px)");
+  const setOrientation = () => tabsEl.setAttribute("aria-orientation", orientMq.matches ? "horizontal" : "vertical");
+  setOrientation();
+  orientMq.addEventListener("change", setOrientation);
 
   function selectStage(id, focus = false) {
     const s = byId[id];
@@ -127,7 +134,7 @@
       t.tabIndex = on ? 0 : -1;
       if (on && focus) t.focus();
       if (on && window.matchMedia("(max-width: 1080px)").matches) {
-        t.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+        t.scrollIntoView({ block: "nearest", inline: "center", behavior: scrollBehavior() });
       }
     });
     panelEl.setAttribute("aria-labelledby", `tab-${id}`);
@@ -178,7 +185,7 @@
     if (!c) return;
     selectStage(c.dataset.go, true);
     if (window.matchMedia("(max-width: 1080px)").matches) {
-      tabsEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      tabsEl.scrollIntoView({ behavior: scrollBehavior(), block: "start" });
     }
   });
   selectStage("discover");
@@ -193,7 +200,7 @@
           role="img" aria-label="${byId[id].name}: ${on ? "included" : "not included"}"></span></td>`;
       }).join("")}
       <td><span class="dot dot--addon${p.addon ? " dot--on" : ""}" style="transition-delay:${(ORDER.length * 0.06).toFixed(2)}s"
-        role="img" aria-label="Ask the Document add-on: ${p.addon ? "included" : "not included"}"></span></td>
+        role="img" aria-label="Ask Chat: ${p.addon ? "included" : "not included"}"></span></td>
       <td>${p.trigger}</td>
     </tr>`).join("");
 
@@ -210,18 +217,20 @@
   /* ---------------- Pricing ---------------- */
   $("#pricingGrid").innerHTML = PRICING.map((p, i) => `
     <article class="price reveal${p.full ? " price--full" : ""}${p.addon ? " price--addon" : ""}" style="--d:${(i % 3) * 0.08}s">
-      <p class="price__stage">${p.stage}</p>
+      <h3 class="price__stage">${p.stage}</h3>
       <p class="price__unit">${p.unit}</p>
       <p class="price__shape">${p.shape}</p>
+      ${p.full ? '<span class="price__badge">Best value</span>' : ""}${p.addon ? '<span class="price__badge">Optional add-on</span>' : ""}
     </article>`).join("");
 
   /* ---------------- Deep links: #stage-redact etc. ---------------- */
   function openStageFromHash() {
     const m = location.hash.match(/^#stage-(\w+)/);
     if (!m || !byId[m[1]]) return;
-    selectStage(m[1]);
+    // Move focus to the stage's tab so keyboard users land where the link pointed
+    selectStage(m[1], true);
     const target = $("#pipeline .stages");
-    requestAnimationFrame(() => window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 110, behavior: "smooth" }));
+    requestAnimationFrame(() => window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 110, behavior: scrollBehavior() }));
   }
   window.addEventListener("hashchange", openStageFromHash);
   openStageFromHash();
@@ -239,7 +248,7 @@
   rail.innerHTML = `
     <div class="chapters__track" aria-hidden="true"><div class="chapters__fill"></div></div>
     <ol>${CHAPTERS.map(c => `
-      <li><a href="#${c.id}" data-id="${c.id}"><span class="chapters__dot"></span><span class="chapters__label"><em>${c.num}</em>${c.label}</span></a></li>`).join("")}
+      <li><a href="#${c.id}" data-id="${c.id}"><span class="chapters__dot"></span><span class="chapters__label"><em>${c.num}</em> ${c.label}</span></a></li>`).join("")}
     </ol>`;
   document.body.appendChild(rail);
 
@@ -260,6 +269,15 @@
   pillBtn.addEventListener("click", () => setSheet(sheet.hidden));
   sheet.addEventListener("click", e => { if (e.target.closest("a")) setSheet(false); });
   document.addEventListener("click", e => { if (!pill.contains(e.target)) setSheet(false); });
+  // Keyboard: Escape closes the sheet (focus back on the button); tabbing out of it closes it too
+  pill.addEventListener("keydown", e => {
+    if (e.key === "Escape" && !sheet.hidden) { setSheet(false); pillBtn.focus(); }
+  });
+  pill.addEventListener("focusout", e => { if (e.relatedTarget && !pill.contains(e.relatedTarget)) setSheet(false); });
+  // WCAG 1.4.13: chapter labels that pop up on hover/focus can be dismissed with Escape
+  document.addEventListener("keydown", e => { if (e.key === "Escape") rail.classList.add("labels-dismissed"); });
+  rail.addEventListener("mouseleave", () => rail.classList.remove("labels-dismissed"));
+  rail.addEventListener("focusout", e => { if (!rail.contains(e.relatedTarget)) rail.classList.remove("labels-dismissed"); });
 
   const railLinks = [...rail.querySelectorAll("a"), ...sheet.querySelectorAll("a")];
   const railFill = rail.querySelector(".chapters__fill");

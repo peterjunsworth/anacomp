@@ -9,20 +9,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=16">
-  <link rel="stylesheet" href="pages.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="pages.css?v=17">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header id="nav" data-page="clients"></header>
-<script src="layout.js?v=16"></script>
+<script src="layout.js?v=17"></script>
 
 <main id="main">
   <section class="page-hero dark">
     <div class="hero__grid" aria-hidden="true"></div>
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="wrap">
-      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Clients</span></nav>
+      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Clients</span></nav>
       <p class="eyebrow reveal">Clients</p>
       <h1 class="reveal">Trusted with the records that matter most.</h1>
       <p class="page-hero__lede reveal">Public agencies rely on Anacomp to find, digitize, protect, remediate and release their records, one stage or the whole lifecycle.</p>
@@ -49,12 +49,12 @@
       </header>
       <!-- TODO: confirm the sectors Anacomp serves -->
       <ul class="sectors" data-placeholder>
-        <li class="sector reveal"><svg viewBox="0 0 48 48"><path d="M6 42h36M10 42V20M18 42V20M30 42V20M38 42V20M4 20h40L24 6z"/><path d="M20 14h8" class="ic-accent"/></svg><strong>State agencies</strong></li>
-        <li class="sector reveal"><svg viewBox="0 0 48 48"><rect x="8" y="12" width="32" height="30" rx="2"/><path d="M8 20h32M16 28h6M26 28h6M16 34h6M26 34h6"/><path d="M18 12V6h12v6" class="ic-accent"/></svg><strong>Counties</strong></li>
-        <li class="sector reveal"><svg viewBox="0 0 48 48"><path d="M6 42V18l10-6v30M16 42V8l14 6v28M30 42V22l12 4v16M4 42h40"/><path d="M21 20h4M21 28h4" class="ic-accent"/></svg><strong>Cities &amp; municipalities</strong></li>
-        <li class="sector reveal"><svg viewBox="0 0 48 48"><path d="M24 6v36M14 42h20M10 14h28"/><path d="M10 14l-6 14h12zM38 14l-6 14h12z" class="ic-accent"/></svg><strong>Courts &amp; justice</strong></li>
-        <li class="sector reveal"><svg viewBox="0 0 48 48"><path d="M24 6l18 8-18 8-18-8z"/><path d="M12 18v12c0 4 6 7 12 7s12-3 12-7V18" /><path d="M42 14v12" class="ic-accent"/></svg><strong>Higher education</strong></li>
-        <li class="sector reveal"><svg viewBox="0 0 48 48"><path d="M24 42S8 32 8 18a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 14-16 24-16 24z"/><path d="M18 24h4l2-4 3 8 2-4h3" class="ic-accent"/></svg><strong>Health &amp; human services</strong></li>
+        <li class="sector reveal"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M6 42h36M10 42V20M18 42V20M30 42V20M38 42V20M4 20h40L24 6z"/><path d="M20 14h8" class="ic-accent"/></svg><strong>State agencies</strong></li>
+        <li class="sector reveal"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="8" y="12" width="32" height="30" rx="2"/><path d="M8 20h32M16 28h6M26 28h6M16 34h6M26 34h6"/><path d="M18 12V6h12v6" class="ic-accent"/></svg><strong>Counties</strong></li>
+        <li class="sector reveal"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M6 42V18l10-6v30M16 42V8l14 6v28M30 42V22l12 4v16M4 42h40"/><path d="M21 20h4M21 28h4" class="ic-accent"/></svg><strong>Cities &amp; municipalities</strong></li>
+        <li class="sector reveal"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 6v36M14 42h20M10 14h28"/><path d="M10 14l-6 14h12zM38 14l-6 14h12z" class="ic-accent"/></svg><strong>Courts &amp; justice</strong></li>
+        <li class="sector reveal"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 6l18 8-18 8-18-8z"/><path d="M12 18v12c0 4 6 7 12 7s12-3 12-7V18" /><path d="M42 14v12" class="ic-accent"/></svg><strong>Higher education</strong></li>
+        <li class="sector reveal"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 42S8 32 8 18a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 14-16 24-16 24z"/><path d="M18 24h4l2-4 3 8 2-4h3" class="ic-accent"/></svg><strong>Health &amp; human services</strong></li>
       </ul>
 
       <!-- TODO: replace with client logos (with permission). Use <img> inside each <li>. -->
@@ -90,7 +90,7 @@
           <div class="case__top">
             <p class="case__sector">State agency · Request Response</p>
             <h3>Clearing a public-records backlog</h3>
-            <div class="case__stages"><span>Redact</span><span>Release</span><span>Analyze</span></div>
+            <ul class="case__stages" aria-label="Stages"><li>Redact</li><li>Release</li><li>Analyze</li></ul>
           </div>
           <dl class="case__body">
             <div><dt>Challenge</dt><dd>“We can’t keep up with records requests.” Requests arrived by email and every page was read by hand before release.</dd></div>
@@ -103,7 +103,7 @@
           <div class="case__top">
             <p class="case__sector">County · Paper to Accessible</p>
             <h3>Closing a file room with an accessibility duty</h3>
-            <div class="case__stages"><span>Digitize</span><span>Remediate</span></div>
+            <ul class="case__stages" aria-label="Stages"><li>Digitize</li><li>Remediate</li></ul>
           </div>
           <dl class="case__body">
             <div><dt>Challenge</dt><dd>“We have to close the file room.” Decades of paper had to go digital and meet ADA Title II.</dd></div>
@@ -116,7 +116,7 @@
           <div class="case__top">
             <p class="case__sector">City · Safe Share</p>
             <h3>Removing PII before an AI rollout</h3>
-            <div class="case__stages"><span>Discover</span><span>Redact</span></div>
+            <ul class="case__stages" aria-label="Stages"><li>Discover</li><li>Redact</li></ul>
           </div>
           <dl class="case__body">
             <div><dt>Challenge</dt><dd>“We’re moving to the cloud and don’t know what we have.” Sensitive data sat in years of unmapped file shares.</dd></div>
@@ -129,7 +129,7 @@
           <div class="case__top">
             <p class="case__sector">University · Accessible Release</p>
             <h3>Answering an accessibility complaint</h3>
-            <div class="case__stages"><span>Remediate</span><span>Release</span></div>
+            <ul class="case__stages" aria-label="Stages"><li>Remediate</li><li>Release</li></ul>
           </div>
           <dl class="case__body">
             <div><dt>Challenge</dt><dd>“We were told our documents aren’t accessible.” A library of image-only PDFs couldn’t be read by assistive technology.</dd></div>
@@ -142,7 +142,7 @@
           <div class="case__top">
             <p class="case__sector">State department · Records Insight</p>
             <h3>Giving leadership a live view of the estate</h3>
-            <div class="case__stages"><span>Discover</span><span>Analyze</span></div>
+            <ul class="case__stages" aria-label="Stages"><li>Discover</li><li>Analyze</li></ul>
           </div>
           <dl class="case__body">
             <div><dt>Challenge</dt><dd>“We can’t tell leadership where our backlog stands.” Reporting meant spreadsheets assembled by hand each quarter.</dd></div>
@@ -155,7 +155,7 @@
           <div class="case__top">
             <p class="case__sector">Agency · Full Lifecycle</p>
             <h3>One vendor from paper intake to public release</h3>
-            <div class="case__stages"><span>All six stages</span></div>
+            <ul class="case__stages" aria-label="Stages"><li>All six stages</li></ul>
           </div>
           <dl class="case__body">
             <div><dt>Challenge</dt><dd>Steady request volume, a mix of paper and digital records, and four vendors with hand-offs between them.</dd></div>
@@ -185,34 +185,34 @@
         <!-- TODO: replace with real, attributed client reviews (with permission) -->
         <div class="reviews">
           <figure class="review reveal" data-placeholder>
-            <span class="stars" aria-label="5 out of 5">★★★★★</span>
+            <span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
             <blockquote>Add a client quote about how the portal changed the way the public requests records.</blockquote>
-            <footer><span class="avatar">RM</span><div><cite>Reviewer name</cite><small>Records Manager, Agency</small></div></footer>
+            <footer><span class="avatar" aria-hidden="true">RM</span><div><cite>Reviewer name</cite><small>Records Manager, Agency</small></div></footer>
           </figure>
           <figure class="review reveal" data-placeholder>
-            <span class="stars" aria-label="5 out of 5">★★★★★</span>
+            <span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
             <blockquote>Add a client quote about redaction quality and turnaround on a backlog project.</blockquote>
-            <footer><span class="avatar">PO</span><div><cite>Reviewer name</cite><small>Public Records Officer, City</small></div></footer>
+            <footer><span class="avatar" aria-hidden="true">PO</span><div><cite>Reviewer name</cite><small>Public Records Officer, City</small></div></footer>
           </figure>
           <figure class="review reveal" data-placeholder>
-            <span class="stars" aria-label="5 out of 5">★★★★★</span>
+            <span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
             <blockquote>Add a client quote about meeting Section 508 / ADA Title II with remediated documents.</blockquote>
-            <footer><span class="avatar">AC</span><div><cite>Reviewer name</cite><small>Accessibility Coordinator, University</small></div></footer>
+            <footer><span class="avatar" aria-hidden="true">AC</span><div><cite>Reviewer name</cite><small>Accessibility Coordinator, University</small></div></footer>
           </figure>
           <figure class="review reveal" data-placeholder>
-            <span class="stars" aria-label="5 out of 5">★★★★★</span>
+            <span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
             <blockquote>Add a client quote about closing a file room and getting paper into the digital flow.</blockquote>
-            <footer><span class="avatar">CC</span><div><cite>Reviewer name</cite><small>County Clerk, County</small></div></footer>
+            <footer><span class="avatar" aria-hidden="true">CC</span><div><cite>Reviewer name</cite><small>County Clerk, County</small></div></footer>
           </figure>
           <figure class="review reveal" data-placeholder>
-            <span class="stars" aria-label="5 out of 5">★★★★★</span>
+            <span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
             <blockquote>Add a client quote about reporting to leadership with Insignal dashboards.</blockquote>
-            <footer><span class="avatar">CIO</span><div><cite>Reviewer name</cite><small>Chief Information Officer, State</small></div></footer>
+            <footer><span class="avatar" aria-hidden="true">CIO</span><div><cite>Reviewer name</cite><small>Chief Information Officer, State</small></div></footer>
           </figure>
           <figure class="review reveal" data-placeholder>
-            <span class="stars" aria-label="5 out of 5">★★★★★</span>
+            <span class="stars" role="img" aria-label="Rated 5 out of 5">★★★★★</span>
             <blockquote>Add a client quote about having one accountable vendor and one chain of custody.</blockquote>
-            <footer><span class="avatar">DD</span><div><cite>Reviewer name</cite><small>Deputy Director, Agency</small></div></footer>
+            <footer><span class="avatar" aria-hidden="true">DD</span><div><cite>Reviewer name</cite><small>Deputy Director, Agency</small></div></footer>
           </figure>
         </div>
       </div>
@@ -233,6 +233,6 @@
 </main>
 
 <footer id="site-footer"></footer>
-<script src="pages.js?v=16"></script>
+<script src="pages.js?v=17"></script>
 </body>
 </html>

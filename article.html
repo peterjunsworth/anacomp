@@ -9,20 +9,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=16">
-  <link rel="stylesheet" href="pages.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=17">
+  <link rel="stylesheet" href="pages.css?v=17">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header id="nav" data-page="news"></header>
-<script src="layout.js?v=16"></script>
+<header id="nav" data-page="news" data-current="true"></header>
+<script src="layout.js?v=17"></script>
 
 <main id="main">
   <section class="page-hero dark article-hero">
     <div class="hero__grid" aria-hidden="true"></div>
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="wrap">
-      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="news.html">News</a><span aria-hidden="true">/</span><span>Announcement</span></nav>
+      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="news.html">News</a><span aria-hidden="true">/</span><span aria-current="page">Announcement</span></nav>
       <h1 class="reveal" style="max-width:20ch">Introducing the Anacomp Information Lifecycle</h1>
       <div class="post-meta reveal"><span class="tag">Announcement</span><time datetime="2026-11">November 2026</time><span>· 4 min read</span></div>
     </div>
@@ -53,13 +53,13 @@
 
       <h2>Start with a 30-day pilot</h2>
       <p>In week one we scan one repository. In weeks two and three, a sample set of pages runs through Redact and Remediate for your review. In week four, a portal sandbox walks one request from ID.me sign-in to release, all reported in Insignal. The pilot ends with a scoped proposal: the full pipeline, or the stages that proved their value.</p>
-      <p><a href="contact.html?topic=pilot">Book a 30-day pilot →</a></p>
+      <p><a href="contact.html?topic=pilot">Book a 30-day pilot <span aria-hidden="true">→</span></a></p>
     </div>
     <aside class="article__aside">
       <div class="share">
         <p>Share</p>
         <button data-share="copy">Copy link</button>
-        <button data-share="linkedin">LinkedIn</button>
+        <button data-share="linkedin">LinkedIn<span class="visually-hidden"> (opens in a new window)</span></button>
         <button data-share="email">Email</button>
       </div>
     </aside>
@@ -79,6 +79,6 @@
 </main>
 
 <footer id="site-footer"></footer>
-<script src="pages.js?v=16"></script>
+<script src="pages.js?v=17"></script>
 </body>
 </html>
