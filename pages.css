@@ -78,8 +78,8 @@
 .leaders { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
 /* Row 1: CEO + President (wide) · Row 2: three leaders · Row 3: the wider team, full width */
 .leaders > .leader { grid-column: span 2; }
-.leaders > .leader:nth-child(-n+2) { grid-column: span 3; }
-.leaders > .leader:nth-child(-n+2) .leader__photo { aspect-ratio: 16 / 7; }
+.leaders > .leader--wide { grid-column: span 3; }
+.leaders > .leader--wide .leader__photo { aspect-ratio: 16 / 7; }
 .leaders > .leader--team { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(220px, 1fr) 2fr; }
 .leaders > .leader--team .leader__photo { aspect-ratio: auto; min-height: 100%; }
 .leaders > .leader--team .leader__body { padding: 36px 40px; align-self: center; }
@@ -279,12 +279,12 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--o
 
 @media (max-width: 1080px) {
   .leaders { grid-template-columns: repeat(6, 1fr); }
-  .leaders > .leader, .leaders > .leader:nth-child(-n+2) { grid-column: span 3; }
+  .leaders > .leader, .leaders > .leader--wide { grid-column: span 3; }
   .leaders > .leader--team { grid-column: 1 / -1; }
 }
 @media (max-width: 760px) {
   .leaders { grid-template-columns: 1fr; }
-  .leaders > .leader, .leaders > .leader:nth-child(-n+2), .leaders > .leader--team { grid-column: 1 / -1; }
+  .leaders > .leader, .leaders > .leader--wide, .leaders > .leader--team { grid-column: 1 / -1; }
   .leaders > .leader--team { grid-template-columns: 1fr; }
   .leaders > .leader--team .leader__photo { aspect-ratio: 16 / 7; }
   .leaders > .leader--team .leader__body { padding: 24px 26px 28px; }
@@ -292,3 +292,6 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--o
 
 /* Leader portraits: circular photo in place of the initials badge */
 .leader__photo img.leader__avatar { position: relative; inset: auto; z-index: 1; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,.35); box-shadow: 0 18px 40px -16px rgba(0,0,0,.6); }
+
+/* Board of directors block (inside the leadership section) */
+.board__head { margin-top: 88px; }
