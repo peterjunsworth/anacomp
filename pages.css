@@ -75,7 +75,16 @@
 .review small { color: var(--slate); font-size: .85rem; }
 
 /* ---------- Team ---------- */
-.leaders { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.leaders { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
+/* Row 1: CEO + President (wide) · Row 2: three leaders · Row 3: the wider team, full width */
+.leaders > .leader { grid-column: span 2; }
+.leaders > .leader:nth-child(-n+2) { grid-column: span 3; }
+.leaders > .leader:nth-child(-n+2) .leader__photo { aspect-ratio: 16 / 7; }
+.leaders > .leader--team { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(220px, 1fr) 2fr; }
+.leaders > .leader--team .leader__photo { aspect-ratio: auto; min-height: 100%; }
+.leaders > .leader--team .leader__body { padding: 36px 40px; align-self: center; }
+.leaders > .leader--team h3 { font-size: 1.8rem; }
+.leaders > .leader--team p { font-size: 1.05rem; max-width: 60ch; }
 .leader { background: #fff; border-radius: 22px; overflow: hidden; box-shadow: var(--shadow); transition: transform .35s var(--ease), box-shadow .35s; }
 .leader:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .leader__photo { aspect-ratio: 4 / 3.4; background: linear-gradient(150deg, var(--navy-2), var(--navy)); display: grid; place-items: center; position: relative; overflow: hidden; }
@@ -267,3 +276,16 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--o
 .leader--team .leader__role { color: var(--orange-lt); }
 .leader--team p { color: var(--blue); }
 .leader--team .leader__owns span { background: rgba(255,255,255,.1); color: #fff; }
+
+@media (max-width: 1080px) {
+  .leaders { grid-template-columns: repeat(6, 1fr); }
+  .leaders > .leader, .leaders > .leader:nth-child(-n+2) { grid-column: span 3; }
+  .leaders > .leader--team { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+  .leaders { grid-template-columns: 1fr; }
+  .leaders > .leader, .leaders > .leader:nth-child(-n+2), .leaders > .leader--team { grid-column: 1 / -1; }
+  .leaders > .leader--team { grid-template-columns: 1fr; }
+  .leaders > .leader--team .leader__photo { aspect-ratio: 16 / 7; }
+  .leaders > .leader--team .leader__body { padding: 24px 26px 28px; }
+}
