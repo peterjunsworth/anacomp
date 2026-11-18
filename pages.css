@@ -289,3 +289,6 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--o
   .leaders > .leader--team .leader__photo { aspect-ratio: 16 / 7; }
   .leaders > .leader--team .leader__body { padding: 24px 26px 28px; }
 }
+
+/* Leader portraits: circular photo in place of the initials badge */
+.leader__photo img.leader__avatar { position: relative; inset: auto; z-index: 1; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,.35); box-shadow: 0 18px 40px -16px rgba(0,0,0,.6); }
