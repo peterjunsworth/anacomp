@@ -148,6 +148,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .flow__label { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; }
 .flow__analyze-label { position: absolute; left: 0; right: 0; bottom: -18px; text-align: center; color: var(--blue); font-size: .95rem; display: flex; justify-content: center; align-items: center; gap: 10px; }
 .flow__analyze-label .pill { box-shadow: 0 0 0 6px var(--navy); }
+.flow__analyze-label { flex-wrap: wrap; column-gap: 36px; row-gap: 12px; }
+.flow__tag { display: inline-flex; align-items: center; gap: 10px; }
+.pill--ask { background: var(--orange-ink); color: #fff; }
 
 /* ---------- CHALLENGE ---------- */
 .pressures { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }

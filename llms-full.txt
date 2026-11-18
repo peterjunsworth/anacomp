@@ -29,7 +29,7 @@ See the pipeline
 
 - 05, Release
 
-Analyze Insignal, across every stage
+Analyze Insignal, across every stage, Ask Botcopy, answers from your documents
 
 The problem
 
