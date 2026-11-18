@@ -75,7 +75,7 @@
 .review small { color: var(--slate); font-size: .85rem; }
 
 /* ---------- Team ---------- */
-.leaders { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.leaders { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .leader { background: #fff; border-radius: 22px; overflow: hidden; box-shadow: var(--shadow); transition: transform .35s var(--ease), box-shadow .35s; }
 .leader:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .leader__photo { aspect-ratio: 4 / 3.4; background: linear-gradient(150deg, var(--navy-2), var(--navy)); display: grid; place-items: center; position: relative; overflow: hidden; }
@@ -260,10 +260,6 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--o
 .nl-err { grid-column: 2; margin-top: -20px; font-size: .9rem; }
 .form-success h2:focus, .newsletter form p:focus { outline: none; }
 
-/* Leadership: 4 across, so the initials badge and padding are a little tighter */
-.leaders .leader__photo span { font-size: 2.6rem; width: 96px; height: 96px; }
-.leaders .leader__body { padding: 22px 22px 26px; }
-.leaders .leader h3 { font-size: 1.25rem; }
 /* Closing card: the wider team */
 .leader--team { background: var(--navy); color: #fff; }
 .leader--team .leader__photo { background: linear-gradient(150deg, var(--orange-ink), var(--rust)); }
