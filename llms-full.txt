@@ -395,7 +395,7 @@ Full Lifecycle Complete |
 ✓ |
 ✓ |
 ✓ |
-– |
+✓ |
 One vendor from paper intake to public release |
 
 Where are you starting?

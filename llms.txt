@@ -40,7 +40,7 @@ Anacomp sells the Information Lifecycle end to end (one contract, one service le
 - Request Response: Redact + Release + Analyze. Typical trigger: A records-request backlog to clear and report on.
 - Accessible Release: Remediate + Release. Typical trigger: Requests delivered in accessible form.
 - Accessible Answers: Remediate + Release + Ask the Document. Typical trigger: Residents need answers from long documents, not just access.
-- Full Lifecycle: Discover + Digitize + Redact + Remediate + Release + Analyze. Typical trigger: One vendor from paper intake to public release.
+- Full Lifecycle: Discover + Digitize + Redact + Remediate + Release + Analyze + Ask the Document. Typical trigger: One vendor from paper intake to public release.
 
 ## Pricing model
 

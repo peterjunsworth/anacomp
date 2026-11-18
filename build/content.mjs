@@ -117,7 +117,7 @@ export const PACKAGES = [
   { name: "Request Response", stages: ["redact", "release", "analyze"], trigger: "A records-request backlog to clear and report on" },
   { name: "Accessible Release", stages: ["remediate", "release"], trigger: "Requests delivered in accessible form" },
   { name: "Accessible Answers", stages: ["remediate", "release"], addon: true, trigger: "Residents need answers from long documents, not just access" },
-  { name: "Full Lifecycle", stages: ORDER, trigger: "One vendor from paper intake to public release", featured: true }
+  { name: "Full Lifecycle", stages: ORDER, addon: true, trigger: "One vendor from paper intake to public release", featured: true }
 ];
 
 export const QUOTES = [
