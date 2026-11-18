@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="show-placeholders">
+<html lang="en">
 <head>
 <!-- build:head -->
   <meta charset="utf-8">
@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css?v=c48af9f8">
-  <link rel="stylesheet" href="/pages.css?v=4d991b03">
+  <link rel="stylesheet" href="/pages.css?v=0a29c4ce">
   <script>document.documentElement.classList.add("js")</script>
   <script src="/layout.js?v=e59e6e6c" defer></script>
   <script src="/pages.js?v=cadf5221" defer></script>
@@ -174,6 +174,21 @@
       "hasPart": [
         {
           "@id": "https://www.anacomp.com/news/introducing-the-anacomp-information-lifecycle#article"
+        },
+        {
+          "@id": "https://www.anacomp.com/news/zero-trust-white-paper-executive-order-14028#article"
+        },
+        {
+          "@id": "https://www.anacomp.com/news/cisa-zero-trust-maturity-model-webinar#article"
+        },
+        {
+          "@id": "https://www.anacomp.com/news/chuck-brooks-joins-anacomp-advisory-board#article"
+        },
+        {
+          "@id": "https://www.anacomp.com/news/grs-anacomp-950m-air-force-abms-contract#article"
+        },
+        {
+          "@id": "https://www.anacomp.com/news/anacomp-exonar-data-discovery-partnership#article"
         }
       ]
     }
@@ -299,73 +314,66 @@
       </a>
 
       <div class="news-tools">
-        <h2>Latest</h2>
+        <h2>Press releases</h2>
         <div class="case-filter" style="margin:0" data-filter-group=".post" role="group" aria-label="Filter articles by topic">
+<!-- build:news-filters -->
           <button class="chip" data-filter="all" aria-pressed="true">All</button>
-          <button class="chip" data-filter="accessibility" aria-pressed="false">Accessibility</button>
-          <button class="chip" data-filter="privacy" aria-pressed="false">Privacy</button>
-          <button class="chip" data-filter="records" aria-pressed="false">Records requests</button>
-          <button class="chip" data-filter="news" aria-pressed="false">Company news</button>
+          <button class="chip" data-filter="cybersecurity" aria-pressed="false">Cybersecurity</button>
+          <button class="chip" data-filter="partnerships" aria-pressed="false">Partnerships &amp; contracts</button>
+          <button class="chip" data-filter="company" aria-pressed="false">Company news</button>
+<!-- /build:news-filters -->
         </div>
       </div>
 
-      <!-- TODO: each card below is a suggested article topic. Write the article, give it a page
-           (copy article.html), then turn the <article> into an <a href="..."> and set the date. -->
       <div class="posts">
-        <article class="post reveal" data-tags="accessibility" data-placeholder>
-          <div class="post-art" data-art="ada-title-ii"></div>
+<!-- build:news -->
+
+        <a class="post reveal" href="/news/zero-trust-white-paper-executive-order-14028" data-tags="cybersecurity">
+          <div class="post-art post-art--img"><img src="/assets/news/zero-trust-white-paper.jpg" alt="" width="1200" height="627" loading="lazy" decoding="async"></div>
           <div class="post__body">
-            <span class="tag" style="align-self:start">Accessibility</span>
-            <h3>What ADA Title II means for the documents on your website</h3>
-            <p>Why image-only PDFs fall short, and what accessible HTML and tagged documents change.</p>
-            <div class="post-meta"><span>Publish date</span><span>· 6 min read</span></div>
+            <span class="tag" style="align-self:start">White paper</span>
+            <h3>New Zero Trust White Paper on Meeting White House Executive Order 14028 on Improving the Nation’s Cybersecurity</h3>
+            <p>Anacomp published a white paper by advisory board member Chuck Brooks on meeting DHS and CISA Zero Trust guidance, starting with an inventory of all data assets.</p>
+            <div class="post-meta"><time datetime="2022-05-02">May 2, 2022</time><span>· 3 min read</span></div>
           </div>
-        </article>
-        <article class="post reveal" data-tags="privacy" data-placeholder>
-          <div class="post-art" data-art="cloud-migration-inventory"></div>
+        </a>
+        <a class="post reveal" href="/news/cisa-zero-trust-maturity-model-webinar" data-tags="cybersecurity">
+          <div class="post-art post-art--img"><img src="/assets/news/zero-trust-webinar.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async"></div>
           <div class="post__body">
-            <span class="tag" style="align-self:start">Privacy</span>
-            <h3>Five questions to answer before a cloud migration</h3>
-            <p>Counts, sizes, duplicates and sensitive data: the inventory to take before you move a thing.</p>
-            <div class="post-meta"><span>Publish date</span><span>· 5 min read</span></div>
+            <span class="tag" style="align-self:start">Webinar</span>
+            <h3>New Webinar on the CISA Zero Trust Maturity Model, The Requirement for a New Data-Centric Cybersecurity Approach</h3>
+            <p>Anacomp launched a webinar series on federal Zero Trust guidance, opening with Chuck Brooks, Greg Touhill and Tyler Cohen Wood on the CISA Zero Trust Maturity Model.</p>
+            <div class="post-meta"><time datetime="2022-02-22">February 22, 2022</time><span>· 4 min read</span></div>
           </div>
-        </article>
-        <article class="post reveal" data-tags="records" data-placeholder>
-          <div class="post-art" data-art="records-backlog"></div>
+        </a>
+        <a class="post reveal" href="/news/chuck-brooks-joins-anacomp-advisory-board" data-tags="company">
+          <div class="post-art post-art--img"><img src="/assets/news/chuck-brooks-advisory-board.jpg" alt="" width="1200" height="626" loading="lazy" decoding="async"></div>
           <div class="post__body">
-            <span class="tag" style="align-self:start">Records requests</span>
-            <h3>How to clear a public-records backlog without adding headcount</h3>
-            <p>Routing requests through one portal, redacting in workflows, and measuring turnaround as you go.</p>
-            <div class="post-meta"><span>Publish date</span><span>· 7 min read</span></div>
+            <span class="tag" style="align-self:start">Announcement</span>
+            <h3>Chuck Brooks, Cybersecurity &amp; Emerging Technology Leader, Joins Anacomp’s Advisory Board</h3>
+            <p>Globally recognized cybersecurity and emerging technology leader Chuck Brooks joined Anacomp’s Strategic Advisory Board to guide its cybersecurity and data protection work.</p>
+            <div class="post-meta"><time datetime="2021-11-17">November 17, 2021</time><span>· 3 min read</span></div>
           </div>
-        </article>
-        <article class="post reveal" data-tags="privacy" data-placeholder>
-          <div class="post-art" data-art="pii-before-ai"></div>
+        </a>
+        <a class="post reveal" href="/news/grs-anacomp-950m-air-force-abms-contract" data-tags="partnerships">
+          <div class="post-art post-art--img"><img src="/assets/news/grs-abms-contract.jpg" alt="" width="1200" height="630" loading="lazy" decoding="async"></div>
           <div class="post__body">
-            <span class="tag" style="align-self:start">Privacy</span>
-            <h3>Remove PII before your agency’s AI rollout, not after</h3>
-            <p>Why redaction belongs at the start of any AI project that touches unstructured documents.</p>
-            <div class="post-meta"><span>Publish date</span><span>· 5 min read</span></div>
+            <span class="tag" style="align-self:start">Contract award</span>
+            <h3>GRS and Technology Partner Anacomp Awarded $950M Ceiling IDIQ Contract by the U.S. Air Force to Support Data Discovery for Advanced Battle Management System (ABMS)</h3>
+            <p>Government Research Specialists, with technology partner Anacomp, won a $950M-ceiling IDIQ contract from the U.S. Air Force to develop data discovery capabilities for ABMS and JADC2.</p>
+            <div class="post-meta"><time datetime="2021-08-25">August 25, 2021</time><span>· 3 min read</span></div>
           </div>
-        </article>
-        <article class="post reveal" data-tags="records accessibility" data-placeholder>
-          <div class="post-art" data-art="file-room-closure"></div>
+        </a>
+        <a class="post reveal" href="/news/anacomp-exonar-data-discovery-partnership" data-tags="partnerships">
+          <div class="post-art post-art--img"><img src="/assets/news/exonar-partnership.jpg" alt="" width="1200" height="630" loading="lazy" decoding="async"></div>
           <div class="post__body">
-            <span class="tag" style="align-self:start">Records requests</span>
-            <h3>Closing the file room: a planning checklist</h3>
-            <p>Scanning, indexing and remediation in the right order, so paper becomes searchable, accessible data.</p>
-            <div class="post-meta"><span>Publish date</span><span>· 6 min read</span></div>
+            <span class="tag" style="align-self:start">Partnership</span>
+            <h3>Anacomp and Exonar Announce Strategic Partnership to Deliver Intelligent Data Discovery Services in U.S.</h3>
+            <p>Anacomp and Exonar formalized a partnership to deliver intelligent data discovery services to U.S. federal agencies and commercial organizations.</p>
+            <div class="post-meta"><time datetime="2021-02-24">February 24, 2021</time><span>· 2 min read</span></div>
           </div>
-        </article>
-        <article class="post reveal" data-tags="news" data-placeholder>
-          <div class="post-art" data-art="company-news-event"></div>
-          <div class="post__body">
-            <span class="tag" style="align-self:start">Company news</span>
-            <h3>Add an event, partnership or press release</h3>
-            <p>Conference appearances, new partnerships, security authorizations and other company news.</p>
-            <div class="post-meta"><span>Publish date</span></div>
-          </div>
-        </article>
+        </a>
+<!-- /build:news -->
       </div>
 
       <div class="newsletter reveal">

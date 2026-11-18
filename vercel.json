@@ -3,36 +3,125 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/article", "destination": "/news/introducing-the-anacomp-information-lifecycle", "permanent": true },
-    { "source": "/article.html", "destination": "/news/introducing-the-anacomp-information-lifecycle", "permanent": true },
-    { "source": "/index", "destination": "/", "permanent": true }
+    {
+      "source": "/article",
+      "destination": "/news/introducing-the-anacomp-information-lifecycle",
+      "permanent": true
+    },
+    {
+      "source": "/article.html",
+      "destination": "/news/introducing-the-anacomp-information-lifecycle",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/new-zero-trust-white-paper-on-meeting-white-house-executive-order-14028-on-improving-the-nations-cybersecurity",
+      "destination": "/news/zero-trust-white-paper-executive-order-14028",
+      "permanent": true
+    },
+    {
+      "source": "/new-zero-trust-white-paper-on-meeting-white-house-executive-order-14028-on-improving-the-nations-cybersecurity/",
+      "destination": "/news/zero-trust-white-paper-executive-order-14028",
+      "permanent": true
+    },
+    {
+      "source": "/new-webinar-on-the-cisa-zero-trust-maturity-model-the-requirement-for-a-new-data-centric-cybersecurity-approach",
+      "destination": "/news/cisa-zero-trust-maturity-model-webinar",
+      "permanent": true
+    },
+    {
+      "source": "/new-webinar-on-the-cisa-zero-trust-maturity-model-the-requirement-for-a-new-data-centric-cybersecurity-approach/",
+      "destination": "/news/cisa-zero-trust-maturity-model-webinar",
+      "permanent": true
+    },
+    {
+      "source": "/chuck-brooks-cybersecurity-emerging-technology-leader-joins-anacomps-advisory-board",
+      "destination": "/news/chuck-brooks-joins-anacomp-advisory-board",
+      "permanent": true
+    },
+    {
+      "source": "/chuck-brooks-cybersecurity-emerging-technology-leader-joins-anacomps-advisory-board/",
+      "destination": "/news/chuck-brooks-joins-anacomp-advisory-board",
+      "permanent": true
+    },
+    {
+      "source": "/grs-and-anacomp-awarded-abms-contract",
+      "destination": "/news/grs-anacomp-950m-air-force-abms-contract",
+      "permanent": true
+    },
+    {
+      "source": "/grs-and-anacomp-awarded-abms-contract/",
+      "destination": "/news/grs-anacomp-950m-air-force-abms-contract",
+      "permanent": true
+    },
+    {
+      "source": "/anacomp-and-exonar-announce-strategic-partnership-to-deliver-intelligent-data-discovery-services-in-u-s",
+      "destination": "/news/anacomp-exonar-data-discovery-partnership",
+      "permanent": true
+    },
+    {
+      "source": "/anacomp-and-exonar-announce-strategic-partnership-to-deliver-intelligent-data-discovery-services-in-u-s/",
+      "destination": "/news/anacomp-exonar-data-discovery-partnership",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/(.*)\\.(css|js)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
     },
     {
       "source": "/(llms|llms-full|robots)\\.txt",
       "headers": [
-        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     },
     {
       "source": "/sitemap.xml",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
     }
   ]
 }

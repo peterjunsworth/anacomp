@@ -23,6 +23,14 @@ Anacomp sells the Information Lifecycle end to end (one contract, one service le
 - [Introducing the Anacomp Information Lifecycle](https://www.anacomp.com/news/introducing-the-anacomp-information-lifecycle): Launch announcement explaining the five stages, Insignal analytics, ways to buy and the 30-day pilot.
 - [Contact & FAQ](https://www.anacomp.com/contact): Contact form, what happens next, and answers to common questions about buying, the pilot, pricing, custody and technology.
 
+## News and press releases
+
+- [New Zero Trust White Paper on Meeting White House Executive Order 14028 on Improving the Nation’s Cybersecurity](https://www.anacomp.com/news/zero-trust-white-paper-executive-order-14028) (May 2, 2022): Anacomp published a white paper by advisory board member Chuck Brooks on meeting DHS and CISA Zero Trust guidance, starting with an inventory of all data assets.
+- [New Webinar on the CISA Zero Trust Maturity Model, The Requirement for a New Data-Centric Cybersecurity Approach](https://www.anacomp.com/news/cisa-zero-trust-maturity-model-webinar) (February 22, 2022): Anacomp launched a webinar series on federal Zero Trust guidance, opening with Chuck Brooks, Greg Touhill and Tyler Cohen Wood on the CISA Zero Trust Maturity Model.
+- [Chuck Brooks, Cybersecurity & Emerging Technology Leader, Joins Anacomp’s Advisory Board](https://www.anacomp.com/news/chuck-brooks-joins-anacomp-advisory-board) (November 17, 2021): Globally recognized cybersecurity and emerging technology leader Chuck Brooks joined Anacomp’s Strategic Advisory Board to guide its cybersecurity and data protection work.
+- [GRS and Technology Partner Anacomp Awarded $950M Ceiling IDIQ Contract by the U.S. Air Force to Support Data Discovery for Advanced Battle Management System (ABMS)](https://www.anacomp.com/news/grs-anacomp-950m-air-force-abms-contract) (August 25, 2021): Government Research Specialists, with technology partner Anacomp, won a $950M-ceiling IDIQ contract from the U.S. Air Force to develop data discovery capabilities for ABMS and JADC2.
+- [Anacomp and Exonar Announce Strategic Partnership to Deliver Intelligent Data Discovery Services in U.S.](https://www.anacomp.com/news/anacomp-exonar-data-discovery-partnership) (February 24, 2021): Anacomp and Exonar formalized a partnership to deliver intelligent data discovery services to U.S. federal agencies and commercial organizations.
+
 ## Packages
 
 - Estate Assessment: Discover. Typical trigger: Pre-migration or storage clean-up.

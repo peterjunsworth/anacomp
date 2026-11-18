@@ -12,6 +12,7 @@ import { createHash } from "node:crypto";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE, NAV, STAGES, ORDER, PACKAGES, QUOTES, PRICING, PAGES, PEOPLE, ARTICLE_PATH } from "./content.mjs";
+import { NEWS, NEWS_TAGS } from "./news.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const read = f => readFileSync(join(ROOT, f), "utf8");
@@ -266,7 +267,7 @@ function jsonld(page, html) {
     "@type": page.type === "NewsArticle" ? "WebPage" : page.type, "@id": url + "#webpage", url,
     name: page.title, description: page.description, isPartOf: { "@id": SITE_ID },
     about: { "@id": ORG_ID }, inLanguage: "en-US",
-    primaryImageOfPage: { "@type": "ImageObject", url: abs(SITE.ogImage) },
+    primaryImageOfPage: { "@type": "ImageObject", url: abs(ogOf(page).url) },
     dateModified: TODAY
   };
   const bc = breadcrumb(page);
@@ -280,12 +281,12 @@ function jsonld(page, html) {
       "@type": "NewsArticle", "@id": url + "#article", headline: page.article.headline,
       description: page.description, articleSection: page.article.section,
       datePublished: page.article.datePublished, dateModified: page.article.dateModified || page.article.datePublished,
-      image: [abs(SITE.ogImage)], author: { "@id": ORG_ID }, publisher: { "@id": ORG_ID },
+      image: [abs(ogOf(page).url)], author: { "@id": ORG_ID }, publisher: { "@id": ORG_ID },
       mainEntityOfPage: { "@id": url + "#webpage" }, isPartOf: { "@id": SITE_ID }, inLanguage: "en-US"
     });
   }
   if (page.path === "/news") {
-    webpage.hasPart = [{ "@id": abs(ARTICLE_PATH) + "#article" }];
+    webpage.hasPart = [ARTICLE_PATH, ...NEWS.map(n => `/news/${n.slug}`)].map(p => ({ "@id": abs(p) + "#article" }));
   }
   if (page.path === "/team") {
     const people = PEOPLE.map(p => ({
@@ -306,7 +307,8 @@ function jsonld(page, html) {
 function head(page, html) {
   const url = abs(page.path);
   const ogType = page.article ? "article" : "website";
-  const img = abs(SITE.ogImage);
+  const og = ogOf(page);
+  const img = abs(og.url);
   return `<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(page.title)}</title>
@@ -324,16 +326,16 @@ function head(page, html) {
   <meta property="og:title" content="${esc(page.title)}">
   <meta property="og:description" content="${esc(page.description)}">
   <meta property="og:image" content="${img}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="${esc(SITE.ogImageAlt)}">${page.article ? `
+  <meta property="og:image:width" content="${og.width}">
+  <meta property="og:image:height" content="${og.height}">
+  <meta property="og:image:alt" content="${esc(og.alt)}">${page.article ? `
   <meta property="article:published_time" content="${page.article.datePublished}">
   <meta property="article:section" content="${esc(page.article.section)}">` : ""}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(page.title)}">
   <meta name="twitter:description" content="${esc(page.description)}">
   <meta name="twitter:image" content="${img}">
-  <meta name="twitter:image:alt" content="${esc(SITE.ogImageAlt)}">
+  <meta name="twitter:image:alt" content="${esc(og.alt)}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -402,13 +404,124 @@ function toMarkdown(html) {
   return decode(h).split("\n").map(l => l.replace(/[ \t]+/g, " ").trim()).join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
+/* ------------------------------------------------------------------ news archive */
+const fmtDate = d => new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+const tagLabel = id => (NEWS_TAGS.find(t => t.id === id) || {}).label || id;
+
+function ogOf(page) {
+  return page.og || { url: SITE.ogImage, width: 1200, height: 630, alt: SITE.ogImageAlt };
+}
+
+const newsFilters = () => [`<button class="chip" data-filter="all" aria-pressed="true">All</button>`,
+  ...NEWS_TAGS.filter(t => NEWS.some(n => n.tag === t.id)).map(t => `<button class="chip" data-filter="${t.id}" aria-pressed="false">${esc(t.label)}</button>`)]
+  .map(b => "          " + b).join("\n");
+
+const newsCards = () => NEWS.map(n => `
+        <a class="post reveal" href="/news/${n.slug}" data-tags="${n.tag}">
+          <div class="post-art post-art--img"><img src="${n.image}" alt="" width="${n.width}" height="${n.height}" loading="lazy" decoding="async"></div>
+          <div class="post__body">
+            <span class="tag" style="align-self:start">${esc(n.kind)}</span>
+            <h3>${esc(n.title)}</h3>
+            <p>${esc(n.excerpt)}</p>
+            <div class="post-meta"><time datetime="${n.date}">${fmtDate(n.date)}</time><span>· ${n.minutes} min read</span></div>
+          </div>
+        </a>`).join("");
+
+function newsPageFile(n) {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- build:head -->
+<!-- /build:head -->
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<!-- build:header -->
+<!-- /build:header -->
+
+<!-- Generated from build/news.mjs by build/build.mjs: edit the article there, not here. -->
+<main id="main">
+  <section class="page-hero dark article-hero">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/news">News</a><span aria-hidden="true">/</span><span aria-current="page">${esc(n.kind)}</span></nav>
+      <h1 class="reveal" style="max-width:24ch">${esc(n.title)}</h1>
+      <div class="post-meta reveal"><span class="tag">${esc(n.kind)}</span><time datetime="${n.date}">${fmtDate(n.date)}</time><span>· ${n.minutes} min read</span></div>
+    </div>
+  </section>
+
+  <article class="article">
+    <div class="article__body">
+      <figure class="article__figure"><img src="${n.image}" alt="${esc(n.imageAlt)}" width="${n.width}" height="${n.height}"></figure>
+      <p class="article__note">Press release from the Anacomp archive, originally published ${fmtDate(n.date)}. Titles and details reflect that date.</p>
+${n.body.trim().split("\n").map(l => "      " + l.trim()).join("\n")}
+      <p><a href="/news">Back to all news <span aria-hidden="true">→</span></a></p>
+    </div>
+    <aside class="article__aside">
+      <div class="share">
+        <p>Share</p>
+        <button data-share="copy">Copy link</button>
+        <button data-share="linkedin">LinkedIn<span class="visually-hidden"> (opens in a new window)</span></button>
+        <button data-share="email">Email</button>
+      </div>
+    </aside>
+  </article>
+
+  <section class="section paper" style="padding-top:80px">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div>
+          <h2>See the Information Lifecycle on your own records.</h2>
+          <p>Thirty days, one repository, a sample set of pages and one request walked all the way through.</p>
+        </div>
+        <a href="/contact?topic=pilot" class="btn btn--accent btn--lg">Book a pilot <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- build:footer -->
+<!-- /build:footer -->
+</body>
+</html>
+`;
+}
+
+/* Each news item becomes a page */
+const NEWS_PAGES = NEWS.map(n => {
+  write(`news/${n.slug}.html`, newsPageFile(n));
+  const short = n.shortTitle || n.title;
+  return {
+    file: `news/${n.slug}.html`, path: `/news/${n.slug}`, short, nav: "news", navCurrent: "true",
+    type: "NewsArticle", css: ["styles.css", "pages.css"], js: ["pages.js"],
+    title: `${short} | Anacomp News`, description: n.excerpt,
+    crumbs: [["News", "/news"], [short, `/news/${n.slug}`]],
+    article: { headline: n.title.length > 110 ? short : n.title, datePublished: n.date, section: tagLabel(n.tag) },
+    og: { url: n.image, width: n.width, height: n.height, alt: n.imageAlt },
+    llms: n.excerpt
+  };
+});
+const ALL_PAGES = [...PAGES.slice(0, PAGES.findIndex(p => p.path === ARTICLE_PATH) + 1), ...NEWS_PAGES,
+  ...PAGES.slice(PAGES.findIndex(p => p.path === ARTICLE_PATH) + 1)];
+
+/* Old WordPress article addresses redirect permanently to their new homes */
+const vercel = JSON.parse(read("vercel.json"));
+const keep = (vercel.redirects || []).filter(r => !NEWS.some(n => r.source === n.oldPath || r.source === n.oldPath + "/"));
+vercel.redirects = [...keep, ...NEWS.flatMap(n => [n.oldPath, n.oldPath + "/"].map(source => ({ source, destination: `/news/${n.slug}`, permanent: true })))];
+write("vercel.json", JSON.stringify(vercel, null, 2) + "\n");
+
 /* ------------------------------------------------------------------ run */
 const built = {};
-for (const page of PAGES) {
+for (const page of ALL_PAGES) {
   if (!existsSync(join(ROOT, page.file))) throw new Error(`Missing ${page.file}`);
   let html = read(page.file);
   html = region(html, "header", header(page), page.file);
   html = region(html, "footer", footer(), page.file);
+  if (page.path === "/news") {
+    html = region(html, "news-filters", newsFilters(), page.file);
+    html = region(html, "news", newsCards(), page.file);
+  }
   if (page.path === "/") {
     html = region(html, "stages", stages(), page.file);
     html = region(html, "matrix", matrixRows(), page.file);
@@ -437,7 +550,8 @@ Sitemap: ${SITE.origin}/sitemap.xml
 `);
 
 /* sitemap.xml */
-const indexable = PAGES.filter(p => !p.noindex);
+const indexable = ALL_PAGES.filter(p => !p.noindex);
+const isNewsItem = p => NEWS_PAGES.includes(p);
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${indexable.map(p => `  <url>
@@ -466,7 +580,11 @@ ${stageLines}
 
 ## Pages
 
-${indexable.map(p => `- [${p.short || p.title}](${abs(p.path)}): ${p.llms || p.description}`).join("\n")}
+${indexable.filter(p => !isNewsItem(p)).map(p => `- [${p.short || p.title}](${abs(p.path)}): ${p.llms || p.description}`).join("\n")}
+
+## News and press releases
+
+${NEWS.map(n => `- [${n.title}](${abs(`/news/${n.slug}`)}) (${fmtDate(n.date)}): ${n.excerpt}`).join("\n")}
 
 ## Packages
 
