@@ -416,9 +416,9 @@ const newsFilters = () => [`<button class="chip" data-filter="all" aria-pressed=
   ...NEWS_TAGS.filter(t => NEWS.some(n => n.tag === t.id)).map(t => `<button class="chip" data-filter="${t.id}" aria-pressed="false">${esc(t.label)}</button>`)]
   .map(b => "          " + b).join("\n");
 
-const newsCards = () => NEWS.map(n => `
+const newsCards = () => NEWS.map((n, i) => `
         <a class="post reveal" href="/news/${n.slug}" data-tags="${n.tag}">
-          <div class="post-art post-art--img"><img src="${n.image}" alt="" width="${n.width}" height="${n.height}" loading="lazy" decoding="async"></div>
+          ${newsCover(n, i)}
           <div class="post__body">
             <span class="tag" style="align-self:start">${esc(n.kind)}</span>
             <h3>${esc(n.title)}</h3>
@@ -426,6 +426,35 @@ const newsCards = () => NEWS.map(n => `
             <div class="post-meta"><time datetime="${n.date}">${fmtDate(n.date)}</time><span>· ${n.minutes} min read</span></div>
           </div>
         </a>`).join("");
+
+/* Branded card cover: navy + grid + orange glow, a motif per topic, and a short headline.
+   Decorative (the card's visible title and text carry the meaning), so hidden from assistive tech. */
+const MOTIFS = {
+  cybersecurity: `<path d="M318 38 l46 16 v36 c0 30-20 52-46 64 c-26-12-46-34-46-64 v-36 z" fill="none" stroke="#F28C5A" stroke-width="2"/>
+      <path d="M318 62 l26 9 v20 c0 17-11 30-26 37 c-15-7-26-20-26-37 v-20 z" fill="rgba(242,140,90,.14)" stroke="#B9C6D6" stroke-width="1.2"/>
+      <circle cx="318" cy="92" r="6" fill="#F28C5A"/>`,
+  partnerships: `<circle cx="296" cy="90" r="44" fill="none" stroke="#F28C5A" stroke-width="2"/>
+      <circle cx="344" cy="90" r="44" fill="none" stroke="#B9C6D6" stroke-width="2"/>
+      <circle cx="320" cy="90" r="6" fill="#F28C5A"/>`,
+  company: `<g fill="none" stroke="#B9C6D6" stroke-width="1.2" opacity=".8"><path d="M276 60 L330 92 L372 54 M330 92 L318 146 M276 60 L262 118 L318 146"/></g>
+      <circle cx="330" cy="92" r="9" fill="#F28C5A"/><circle cx="276" cy="60" r="6" fill="#1B3352" stroke="#B9C6D6" stroke-width="1.5"/>
+      <circle cx="372" cy="54" r="6" fill="#1B3352" stroke="#B9C6D6" stroke-width="1.5"/><circle cx="262" cy="118" r="5" fill="#1B3352" stroke="#F28C5A" stroke-width="1.5"/>
+      <circle cx="318" cy="146" r="6" fill="#1B3352" stroke="#B9C6D6" stroke-width="1.5"/>`
+};
+function newsCover(n, i) {
+  const gx = [78, 88, 70, 92, 82][i % 5], gy = [8, 20, 4, 14, 24][i % 5];
+  return `<div class="post-art post-art--brand" aria-hidden="true">
+            <svg viewBox="0 0 400 210" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <defs>
+                <radialGradient id="glow-${n.slug}" cx="${gx}%" cy="${gy}%" r="75%"><stop offset="0" stop-color="#E2622B" stop-opacity=".5"/><stop offset="1" stop-color="#0F2238" stop-opacity="0"/></radialGradient>
+                <pattern id="grid-${n.slug}" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#B9C6D6" stroke-opacity=".08" stroke-width=".6"/></pattern>
+              </defs>
+              <rect width="400" height="210" fill="#0F2238"/><rect width="400" height="210" fill="url(#grid-${n.slug})"/><rect width="400" height="210" fill="url(#glow-${n.slug})"/>
+              ${MOTIFS[n.tag] || MOTIFS.company}
+            </svg>
+            <div class="post-art__cover"><span class="post-art__kicker">Anacomp news · ${n.date.slice(0, 4)}</span><span class="post-art__title">${esc(n.cover || n.shortTitle || n.title)}</span></div>
+          </div>`;
+}
 
 function newsPageFile(n) {
   return `<!DOCTYPE html>

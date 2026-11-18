@@ -306,3 +306,10 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--o
 .article__figure { margin: 0 0 28px; }
 .article__figure img { display: block; width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow); }
 .article__note { font-size: .9rem; color: var(--slate); border-left: 3px solid var(--paper-2); padding-left: 14px; margin-bottom: 28px; }
+
+/* News cards: branded covers with a short headline (decorative) */
+.post .post-art--brand { aspect-ratio: 40 / 21; }
+.post-art--brand svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.post-art__cover { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 22px 20px; display: flex; flex-direction: column; gap: 6px; max-width: 70%; }
+.post-art__kicker { font-family: var(--font-display); font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange-lt); }
+.post-art__title { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.15; color: #fff; letter-spacing: -0.01em; }

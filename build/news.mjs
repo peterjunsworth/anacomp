@@ -17,6 +17,7 @@ export const NEWS_TAGS = [
 export const NEWS = [
   {
     slug: "zero-trust-white-paper-executive-order-14028",
+    cover: "Zero Trust and Executive Order 14028",
     oldPath: "/new-zero-trust-white-paper-on-meeting-white-house-executive-order-14028-on-improving-the-nations-cybersecurity",
     title: "New Zero Trust White Paper on Meeting White House Executive Order 14028 on Improving the Nation’s Cybersecurity",
     shortTitle: "Zero Trust White Paper on Executive Order 14028",
@@ -38,6 +39,7 @@ export const NEWS = [
   },
   {
     slug: "cisa-zero-trust-maturity-model-webinar",
+    cover: "Inside the CISA Zero Trust Maturity Model",
     oldPath: "/new-webinar-on-the-cisa-zero-trust-maturity-model-the-requirement-for-a-new-data-centric-cybersecurity-approach",
     title: "New Webinar on the CISA Zero Trust Maturity Model, The Requirement for a New Data-Centric Cybersecurity Approach",
     shortTitle: "Webinar: the CISA Zero Trust Maturity Model",
@@ -61,6 +63,7 @@ export const NEWS = [
   },
   {
     slug: "chuck-brooks-joins-anacomp-advisory-board",
+    cover: "Chuck Brooks joins our Advisory Board",
     oldPath: "/chuck-brooks-cybersecurity-emerging-technology-leader-joins-anacomps-advisory-board",
     title: "Chuck Brooks, Cybersecurity & Emerging Technology Leader, Joins Anacomp’s Advisory Board",
     shortTitle: "Chuck Brooks Joins Anacomp’s Advisory Board",
@@ -80,6 +83,7 @@ export const NEWS = [
   },
   {
     slug: "grs-anacomp-950m-air-force-abms-contract",
+    cover: "$950M Air Force data discovery contract",
     oldPath: "/grs-and-anacomp-awarded-abms-contract",
     title: "GRS and Technology Partner Anacomp Awarded $950M Ceiling IDIQ Contract by the U.S. Air Force to Support Data Discovery for Advanced Battle Management System (ABMS)",
     shortTitle: "GRS and Anacomp Win $950M Air Force ABMS Contract",
@@ -102,6 +106,7 @@ export const NEWS = [
   },
   {
     slug: "anacomp-exonar-data-discovery-partnership",
+    cover: "Anacomp and Exonar join forces",
     oldPath: "/anacomp-and-exonar-announce-strategic-partnership-to-deliver-intelligent-data-discovery-services-in-u-s",
     title: "Anacomp and Exonar Announce Strategic Partnership to Deliver Intelligent Data Discovery Services in U.S.",
     shortTitle: "Anacomp and Exonar Partner on Data Discovery",
