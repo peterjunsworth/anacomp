@@ -17,14 +17,14 @@
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://www.anacomp.com/assets/team/tyler-dulmage.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.anacomp.com/assets/team/tom-cunningham.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.anacomp.com/assets/team/peter-unsworth.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.anacomp.com/assets/team/marie-hickey.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.anacomp.com/assets/team/brian-odonnell.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.anacomp.com/assets/team/lisa-basler.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.anacomp.com/assets/team/gina-kenney.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.anacomp.com/assets/team/alan-howe.jpg</image:loc></image:image>
+    <image:image><image:loc>https://anacomp.vercel.app/assets/team/tyler-dulmage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://anacomp.vercel.app/assets/team/tom-cunningham.jpg</image:loc></image:image>
+    <image:image><image:loc>https://anacomp.vercel.app/assets/team/peter-unsworth.jpg</image:loc></image:image>
+    <image:image><image:loc>https://anacomp.vercel.app/assets/team/marie-hickey.jpg</image:loc></image:image>
+    <image:image><image:loc>https://anacomp.vercel.app/assets/team/brian-odonnell.jpg</image:loc></image:image>
+    <image:image><image:loc>https://anacomp.vercel.app/assets/team/lisa-basler.jpg</image:loc></image:image>
+    <image:image><image:loc>https://anacomp.vercel.app/assets/team/gina-kenney.jpg</image:loc></image:image>
+    <image:image><image:loc>https://anacomp.vercel.app/assets/team/alan-howe.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.anacomp.com/news</loc>

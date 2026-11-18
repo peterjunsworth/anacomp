@@ -19,6 +19,8 @@ const read = f => readFileSync(join(ROOT, f), "utf8");
 const write = (f, s) => writeFileSync(join(ROOT, f), s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const abs = p => SITE.origin + (p === "/" ? "/" : p);
+/* Images must load from wherever the site is actually served (see SITE.assetOrigin) */
+const absAsset = p => (SITE.assetOrigin || SITE.origin) + p;
 const byId = Object.fromEntries(STAGES.map(s => [s.id, s]));
 const TODAY = new Date().toISOString().slice(0, 10);
 
@@ -227,8 +229,8 @@ function organization() {
   return {
     "@type": "Organization", "@id": ORG_ID,
     name: SITE.name, legalName: SITE.legalName, url: SITE.origin + "/",
-    logo: { "@type": "ImageObject", url: abs(SITE.logo), width: 147, height: 48 },
-    image: abs(SITE.ogImage),
+    logo: { "@type": "ImageObject", url: absAsset(SITE.logo), width: 147, height: 48 },
+    image: absAsset(SITE.ogImage),
     description: SITE.description,
     slogan: SITE.tagline,
     sameAs: SITE.social.map(s => s.url),
@@ -292,7 +294,7 @@ function jsonld(page, html) {
     "@type": page.type === "NewsArticle" ? "WebPage" : page.type, "@id": url + "#webpage", url,
     name: page.title, description: page.description, isPartOf: { "@id": SITE_ID },
     about: { "@id": ORG_ID }, inLanguage: "en-US",
-    primaryImageOfPage: { "@type": "ImageObject", url: abs(ogOf(page).url) },
+    primaryImageOfPage: { "@type": "ImageObject", url: absAsset(ogOf(page).url) },
     dateModified: TODAY
   };
   const bc = breadcrumb(page);
@@ -306,7 +308,7 @@ function jsonld(page, html) {
       "@type": "NewsArticle", "@id": url + "#article", headline: page.article.headline,
       description: page.description, articleSection: page.article.section,
       datePublished: page.article.datePublished, dateModified: page.article.dateModified || page.article.datePublished,
-      image: [abs(ogOf(page).url)], author: { "@id": ORG_ID }, publisher: { "@id": ORG_ID },
+      image: [absAsset(ogOf(page).url)], author: { "@id": ORG_ID }, publisher: { "@id": ORG_ID },
       mainEntityOfPage: { "@id": url + "#webpage" }, isPartOf: { "@id": SITE_ID }, inLanguage: "en-US"
     });
   }
@@ -317,7 +319,7 @@ function jsonld(page, html) {
     const people = PEOPLE.map(p => ({
       "@type": "Person", "@id": `${SITE.origin}/team#${p.name.toLowerCase().replace(/[^a-z]+/g, "-")}`,
       name: p.name, jobTitle: p.jobTitle,
-      ...(p.image ? { image: abs(p.image) } : {}),
+      ...(p.image ? { image: absAsset(p.image) } : {}),
       ...(p.sameAs ? { sameAs: [p.sameAs] } : {}),
       ...(p.board ? { memberOf: { "@id": ORG_ID } } : { worksFor: { "@id": ORG_ID } })
     }));
@@ -333,7 +335,7 @@ function head(page, html) {
   const url = abs(page.path);
   const ogType = page.article ? "article" : "website";
   const og = ogOf(page);
-  const img = abs(og.url);
+  const img = absAsset(og.url);
   return `<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(page.title)}</title>
@@ -626,7 +628,7 @@ ${indexable.map(p => `  <url>
     <lastmod>${TODAY}</lastmod>
     <changefreq>${p.path === "/" || p.path === "/news" ? "weekly" : "monthly"}</changefreq>
     <priority>${p.path === "/" ? "1.0" : p.article ? "0.7" : "0.8"}</priority>${p.path === "/team" ? PEOPLE.filter(x => x.image).map(x => `
-    <image:image><image:loc>${abs(x.image)}</image:loc></image:image>`).join("") : ""}
+    <image:image><image:loc>${absAsset(x.image)}</image:loc></image:image>`).join("") : ""}
   </url>`).join("\n")}
 </urlset>
 `);

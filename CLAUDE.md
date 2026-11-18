@@ -12,6 +12,7 @@ Static marketing site for Anacomp (public-sector records: Discover, Digitize, Re
 - CSS and JS get content-hash `?v=` stamps automatically. Don't add version numbers by hand.
 - Links are root-absolute and clean: `/team`, `/contact?topic=pilot`, `/assets/...`. Never use `.html` in links.
 - **Icons:** `assets/favicon.svg` is the master. The PNG/ICO sizes are rendered from it: `/favicon.ico` (16/32/48), `/apple-touch-icon.png` (180), and `assets/icons/icon-{48,192,512}.png` plus `icon-maskable-512.png`. The build writes `site.webmanifest`.
+- **Image URLs** in share tags, structured data and the sitemap use `SITE.assetOrigin` (currently `https://anacomp.vercel.app`), because www.anacomp.com still serves the old WordPress site. After the domain switch, remove `assetOrigin` so images use `SITE.origin`.
 - **Social:** the official profiles live in `SITE.social` in `build/content.mjs`. They feed the footer icons, `Organization.sameAs` and `twitter:site`. Article share buttons come from `shareBlock()` in the build, with their behaviour in `pages.js`.
 
 ## Adding a page

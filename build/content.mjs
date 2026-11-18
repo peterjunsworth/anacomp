@@ -3,6 +3,11 @@
 
 export const SITE = {
   origin: "https://www.anacomp.com",
+  /* Where images (share cards, logo, team photos) are fetched from. Social platforms and
+     search engines need a URL that actually serves the file. Until www.anacomp.com points
+     at this Vercel project, images load from the production Vercel URL. After the domain
+     switch, delete this line (or set it to the origin). */
+  assetOrigin: "https://anacomp.vercel.app",
   name: "Anacomp",
   legalName: "Anacomp, Inc.",
   tagline: "From raw records to public release",
