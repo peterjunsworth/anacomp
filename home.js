@@ -46,7 +46,7 @@
       addon: {
         name: "Ask the Document",
         powered: "Botcopy",
-        text: "Put an accessible assistant beside the HTML that ADA produces, on your own site or portal. Residents ask questions in plain language and get answers drawn from the document, in 190+ languages, with ID.me sign-in where needed."
+        text: "Put an accessible assistant beside the HTML that ADA produces, on your own site or portal. Residents ask questions in plain language and get answers drawn from the document whenever needed."
       }
     },
     {
@@ -153,7 +153,6 @@
         </div>
         ${s.addon ? `
         <div class="stage-panel__addon">
-          <p class="stage-panel__label">Optional add-on</p>
           <p class="stage-panel__addon-name"><strong>${esc(s.addon.name)}</strong> <span>Powered by ${esc(s.addon.powered)}</span></p>
           <p>${esc(s.addon.text)}</p>
         </div>` : ""}

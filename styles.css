@@ -243,6 +243,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .note__icon { flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: rgba(185,198,214,.12); font-size: 1.2rem; }
 .note--accent { background: linear-gradient(135deg, rgba(226,98,43,.18), rgba(226,98,43,.04)); border-color: rgba(226,98,43,.4); }
 .note--accent .note__icon { background: var(--orange); }
+.note--addon { margin-top: 64px; border: 2px dashed rgba(226,98,43,.6); }
+.note--addon .note__icon { color: #fff; font-family: var(--font-display); font-weight: 600; }
+.note--addon + .journey__notes { margin-top: 18px; }
 
 /* ---------- OPTIONS ---------- */
 .options { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
