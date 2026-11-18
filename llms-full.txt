@@ -565,44 +565,267 @@ The pilot ends with a scoped proposal: the full pipeline, or the stages that pro
 ---
 
 URL: https://www.anacomp.com/clients
-Title: Clients & Case Studies | Anacomp
-Description: The public agencies Anacomp serves and case studies across records discovery, digitization, redaction, accessibility remediation and public release.
+Title: Clients, Agencies & Case Studies | Anacomp
+Description: Over 120 federal agencies, the U.S. military and Fortune 500 companies trust Anacomp. See the agencies served, case studies and credentials.
 
 Clients
 
 # Trusted with the records that matter most.
 
-Public agencies rely on Anacomp to find, digitize, protect, remediate and release their records, one stage or the whole lifecycle.
+For more than 50 years, over 120 federal agencies, the U.S. military and dozens of Fortune 500 companies have trusted Anacomp with their records.
+
+- Federal agencies served: 120+
+
+- Years in records and data, since 1968: 50+
+
+- Metadata accuracy: 99.995%
+
+- Images in one personnel-records program: 380M+
 
 - Who we serve
 
+- Agencies 58
+
 - Case studies 6
 
-- Reviews 6
+- Credentials
 
 Who we serve
 
-## Built for public-sector records programs
+## Proven where records are most sensitive
 
-Wherever there’s a backlog, a file room, a records request or an accessibility mandate, the pipeline fits.
+Decades of federal, military and Fortune 500 work, now brought to every public agency with a backlog, a file room, a records request or an accessibility mandate.
+
+### Proven at scale
+
+- Federal civilian agencies
+
+- Defense & military
+
+- Veterans & federal health
+
+- Fortune 500 enterprises
+
+### Now serving
+
+- State & local government
+
+- Courts & justice
+
+- Higher education
+
+Agencies we’ve served
+
+## 58 of the 120+ federal agencies
+
+A selection of the departments, agencies and institutions that have trusted Anacomp with their records, from service treatment records to historical archives.
+
+### Defense & military (6)
+
+- U.S. Air Force
+- U.S. Army
+- Department of the Navy
+- U.S. Coast Guard
+- Defense Logistics Agency
+- Department of Defense Education Activity
+
+### Veterans & health (3)
+
+- Department of Veterans Affairs
+- Department of Health and Human Services
+- American Battle Monuments Commission
+
+### Homeland security & justice (8)
+
+- Department of Homeland Security
+- U.S. Customs and Border Protection
+- Transportation Security Administration
+- U.S. Citizenship and Immigration Services
+- U.S. Secret Service
+- Department of Justice
+- Office of Justice Programs
+- Federal Bureau of Prisons
+
+### Cabinet departments (10)
+
+- Department of Agriculture
+- Department of Commerce
+- Department of Education
+- Department of Energy
+- Department of Housing and Urban Development
+- Department of the Interior
+- Department of Labor
+- Department of State
+- Department of Transportation
+- Department of the Treasury
+
+### Bureaus & agencies (16)
+
+- Agricultural Research Service
+- Animal and Plant Health Inspection Service
+- U.S. Forest Service
+- National Oceanic and Atmospheric Administration
+- U.S. Patent and Trademark Office
+- Bureau of Land Management
+- Bureau of the Fiscal Service
+- Social Security Administration
+- Office of Personnel Management
+- General Services Administration
+- Environmental Protection Agency
+- NASA
+- Small Business Administration
+- U.S. Agency for International Development
+- U.S. Agency for Global Media
+- Government Publishing Office
+
+### Independent agencies & regulators (10)
+
+- Securities and Exchange Commission
+- Consumer Financial Protection Bureau
+- Federal Energy Regulatory Commission
+- Nuclear Regulatory Commission
+- National Credit Union Administration
+- Federal Election Commission
+- Federal Labor Relations Authority
+- Consumer Product Safety Commission
+- U.S. International Trade Commission
+- Pension Benefit Guaranty Corporation
+
+### Legislative, judicial & cultural (5)
+
+- Architect of the Capitol
+- Library of Congress
+- U.S. Courts
+- Smithsonian Institution
+- National Gallery of Art
+
+The list reflects past engagements, including work as a subcontractor, and does not imply endorsement by any agency.
 
 Case studies
 
-## Every engagement starts with one problem
+## Millions of records, measured results
 
-See where clients started, the stages they used, and what changed. Filter by stage.
+Past performance from federal programs, with the stages each one used. Filter by stage.
 
-Reviews
+U.S. Navy · Federal health records
 
-## What records leaders say
+### Digitizing 65 million pages of Navy service treatment records
 
-Your voice
+- Digitize
 
-Work with us? Tell others how it went.
+- Challenge: A 2013 White House mandate required service treatment records received by the Department of Veterans Affairs to be electronic, with paperless transfer from January 2014. Navy records had to be separated by service member as they were digitized.
 
-We publish reviews from clients with their permission, unedited.
+- Approach: Anacomp assessed the collection and ran a semi-automated scanning and indexing process with chain-of-custody tracking, separating each service member’s record.
 
-[Leave a review](https://www.anacomp.com/contact?topic=review)
+- Outcome: 65 million pages of paper records converted. Since 2014, Anacomp has processed millions of service treatment records at over 99.7% accuracy.
+
+Federal health records · HIPAA
+
+### Catching misfiled patient records before they become violations
+
+- Discover
+- Redact
+- Release
+
+- Challenge: A misfiled page in a service treatment record is a HIPAA violation, can affect a veteran’s disability benefits, and triggers a 100-year retention requirement for the whole batch. A 2022 policy prioritized fast remediation.
+
+- Approach: Anacomp’s D3TECT indexes the personal identifiers in every digitized record, compares them with the known patient identity and flags mismatches for human review. R3DACT then automates PHI and PII redaction for release-of-information requests.
+
+- Outcome: Manual review time cut by more than 80%, false positives by 50% and false negatives by 66%. Redaction review time cut by about 40%. Projected personnel cost avoidance of $2.5M–$4M a year per service branch.
+
+Federal agency · Personnel records
+
+### 380 million images from 2 million personnel files
+
+- Digitize
+
+- Challenge: More than 2 million official personnel records existed only on paper.
+
+- Approach: High-volume scanning with automated classification, metadata capture and quality-control validation.
+
+- Outcome: More than 380 million images delivered at 99.9% accuracy.
+
+Federal agency · Retirement records
+
+### Turning 2 million retirement files into usable data
+
+- Digitize
+- Analyze
+
+- Challenge: Federal retirement records had to be digitized and their contents captured as data for processing.
+
+- Approach: Anacomp digitized the files and captured their data under its quality-controlled, Lean Six Sigma methodology.
+
+- Outcome: More than 2 million retirement records digitized and over 10 billion keystrokes of data captured at 99.995% accuracy.
+
+Federal agency · Historical records
+
+### 55 million immigration records off microfilm
+
+- Digitize
+
+- Challenge: Historical immigration records were held on microfilm and microfiche that staff couldn’t search.
+
+- Approach: Anacomp converted the film to electronic images with associated metadata for the agency’s electronic document management system.
+
+- Outcome: 55 million historical records converted, indexed and searchable.
+
+U.S. Air Force · With GRS
+
+### Zero Trust data discovery for the Air Force
+
+- Discover
+- Analyze
+
+- Challenge: The Advanced Battle Management System needs data from any source, at any location, ready for decision-making.
+
+- Approach: Under a $950M-ceiling IDIQ contract awarded to Government Research Specialists, Anacomp’s D3 data discovery ingests, indexes, tags and monitors data, with federated search across metadata and file contents.
+
+- Outcome: Zero Trust data discovery supporting Air Force missions. [Read the contract announcement](https://www.anacomp.com/news/grs-anacomp-950m-air-force-abms-contract).
+
+Credentials
+
+## Built for federal-grade security
+
+The certifications, authorizations and contract access behind every engagement.
+
+-
+
+### Award nomination
+
+Nominated for the Navy Surgeon General’s award for service excellence.
+
+-
+
+### Authority to Operate
+
+An ATO for scanning federal records containing Sensitive But Unclassified (SBU), PII and PHI data.
+
+-
+
+### Security & privacy compliance
+
+Conversion centers and processes certified compliant with NIST SP 800-171, NIST SP 800-53, OMB Circular A-130, the Privacy Act of 1974 and HIPAA.
+
+-
+
+### Auditable quality
+
+ISO 9001-certified processes, chain-of-custody tracking, and metadata accuracy up to 99.995%, delivered by staff certified in Lean Six Sigma, ECM and BPM.
+
+-
+
+### AI pioneers since 2004
+
+Anacomp pioneered AI/ML document classification and metadata extraction for official government records in 2004.
+
+-
+
+### Contract vehicles
+
+A first-tier subcontractor on GWACs and flexible IDIQ contract vehicles, with prime partners of varied socioeconomic status.
+
+Worked with us? [Share your experience](https://www.anacomp.com/contact?topic=review) and we’ll publish it with your permission.
 
 ## Become the next case study.
 

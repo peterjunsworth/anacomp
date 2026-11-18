@@ -151,10 +151,10 @@ export const PAGES = [
   },
   {
     file: "clients.html", path: "/clients", short: "Clients & case studies", nav: "clients", type: "CollectionPage", css: ["styles.css", "pages.css"], js: ["pages.js"],
-    title: "Clients & Case Studies | Anacomp",
-    description: "The public agencies Anacomp serves and case studies across records discovery, digitization, redaction, accessibility remediation and public release.",
+    title: "Clients, Agencies & Case Studies | Anacomp",
+    description: "Over 120 federal agencies, the U.S. military and Fortune 500 companies trust Anacomp. See the agencies served, case studies and credentials.",
     crumbs: [["Clients", "/clients"]],
-    llms: "Sectors served (state, county and city government, courts, higher education, health and human services) and case studies."
+    llms: "Track record: 58 named federal agencies of 120+ served, six past-performance case studies (Navy service treatment records, misfile correction, personnel, retirement and immigration records, Air Force data discovery) and security credentials."
   },
   {
     file: "team.html", path: "/team", short: "Leadership team & board", nav: "team", type: "AboutPage", css: ["styles.css", "pages.css"], js: ["pages.js"],

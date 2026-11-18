@@ -107,7 +107,7 @@ function footer() {
           <h2 class="footer__head">Company</h2>
           <ul>
             <li><a href="/clients">Clients &amp; case studies</a></li>
-            <li><a href="/clients#reviews">Reviews</a></li>
+            <li><a href="/clients#credentials">Credentials</a></li>
             <li><a href="/team">Leadership team</a></li>
             <li><a href="/news">News &amp; articles</a></li>
           </ul>

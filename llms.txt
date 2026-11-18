@@ -17,7 +17,7 @@ Anacomp sells the Information Lifecycle end to end (one contract, one service le
 ## Pages
 
 - [Home: the Information Lifecycle](https://www.anacomp.com/): The Information Lifecycle: six stages, packages, pricing model, how a records request flows, and the 30-day pilot.
-- [Clients & case studies](https://www.anacomp.com/clients): Sectors served (state, county and city government, courts, higher education, health and human services) and case studies.
+- [Clients & case studies](https://www.anacomp.com/clients): Track record: 58 named federal agencies of 120+ served, six past-performance case studies (Navy service treatment records, misfile correction, personnel, retirement and immigration records, Air Force data discovery) and security credentials.
 - [Leadership team & board](https://www.anacomp.com/team): Leadership team, board of directors and what the team stands for.
 - [News & articles](https://www.anacomp.com/news): Company announcements and articles.
 - [Introducing the Anacomp Information Lifecycle](https://www.anacomp.com/news/introducing-the-anacomp-information-lifecycle): Launch announcement explaining the five stages, Insignal analytics, ways to buy and the 30-day pilot.
