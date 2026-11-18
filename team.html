@@ -36,72 +36,83 @@
         <h2>The people behind the pipeline</h2>
       </header>
 
-      <!-- TODO: replace each card with a real leader: name, title, bio, photo
-           (add <img src="assets/team/name.jpg" alt="Name"> inside .leader__photo) and LinkedIn URL. -->
+      <!-- TODO: add a photo per leader: <img src="assets/team/name.jpg" alt=""> inside .leader__photo
+           (alt="" because the name is already in the heading). -->
       <div class="leaders">
-        <article class="leader reveal" data-placeholder>
-          <div class="leader__photo"><span>CEO</span></div>
+        <article class="leader reveal">
+          <div class="leader__photo"><span aria-hidden="true">TD</span></div>
           <div class="leader__body">
             <p class="leader__role">Chief Executive Officer</p>
-            <h3>Leader name</h3>
-            <p>Add a two-sentence bio: background, years in information management, and what they believe about public records.</p>
+            <h3>Tyler Dulmage</h3>
+            <p>Leads Anacomp’s strategy and its relationships with the agencies it serves.</p>
             <div class="leader__owns"><span>Strategy</span><span>Client relationships</span></div>
-            <div class="leader__links"><a href="#" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
+            <div class="leader__links"><a href="https://www.linkedin.com/in/tylerdulmage/" aria-label="Tyler Dulmage on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
           </div>
         </article>
 
-        <article class="leader reveal" data-placeholder>
-          <div class="leader__photo"><span>COO</span></div>
+        <article class="leader reveal">
+          <div class="leader__photo"><span aria-hidden="true">TC</span></div>
           <div class="leader__body">
-            <p class="leader__role">Chief Operating Officer</p>
-            <h3>Leader name</h3>
-            <p>Add a two-sentence bio. Owns delivery across every stage, the single service level and the chain of custody.</p>
-            <div class="leader__owns"><span>Digitize</span><span>Service levels</span><span>Custody</span></div>
-            <div class="leader__links"><a href="#" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
+            <p class="leader__role">President</p>
+            <h3>Tom Cunningham</h3>
+            <p>Runs delivery across every stage of the pipeline, the single service level and the chain of custody.</p>
+            <div class="leader__owns"><span>Operations</span><span>Service levels</span><span>Custody</span></div>
+            <div class="leader__links"><a href="https://www.linkedin.com/in/tom-cunningham-7874608/" aria-label="Tom Cunningham on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
           </div>
         </article>
 
-        <article class="leader reveal" data-placeholder>
-          <div class="leader__photo"><span>CTO</span></div>
+        <article class="leader reveal">
+          <div class="leader__photo"><span aria-hidden="true">PU</span></div>
           <div class="leader__body">
             <p class="leader__role">Chief Technology Officer</p>
-            <h3>Leader name</h3>
-            <p>Add a two-sentence bio. Integrates Congruity360, Hyperscience, ID.me and Insignal into one pipeline.</p>
-            <div class="leader__owns"><span>Discover</span><span>Analyze</span><span>Integrations</span></div>
-            <div class="leader__links"><a href="#" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
+            <h3>Peter Unsworth</h3>
+            <p>Integrates Congruity360, Hyperscience, ID.me, Botcopy and Insignal into one pipeline.</p>
+            <div class="leader__owns"><span>Technology</span><span>Integrations</span><span>Analyze</span></div>
+            <div class="leader__links"><a href="https://www.linkedin.com/in/peterunsworth/" aria-label="Peter Unsworth on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
           </div>
         </article>
 
-        <article class="leader reveal" data-placeholder>
-          <div class="leader__photo"><span>CRO</span></div>
+        <article class="leader reveal">
+          <div class="leader__photo"><span aria-hidden="true">MH</span></div>
           <div class="leader__body">
-            <p class="leader__role">Chief Revenue Officer</p>
-            <h3>Leader name</h3>
-            <p>Add a two-sentence bio. Leads the public-sector team and the 30-day pilot program.</p>
+            <p class="leader__role">Senior Vice President</p>
+            <h3>Marie Hickey</h3>
+            <p>Add a short description of Marie’s responsibilities.</p>
+            <div class="leader__owns"><span>Leadership</span></div>
+            <div class="leader__links"><a href="https://www.linkedin.com/in/marie-hickey-b200652/" aria-label="Marie Hickey on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
+          </div>
+        </article>
+
+        <article class="leader reveal">
+          <div class="leader__photo"><span aria-hidden="true">BO</span></div>
+          <div class="leader__body">
+            <p class="leader__role">VP Sales</p>
+            <h3>Brian O’Donnell</h3>
+            <p>Leads the public-sector sales team and the 30-day pilot program.</p>
             <div class="leader__owns"><span>Public sector</span><span>Pilots</span></div>
-            <div class="leader__links"><a href="#" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
+            <div class="leader__links"><a href="https://www.linkedin.com/in/brian-o-donnell-6853506/" aria-label="Brian O’Donnell on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
           </div>
         </article>
 
-        <article class="leader reveal" data-placeholder>
-          <div class="leader__photo"><span>VP</span></div>
+        <article class="leader reveal">
+          <div class="leader__photo"><span aria-hidden="true">CC</span></div>
           <div class="leader__body">
-            <p class="leader__role">VP, Accessibility &amp; Remediation</p>
-            <h3>Leader name</h3>
-            <p>Add a two-sentence bio. Owns Anacomp ADA and the Section 508 and ADA Title II practice.</p>
-            <div class="leader__owns"><span>Remediate</span><span>Accessibility</span></div>
-            <div class="leader__links"><a href="#" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
+            <p class="leader__role">Head of Sales</p>
+            <h3>Chuck Cwirka</h3>
+            <p>Works with agencies to scope the stages and packages that fit their records program.</p>
+            <div class="leader__owns"><span>Sales</span><span>Packages</span></div>
+            <div class="leader__links"><a href="https://www.linkedin.com/in/chuck-cwirka/" aria-label="Chuck Cwirka on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
           </div>
         </article>
 
-        <article class="leader reveal" data-placeholder>
-          <div class="leader__photo"><span>VP</span></div>
+        <article class="leader reveal">
+          <div class="leader__photo"><span aria-hidden="true">RC</span></div>
           <div class="leader__body">
-            <p class="leader__role">VP, Privacy &amp; Records Release</p>
-            <h3>Leader name</h3>
-            <p>Add a two-sentence bio. Owns redaction workflows and the identity-verified request portal.</p>
-            <div class="leader__owns"><span>Redact</span><span>Release</span><span>Security</span></div>
-            <div class="leader__links"><a href="#" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
+            <p class="leader__role">Solutions Architect</p>
+            <h3>Robert Curry</h3>
+            <p>Designs how each stage fits an agency’s existing systems, from discovery scan to public release.</p>
+            <div class="leader__owns"><span>Solution design</span><span>Integrations</span></div>
+            <div class="leader__links"><a href="https://www.linkedin.com/in/robert-curry-rsc99/" aria-label="Robert Curry on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4 0-3.2-1.95-3.2S12.8 13.4 12.8 15V21H9z"/></svg></a></div>
           </div>
         </article>
       </div>
